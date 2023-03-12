@@ -1,7 +1,7 @@
 ![separe](https://github.com/studoo-app/.github/blob/main/profile/studoo-banner-logo.png)
 # Ecole Directe API PHP
 
-[![Latest Stable Version](https://poser.pugx.org/studoo-app/ecole-directe-api/v)](//packagist.org/packages/studoo-app/ecole-directe-api) [![Total Downloads](https://poser.pugx.org/studoo-app/ecole-directe-api/downloads)](//packagist.org/packages/studoo-app/ecole-directe-api) [![Latest Unstable Version](https://poser.pugx.org/studoo-app/ecole-directe-api/v/unstable)](//packagist.org/packages/studoo-app/ecole-directe-api) [![License](https://poser.pugx.org/studoo-app/ecole-directe-api/license)](//packagist.org/packages/studoo-app/ecole-directe-api)
+[![Latest Stable Version](https://poser.pugx.org/studoo/ecole-directe-api/v)](//packagist.org/packages/studoo/ecole-directe-api) [![Total Downloads](https://poser.pugx.org/studoo/ecole-directe-api/downloads)](//packagist.org/packages/studoo/ecole-directe-api) [![Latest Unstable Version](https://poser.pugx.org/studoo/ecole-directe-api/v/unstable)](//packagist.org/packages/studoo/ecole-directe-api) [![License](https://poser.pugx.org/studoo/ecole-directe-api/license)](//packagist.org/packages/studoo/ecole-directe-api)
 
 Utilisation de la librairie PHP pour l'API Ecole Directe (non officielle)
 

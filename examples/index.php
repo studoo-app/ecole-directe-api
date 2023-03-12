@@ -13,4 +13,6 @@ $client = new Client([
     "client_secret" => $_ENV["CLIENT_SECRET"],
 ]);
 
-var_dump($client->fetchAccessToken());
+$Login = $client->fetchAccessToken();
+
+var_dump($Login);

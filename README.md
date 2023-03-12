@@ -30,5 +30,5 @@ $client = new Client([
 
 [https://github.com/studoo-app/ecole-directe-api-docs](https://github.com/studoo-app/ecole-directe-api-docs)
 
-Vous pouvez tester l'API via Insomnia en cliquant sur le bouton ci-dessous :
-[![Run in Insomnia}](https://insomnia.rest/images/run.svg)](https://insomnia.rest/run/?label=Ecole%20Directe%20API&uri=https%3A%2F%2Fraw.githubusercontent.com%2Fstudoo-app%2Fapi-ecole-directe%2Fmain%2FInsomnia.json)
+Vous pouvez tester l'API via Insomnia : 
+[![Tester API avec Insomnia}](https://insomnia.rest/images/run.svg)](https://insomnia.rest/run/?label=Ecole%20Directe%20API&uri=https%3A%2F%2Fraw.githubusercontent.com%2Fstudoo-app%2Fapi-ecole-directe%2Fmain%2FInsomnia.json)

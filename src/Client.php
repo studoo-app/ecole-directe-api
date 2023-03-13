@@ -13,6 +13,8 @@ namespace Studoo\Api\EcoleDirecte;
 
 use Studoo\Api\EcoleDirecte\Entity\Login;
 use Studoo\Api\EcoleDirecte\Exception\InvalidCredentialsException;
+use Studoo\Api\EcoleDirecte\Service\Request;
+use Studoo\Api\EcoleDirecte\Service\Response;
 
 /**
  * The Studoo EcoleDirecte API Client
@@ -54,16 +56,9 @@ class Client
      */
     public function fetchAccessToken(): Login
     {
-        $client = new \GuzzleHttp\Client([
-            'base_uri' => $this->config['base_path'] . '/' . $this->config['version'] . '/',
-            'timeout' => $this->config['timeout'],
-            'connect_timeout' => $this->config['connect_timeout'],
-            'verify' => $this->config['verify'],
-            'debug' => $this->config['debug'],
-            'headers' => $this->config['headers'],
-        ]);
 
-        $response = $client->request('POST', 'login.awp', [
+        $data = new Request(config: $this->config);
+        $data = $data->query(methode: 'POST', path: 'login.awp', query: [
             'body' => 'data='. json_encode([
                     'identifiant' => $this->config['client_id'],
                     'motdepasse' => $this->config['client_secret']
@@ -72,8 +67,6 @@ class Client
                 'Content-Type' => 'text/plain',
             ],
         ]);
-
-        $data = json_decode($response->getBody()->getContents(), true, 512, JSON_THROW_ON_ERROR);
 
         if ($data['code'] === 200) {
             $this->login = new Login($data['token']);

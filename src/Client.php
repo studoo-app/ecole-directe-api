@@ -57,10 +57,11 @@ class Client
     public function fetchAccessToken(): object
     {
         $token = new RunQuery("login", $this->config);
-        return $token->run([
+        $this->login = $token->run([
             'identifiant' => $this->config['client_id'],
             'motdepasse' => $this->config['client_secret']
         ]);
+        return $this->login;
     }
 
     /**

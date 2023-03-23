@@ -56,5 +56,59 @@ class LoginTest extends TestCase
         $this->assertEquals('345', $login->getUid());
     }
 
+    public function testSetEmail()
+    {
+        $login = new Login();
+        $login->setEmail('julien@test.fr');
+        $this->assertEquals('julien@test.fr', $login->getEmail());
+    }
 
+    public function testSetPrenom()
+    {
+        $login = new Login();
+        $login->setPrenom('Julien');
+        $this->assertEquals('Julien', $login->getPrenom());
+    }
+
+    public function testSetNom()
+    {
+        $login = new Login();
+        $login->setNom('Test');
+        $this->assertEquals('Test', $login->getNom());
+    }
+
+    public function testSetIdentifiant()
+    {
+        $login = new Login();
+        $login->setIdentifiant('julien.test');
+        $this->assertEquals('julien.test', $login->getIdentifiant());
+    }
+
+    public function testSetTypeCompte()
+    {
+        $login = new Login();
+        $login->setTypeCompte('ELEVE');
+        $this->assertEquals('ELEVE', $login->getTypeCompte());
+    }
+
+    public function testSetNomEtablissement()
+    {
+        $login = new Login();
+        $login->setNomEtablissement('Code School');
+        $this->assertEquals('Code School', $login->getNomEtablissement());
+    }
+
+    public function testAnneeScolaireCourante()
+    {
+        $login = new Login();
+        $login->setAnneeScolaireCourante('2020-2021');
+        $this->assertEquals('2020-2021', $login->getAnneeScolaireCourante());
+    }
+
+    public function testSetProfile()
+    {
+        $login = new Login();
+        $login->setProfile(['ELEVE']);
+        $this->assertEquals(['ELEVE'], $login->getProfile());
+    }
 }

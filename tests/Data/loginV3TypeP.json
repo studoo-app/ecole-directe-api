@@ -1,0 +1,603 @@
+{
+  "code": 200,
+  "token": "f6897e82-c10c-42d9-80R8-5c62r4c2acd2",
+  "message": "",
+  "data": {
+    "changementMDP": false,
+    "accounts": [
+      {
+        "idLogin": 34867434,
+        "id": 294,
+        "uid": "758d8f00dzdz34zer4230c29893",
+        "identifiant": "jbouvier",
+        "typeCompte": "P",
+        "codeOgec": "0345587N",
+        "main": true,
+        "lastConnexion": "2023-03-13 15:54",
+        "civilite": "M.",
+        "prenom": "Julien",
+        "particule": "",
+        "nom": "BOUVIER",
+        "email": "Julien.Bouvier@test.fr",
+        "anneeScolaireCourante": "2022-2023",
+        "nomEtablissement": "STUDOO & CO",
+        "logoEtablissement": "\\\\FTP01\\import\\0345587N\\test.png",
+        "couleurAgendaEtablissement": "#bf00ff",
+        "dicoEnLigneLeRobert": true,
+        "socketToken": "EeRrTRZR46854ZERgerj42Z2+LgbjL4P1cOfE2P5no009saJkCUpSWRIRso8YvWzU/tgA==",
+        "modules": [
+          {
+            "code": "CANTINE_BARCODE",
+            "enable": true,
+            "ordre": 1,
+            "badge": 0,
+            "params": {
+              "numeroBadge": "99999999"
+            }
+          },
+          {
+            "code": "APPEL",
+            "enable": true,
+            "ordre": 40,
+            "badge": 0,
+            "params": {
+              "rechercheParEDT": "1",
+              "rechercheParClasse": "1"
+            }
+          },
+          {
+            "code": "APPEL_PRIMAIRE",
+            "enable": false,
+            "ordre": 41,
+            "badge": 0,
+            "params": {}
+          },
+          {
+            "code": "APPEL_ETUDE",
+            "enable": false,
+            "ordre": 41,
+            "badge": 0,
+            "params": {}
+          },
+          {
+            "code": "CLOUD",
+            "enable": false,
+            "ordre": 100,
+            "badge": 0,
+            "params": {
+              "visiosActif": "0",
+              "collaboraActif": "0",
+              "streamingActif": "0",
+              "nbBadgePostits": "0",
+              "isActifPostitsEspacesTravail": "0",
+              "nbBadgeAgendaEvenements": "0",
+              "isActifAgendaEvenementsEspacesTravail": "0",
+              "padsActif": "1"
+            }
+          },
+          {
+            "code": "COMMANDE_PASSAGE",
+            "enable": false,
+            "ordre": 120,
+            "badge": 0,
+            "params": {
+              "affichageMenuSeul": "1"
+            }
+          },
+          {
+            "code": "DOCUMENTS",
+            "enable": true,
+            "ordre": 140,
+            "badge": 0,
+            "params": {}
+          },
+          {
+            "code": "MESSAGERIE",
+            "enable": true,
+            "ordre": 10,
+            "badge": 52,
+            "params": {
+              "isActif": "1",
+              "canParentsLireMessagesEnfants": "1",
+              "destAdmin": "1",
+              "destEleve": "1",
+              "destFamille": "1",
+              "destProf": "1",
+              "destEspTravail": "0",
+              "disabledNotification": "0",
+              "notificationEmailEtablissement": "1",
+              "choixMailNotification": "2",
+              "autreMailNotification": "",
+              "mailPro": "julien.bouvier@test.fr",
+              "mailPerso": "julien@bouvier.perso",
+              "messagerieApiVersion": "v3",
+              "blackListProfActive": "0",
+              "estEnBlackList": "0",
+              "afficherToutesLesClasses": "0",
+              "droitDeconnexion": "0"
+            }
+          },
+          {
+            "code": "CAHIER_DE_TEXTES",
+            "enable": true,
+            "ordre": 70,
+            "badge": 0,
+            "params": {
+              "isCDTPrimaire": "0",
+              "archives": "2017-2018\n2018-2019\n2019-2020\n2020-2021\n2021-2022\n2022-2023\n",
+              "commentaires": "1",
+              "quota": "5368709120",
+              "ogecCrypte": "0345587N_46415974576349663f5a77",
+              "manuel": "1",
+              "edt": "1",
+              "donneLeModifiable": "1",
+              "correspondancesActives": "0",
+              "compteRenduSeance": "1",
+              "cloud": "0"
+            }
+          },
+          {
+            "code": "MANUELS_SCOLAIRES",
+            "enable": true,
+            "ordre": 71,
+            "badge": 0,
+            "params": {}
+          },
+          {
+            "code": "EDT",
+            "enable": true,
+            "ordre": 20,
+            "badge": 0,
+            "params": {
+              "reservationSallesActif": "0"
+            }
+          },
+          {
+            "code": "CARNET_NOTES",
+            "enable": true,
+            "ordre": 50,
+            "badge": 0,
+            "params": {
+              "saisieLSUN": "1",
+              "seulPPVoieToutesLesNotes": "0",
+              "isProfPrimaire": "0"
+            }
+          },
+          {
+            "code": "CONSEIL_DE_CLASSE_NG",
+            "enable": true,
+            "ordre": 51,
+            "badge": 0,
+            "params": {}
+          },
+          {
+            "code": "QCM",
+            "enable": true,
+            "ordre": 52,
+            "badge": 0,
+            "params": {}
+          },
+          {
+            "code": "EDFORMS",
+            "enable": false,
+            "ordre": 53,
+            "badge": 0,
+            "params": {}
+          },
+          {
+            "code": "VIE_SCOLAIRE",
+            "enable": true,
+            "ordre": 21,
+            "badge": 0,
+            "params": {}
+          },
+          {
+            "code": "SITUATION_FINANCIERE",
+            "enable": false,
+            "ordre": 130,
+            "badge": 0,
+            "params": {}
+          },
+          {
+            "code": "PAIEMENT_EN_LIGNE",
+            "enable": false,
+            "ordre": 135,
+            "badge": 0,
+            "params": {
+              "montantMinimum": "100",
+              "codeDevise": "978",
+              "libelleSoldeDebiteur": "Règlement du solde de votre compte",
+              "libelleSoldeCrediteur": "Versement sur votre compte",
+              "devise": "€"
+            }
+          },
+          {
+            "code": "AFF_EL",
+            "enable": true,
+            "ordre": 11,
+            "badge": 0,
+            "params": {}
+          },
+          {
+            "code": "CONSULTATION_ETABLISSEMENT",
+            "enable": true,
+            "ordre": 30,
+            "badge": 0,
+            "params": {
+              "emploiDuTempsEnseignant": "0",
+              "coordonneesEnseignant": "0"
+            }
+          },
+          {
+            "code": "CARNET_CORRESPONDANCE",
+            "enable": true,
+            "ordre": 80,
+            "badge": 0,
+            "params": {
+              "demandeSignatureActif": "0",
+              "demandeSanctionActif": "1",
+              "suiviActif": "0",
+              "saisieCorrespondanceActif": "1"
+            }
+          },
+          {
+            "code": "CATER",
+            "enable": false,
+            "ordre": 150,
+            "badge": 0,
+            "params": {}
+          },
+          {
+            "code": "ARD",
+            "enable": false,
+            "ordre": 120,
+            "badge": 0,
+            "params": {}
+          },
+          {
+            "code": "SCOLACONCEPT",
+            "enable": false,
+            "ordre": 160,
+            "badge": 0,
+            "params": {}
+          },
+          {
+            "code": "EDUNAO",
+            "enable": false,
+            "ordre": 180,
+            "badge": 0,
+            "params": {}
+          },
+          {
+            "code": "ALISE",
+            "enable": false,
+            "ordre": 190,
+            "badge": 0,
+            "params": {}
+          },
+          {
+            "code": "ETUDIANT",
+            "enable": false,
+            "ordre": 191,
+            "badge": 0,
+            "params": {}
+          },
+          {
+            "code": "FUTURNESS",
+            "enable": false,
+            "ordre": 192,
+            "badge": 0,
+            "params": {}
+          },
+          {
+            "code": "SALLE_DES_PROFS",
+            "enable": false,
+            "ordre": 90,
+            "badge": 0,
+            "params": {}
+          },
+          {
+            "code": "ESIDOC",
+            "enable": false,
+            "ordre": 170,
+            "badge": 0,
+            "params": {}
+          },
+          {
+            "code": "LSL",
+            "enable": true,
+            "ordre": 60,
+            "badge": 0,
+            "params": {}
+          },
+          {
+            "code": "COMP_NUM",
+            "enable": false,
+            "ordre": 65,
+            "badge": 0,
+            "params": {}
+          },
+          {
+            "code": "REUNIONS_PP",
+            "enable": false,
+            "ordre": 110,
+            "badge": 0,
+            "params": {}
+          },
+          {
+            "code": "RDVPP",
+            "enable": true,
+            "ordre": 115,
+            "badge": 0,
+            "params": {}
+          },
+          {
+            "code": "GROUPE_FLEX",
+            "enable": false,
+            "ordre": 35,
+            "badge": 0,
+            "params": {}
+          },
+          {
+            "code": "SUIVI_STAGE",
+            "enable": false,
+            "ordre": 85,
+            "badge": 0,
+            "params": {}
+          },
+          {
+            "code": "PEARLTREES",
+            "enable": true,
+            "ordre": 170,
+            "badge": 0,
+            "params": {
+              "url": "https%3A%2F%2Fwww%2Epearltrees%2Ecom%2Fs%2Fedu%2Fauth%2F0345587N",
+              "rne": "0345587N"
+            }
+          },
+          {
+            "code": "EDUMALIN",
+            "enable": false,
+            "ordre": 171,
+            "badge": 0,
+            "params": {}
+          },
+          {
+            "code": "CLICKNPLAY",
+            "enable": false,
+            "ordre": 171,
+            "badge": 0,
+            "params": {}
+          },
+          {
+            "code": "ONISEPSERVICES",
+            "enable": false,
+            "ordre": 172,
+            "badge": 0,
+            "params": {}
+          },
+          {
+            "code": "AVENRIA",
+            "enable": false,
+            "ordre": 173,
+            "badge": 0,
+            "params": {}
+          },
+          {
+            "code": "VOLTAIRE",
+            "enable": false,
+            "ordre": 175,
+            "badge": 0,
+            "params": {}
+          },
+          {
+            "code": "SACOCHE",
+            "enable": false,
+            "ordre": 176,
+            "badge": 0,
+            "params": {}
+          },
+          {
+            "code": "IJBOX",
+            "enable": false,
+            "ordre": 177,
+            "badge": 0,
+            "params": {}
+          },
+          {
+            "code": "IMPALA",
+            "enable": false,
+            "ordre": 178,
+            "badge": 0,
+            "params": {}
+          },
+          {
+            "code": "POPLAB",
+            "enable": false,
+            "ordre": 179,
+            "badge": 0,
+            "params": {}
+          },
+          {
+            "code": "EDUMEDIA",
+            "enable": true,
+            "ordre": 180,
+            "badge": 0,
+            "params": {
+              "url": "https%3A%2F%2Fwww%2Eedumedia%2Dsciences%2Ecom%2Ffr%3Fecoledirecte%3Dtrue",
+              "rne": "0345587N"
+            }
+          },
+          {
+            "code": "KIDIWE",
+            "enable": false,
+            "ordre": 185,
+            "badge": 0,
+            "params": {}
+          }
+        ],
+        "parametresIndividuels": {
+          "lsuPoilDansLaMainBorne1": "5",
+          "lsuPoilDansLaMainBorne2": "10",
+          "lsuPoilDansLaMainBorne3": "15",
+          "modeCalculLSU": "0",
+          "isQrcode": false,
+          "accessibiliteVisuelle": false,
+          "checkAuthentificationSecure": false,
+          "checkFetS": false,
+          "typeSaisieNotesDefaut": "multi",
+          "nbJoursMaxRenduDevoirCDT": "0",
+          "typeViewCDTDefaut": "list"
+        },
+        "profile": {
+          "nomEtablissement": "STUDOO & CO",
+          "idEtablissement": "0",
+          "photo": "",
+          "telPortable": "07 11 81 23 83",
+          "email": "Julien.Bouvier@test.fr",
+          "classes": [
+            {
+              "id": 152,
+              "code": "2TSSIOALT2",
+              "libelle": "2TSSIOSLAM ALT",
+              "idGroupe": 0
+            },
+            {
+              "id": 126,
+              "code": "CSIB3INIT",
+              "libelle": "Bachelor Concepteur de systèmes d'informations INIT",
+              "idGroupe": 0
+            },
+            {
+              "id": 134,
+              "code": "CSI°B",
+              "libelle": "Bachelor Concepteur de Systèmes d'information",
+              "idGroupe": 0
+            },
+            {
+              "id": 150,
+              "code": "1TSSIOB",
+              "libelle": "1 TS SIO B",
+              "idGroupe": 0
+            },
+            {
+              "id": 151,
+              "code": "2TSSIOALT",
+              "libelle": "2TSSIOSISR ALT",
+              "idGroupe": 0
+            },
+            {
+              "id": 102,
+              "code": "2TSSIOSLAM",
+              "libelle": "2TS SIO SLAM",
+              "idGroupe": 0
+            },
+            {
+              "id": 107,
+              "code": "1TSSIOA",
+              "libelle": "1 TS SIO A",
+              "idGroupe": 0
+            },
+            {
+              "id": 140,
+              "code": "MS2D2ALT",
+              "libelle": "Manager Solutions Digitals et Data 2ème année alternance",
+              "idGroupe": 0
+            },
+            {
+              "id": 30,
+              "code": "2TSIOSISR",
+              "libelle": "2TS SIO  SISR",
+              "idGroupe": 0
+            },
+            {
+              "id": 158,
+              "code": "1SIOSLAMAL",
+              "libelle": "Première année de BTS SIO SLAM - Alternance",
+              "idGroupe": 0
+            },
+            {
+              "id": 147,
+              "code": "1TSSIOALT",
+              "libelle": "Première année BTS SIO en alternance ",
+              "idGroupe": 0
+            }
+          ],
+          "groupes": [],
+          "matieres": [
+            {
+              "id": 6028,
+              "code": "ACCPE",
+              "libelle": "ACCOMPAGNEMT. PERSO."
+            },
+            {
+              "id": 5440,
+              "code": "AHEW",
+              "libelle": "ADMIN HEBERGEMENT WEB"
+            },
+            {
+              "id": 5125,
+              "code": "ARCH",
+              "libelle": "ARCHITECTURES D'APP"
+            },
+            {
+              "id": 5533,
+              "code": "ATELP",
+              "libelle": "AT. PROFESSIONNALIS."
+            },
+            {
+              "id": 5507,
+              "code": "BD",
+              "libelle": "BIG DATA"
+            },
+            {
+              "id": 6071,
+              "code": "COORD",
+              "libelle": "VIE DE CLASSE"
+            },
+            {
+              "id": 5505,
+              "code": "CSID",
+              "libelle": "CONCEPTION SID"
+            },
+            {
+              "id": 6025,
+              "code": "CYSIN",
+              "libelle": "Bloc 3 : CYBERSECURITE"
+            },
+            {
+              "id": 5462,
+              "code": "INDUS",
+              "libelle": "INDUSTRIALISATION DU DEV"
+            },
+            {
+              "id": 5498,
+              "code": "ORAL",
+              "libelle": "Oral"
+            },
+            {
+              "id": 5509,
+              "code": "PPESY",
+              "libelle": "PROJET PREPARATION EPREUVE DE SYNTHESE"
+            },
+            {
+              "id": 5990,
+              "code": "SLAM",
+              "libelle": "Bloc 2 : CONCEPT.DEV.APPLIC"
+            },
+            {
+              "id": 6023,
+              "code": "SMDSI",
+              "libelle": "Bloc 1 : SUP.DISPOS.SERV.INF."
+            },
+            {
+              "id": 5506,
+              "code": "TDB",
+              "libelle": "TABLEAU DE BORD"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

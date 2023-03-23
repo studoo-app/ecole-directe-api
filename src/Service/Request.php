@@ -1,64 +1,70 @@
 <?php
 /*
- * Ce fichier fait partie du ecole-directe-api.
+ * Ce fichier fait partie du Studoo
  *
- * (c) redbull
+ * @author Benoit Foujols
  *
  * Pour les informations complètes sur les droits d'auteur et la licence,
  * veuillez consulter le fichier LICENSE qui a été distribué avec ce code source.
  */
 
-
 namespace Studoo\Api\EcoleDirecte\Service;
 
+use Psr\Http\Message\ResponseInterface;
+
+/**
+ * Traitement de la réponse
+ * @package Studoo\Api\EcoleDirecte\Service
+ */
 class Request
 {
-    private string $token;
-    private string $base_path;
+    private string $basePath;
     private string $version;
-    private string $client_id;
-    private string $client_secret;
     private int $timeout;
-    private int $connect_timeout;
+    private int $connectTimeout;
     private bool $verify;
     private bool $debug;
     private array $headers;
 
-    public function __construct(bool $token = false, array $config = [])
+    public function __construct(array $config = [])
     {
-        $this->token = $token;
-        $this->base_path = $config['base_path'];
+        $this->basePath = $config['base_path'];
         $this->version = $config['version'];
-        $this->client_id = $config['client_id'];
-        $this->client_secret = $config['client_secret'];
         $this->timeout = $config['timeout'];
-        $this->connect_timeout = $config['connect_timeout'];
+        $this->connectTimeout = $config['connect_timeout'];
         $this->verify = $config['verify'];
         $this->debug = $config['debug'];
         $this->headers = $config['headers'];
     }
 
     /**
-     * @param string $methode
-     * @param string $path
-     * @param array $query
-     * @return array
+     * Requete vers l'API
+     * @param string $methode Method of the request (GET, POST, PUT, DELETE)
+     * @param string $path Path of the request (ex: 'v3/eleves/123456789')
+     * @param array $query Query of the request (ex: ['body' => 'data=', 'headers' => ['Content-Type' => 'text/plain']])
+     * @return ResponseInterface
      * @throws \GuzzleHttp\Exception\GuzzleException
      * @throws \JsonException
      */
-    public function query(string $methode, string $path, array $query): array
+    public function query(
+        string $methode,
+        string $path,
+        array  $query = ['body' => 'data=',
+            'headers' => [
+                'Content-Type' => 'text/plain',
+            ]
+        ]
+    ): ResponseInterface
     {
         $client = new \GuzzleHttp\Client([
-            'base_uri' => $this->base_path . '/' . $this->version . '/',
+            'base_uri' => $this->basePath . '/' . $this->version . '/',
             'timeout' => $this->timeout,
-            'connect_timeout' => $this->connect_timeout,
+            'connect_timeout' => $this->connectTimeout,
             'verify' => $this->verify,
             'debug' => $this->debug,
             'headers' => $this->headers,
         ]);
 
-        $response = $client->request($methode, $path, $query);
-
-        return json_decode($response->getBody()->getContents(), true, 512, JSON_THROW_ON_ERROR);
+        return $client->request($methode, $path, $query);
     }
 }

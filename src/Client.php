@@ -2,7 +2,7 @@
 /*
  * Ce fichier fait partie du Studoo
  *
- * (c) Benoit Foujols
+ * @author Benoit Foujols
  *
  * Pour les informations complètes sur les droits d'auteur et la licence,
  * veuillez consulter le fichier LICENSE qui a été distribué avec ce code source.
@@ -13,11 +13,10 @@ namespace Studoo\Api\EcoleDirecte;
 
 use Studoo\Api\EcoleDirecte\Entity\Login;
 use Studoo\Api\EcoleDirecte\Exception\InvalidCredentialsException;
-use Studoo\Api\EcoleDirecte\Service\Request;
-use Studoo\Api\EcoleDirecte\Service\Response;
+use Studoo\Api\EcoleDirecte\Query\RunQuery;
 
 /**
- * The Studoo EcoleDirecte API Client
+ * API Client pour communiquer avec EcoleDirecte
  * @package Studoo\Api\EcoleDirecte
  */
 class Client
@@ -48,37 +47,24 @@ class Client
     }
 
     /**
-     * Returns Login containing the token
-     * @return Login
+     * Accès à l'API EcoleDirecte avec les identifiants de l'utilisateur
+     * Retourne un objet Login
+     * @return object
      * @throws \GuzzleHttp\Exception\GuzzleException
      * @throws \JsonException
      * @throws InvalidCredentialsException
      */
-    public function fetchAccessToken(): Login
+    public function fetchAccessToken(): object
     {
-
-        $data = new Request(config: $this->config);
-        $data = $data->query(methode: 'POST', path: 'login.awp', query: [
-            'body' => 'data='. json_encode([
-                    'identifiant' => $this->config['client_id'],
-                    'motdepasse' => $this->config['client_secret']
-                ], JSON_THROW_ON_ERROR),
-            'headers' => [
-                'Content-Type' => 'text/plain',
-            ],
+        $token = new RunQuery("login", $this->config);
+        return $token->run([
+            'identifiant' => $this->config['client_id'],
+            'motdepasse' => $this->config['client_secret']
         ]);
-
-        if ($data['code'] === 200) {
-            $this->login = new Login($data['token']);
-        } else {
-            throw new InvalidCredentialsException();
-        }
-
-        return $this->login;
     }
 
     /**
-     * Returns the library version
+     * Retourne la version de la librairie
      * @return string
      */
     public function getLibVerion(): string

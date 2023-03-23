@@ -15,5 +15,5 @@ jobs:
         uses: php-actions/phpunit@v3
         with:
           bootstrap: vendor/autoload.php
-          configuration: phpunit.xml
+          configuration: phpunit.xml.dist
           php_version: "8.1"

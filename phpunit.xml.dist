@@ -14,7 +14,7 @@
 
     <testsuites>
         <testsuite name="Studoo Api Ecole Directe">
-            <directory>./Tests/</directory>
+            <directory>./tests/</directory>
         </testsuite>
     </testsuites>
 
@@ -23,8 +23,8 @@
             <directory>./</directory>
         </include>
         <exclude>
-            <directory>./Resources</directory>
-            <directory>./Tests</directory>
+            <directory>./examples</directory>
+            <directory>./tests</directory>
             <directory>./vendor</directory>
         </exclude>
     </coverage>

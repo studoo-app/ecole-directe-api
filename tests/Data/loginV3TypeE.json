@@ -1,0 +1,343 @@
+{
+  "code": 200,
+  "token": "616a64474e4441795a334d726131525a5647314e524556495430453463544e7653314275576c5a6d4f545a74616b7034626c68686332354d5a4446704d5568355a6a426d596b6f344d55787554454a690d0a6555525261544d7257575a585157303551554a7461334e726448634e436c5a73536c566e4e30463452474a6f4e6a524f526b38335747356154556c4952584a4b63544e304d46527365444a45544870470d0a5355397a4e473954526d4a6a517a6c6f55567069593256585530706e517a6c354d303175544570574d6d3546526d6c4f596a566c566d777a4451706e53314a304d6e5a474b7a526f52466875637a63790d0a656d567a546e63765644564c5746524a51566f724e31466a4e314a6e5a45646863564e504d6b357164464a6f554764434e6d38795448644862557778616974705a45524c5633453156334a45536e4a700d0a5255464e5577304b526b6c426231526e556c5630576e4a724c32564b536c55764e4668735a57683562316c334d32466d61453973636a5a4957445a526155744d556b4e76536b35764b314258523035760d0a57477043566e4a36543278575230746e516b5279616e5972526b34784e32465963576f4e436e56325a465270656e566e55335a6e613035515154684f645778614b7a46444d554577566b46334e6b46310d0a527a677256576c364d4868744d456b7a4d6b55796447466b546d784b6157677659325a33546a4a685130683255304a614d5656344e486c32536d74336447357144517052646d4e59575646495746566e0d0a5369737a4c306c4261546c52556c527856305a75613068554c32684e596a6c785a6b597664575a7462587046566e4650625735735448464359556848596b5a6a56544e36535664614d6d396a4e4778490d0a6230646d4f5668434f5531566377304b634842435a6c6f776345314d5a46647551306c6b6258704f65485679566d703556477772526e6c544e473946656a424a4d445a465648564e6330747a4d57354d0d0a545652695a5555314d4746464b334a355a6d4a784b314a3262564e364f574e554c7a566e634749335745304e436c49784e47393456576857556e4d7753574535526b684f6248677855315134593235740d0a57475a58516b4a7554486c544e3035565a6e523651554e4256793971646a64354c334a755756644b5231527456584a47613274315758524c5a5864444d454678616c646f5347395244516f77575563720d0a5233424a5357314e564770614e5735754c30747554446c6b566b4a6b65544d7a63574a366557706c634851764e45785a55485a61576a644a53306c5254584a4f546b70425557523659586831526a644c0d0a4e6c5a355158497a4d6d5a4b59585670544846786341304b516a56304b316844596b5a74536d68304c30463052454e5256324e5a636c51345357524462466873616b526a5a4864704d58684e575752590d0a5445787653555a5364335655626e4246566a5a7a4b305a425631704355573148625731305245684365444e50566c6f345957734e436b7455637a6c6d6348426f55555259616e4245546e6832524851760d0a5a475a554d6c686a5a324e525932706a634339315954466d526b56596357526b64336c4c52455a724d33567863477858596c6b79516e6873513170435444644563326335626a644a64586869616a6c4e0d0a44516f776131683354306772625449305455357761445a6c61325a4d4d6c6b3561326f7a536d74465458647a62565a6d4e6a5a5556585a4d516b3978636e46525656687056554a5252697379616d524d0d0a59564236616c70435579387a6444424b55566c3553573535556c466c5641304b513152504e303153596c5a4d546e64794f466b316279394a536a5647517a42565558427a654852785630566f5a31467a0d0a516e56494e4746524e4668744e6a6831636c517756446c6d5643744362334e76534842445a57464b6246427654564e7853574632526b4d7954586f4e436d30356357646e5558523664554a44646d6c750d0a64475a6a61486c6b5a6d706c524442784f5746424e6b52435a55737a6230787965566472566e684c634568744d577056556e42595a326c32545870475357464f516939614e6a567455474a6851564a700d0a626d686964484e734451703653314d7a4d456c465547524d5230356e525756584d33683162474a4355465a48643142444f464a4b54464a48526d34795458413553325a72636e647065566f32566c564d0d0a5a576c584d6d4e6853457834516c524e595756694d6e4e505a48564c6553744856575a695367304b",
+  "message": "",
+  "data": {
+    "changementMDP": false,
+    "accounts": [
+      {
+        "idLogin": 1234567,
+        "id": 1234,
+        "uid": "",
+        "identifiant": "monid",
+        "typeCompte": "E",
+        "codeOgec": "4578963M",
+        "main": true,
+        "lastConnexion": "2023-03-24 09:17",
+        "civilite": "",
+        "prenom": "monprenom",
+        "particule": "",
+        "nom": "MONNOM",
+        "email": "monmail@gmail.com",
+        "anneeScolaireCourante": "2022-2023",
+        "nomEtablissement": "mon etablissement",
+        "logoEtablissement": "\\\\FTP01\\import\\4578963M\\MONTREUIL165.png",
+        "couleurAgendaEtablissement": "#bf00ff",
+        "dicoEnLigneLeRobert": true,
+        "socketToken": "+csbdGb06vGZ3Hx6+6yXpI9X1W6yVNjl1a3C9A8LsefLtA07SRAPUfdiasiGK4n4Q+4yI7vvc5TUrTDcQ==",
+        "modules": [
+          {
+            "code": "CANTINE_BARCODE",
+            "enable": false,
+            "ordre": 1,
+            "badge": 0,
+            "params": {}
+          },
+          {
+            "code": "VIE_SCOLAIRE",
+            "enable": true,
+            "ordre": 10,
+            "badge": 0,
+            "params": {}
+          },
+          {
+            "code": "VIE_DE_LA_CLASSE",
+            "enable": true,
+            "ordre": 20,
+            "badge": 0,
+            "params": {}
+          },
+          {
+            "code": "NOTES",
+            "enable": true,
+            "ordre": 30,
+            "badge": 0,
+            "params": {}
+          },
+          {
+            "code": "CLOUD",
+            "enable": false,
+            "ordre": 90,
+            "badge": 0,
+            "params": {}
+          },
+          {
+            "code": "MESSAGERIE",
+            "enable": true,
+            "ordre": 40,
+            "badge": 0,
+            "params": {
+              "isActif": "1",
+              "canParentsLireMessagesEnfants": "1",
+              "destAdmin": "1",
+              "destEleve": "0",
+              "destFamille": "0",
+              "destProf": "1",
+              "destEspTravail": "0",
+              "disabledNotification": "0",
+              "notificationEmailEtablissement": "1",
+              "choixMailNotification": "0",
+              "autreMailNotification": "",
+              "mailPro": "",
+              "mailPerso": "monmail@gmail.com",
+              "messagerieApiVersion": "v3",
+              "blackListProfActive": "0",
+              "estEnBlackList": "0",
+              "afficherToutesLesClasses": "0"
+            }
+          },
+          {
+            "code": "EDT",
+            "enable": true,
+            "ordre": 50,
+            "badge": 0,
+            "params": {}
+          },
+          {
+            "code": "DOCUMENTS_ELEVE",
+            "enable": true,
+            "ordre": 77,
+            "badge": 0,
+            "params": {
+              "DocumentsNotesActif": "0",
+              "DocumentsVSActif": "1",
+              "DocumentsAdministratifActif": "1"
+            }
+          },
+          {
+            "code": "CAHIER_DE_TEXTES",
+            "enable": true,
+            "ordre": 60,
+            "badge": 0,
+            "params": {
+              "compteRenduSeance": "1",
+              "compteRenduSeancePrevisionnel": "0",
+              "isCDTPrimaire": "0"
+            }
+          },
+          {
+            "code": "MANUELS_SCOLAIRES",
+            "enable": true,
+            "ordre": 62,
+            "badge": 0,
+            "params": {}
+          },
+          {
+            "code": "QCM",
+            "enable": true,
+            "ordre": 65,
+            "badge": 0,
+            "params": {}
+          },
+          {
+            "code": "RESERVATIONS",
+            "enable": false,
+            "ordre": 80,
+            "badge": 0,
+            "params": {
+              "regime": "Externe",
+              "repasmidi_1": "0",
+              "repassoir_1": "0",
+              "repasmidi_2": "0",
+              "repassoir_2": "0",
+              "repasmidi_3": "0",
+              "repassoir_3": "0",
+              "repasmidi_4": "0",
+              "repassoir_4": "0",
+              "repasmidi_5": "0",
+              "repassoir_5": "0",
+              "repasmidi_6": "0",
+              "repassoir_6": "0",
+              "repasmidi_7": "0",
+              "repassoir_7": "0"
+            }
+          },
+          {
+            "code": "COMMANDE_PASSAGE",
+            "enable": false,
+            "ordre": 81,
+            "badge": 0,
+            "params": {
+              "affichageMenuSeul": "1"
+            }
+          },
+          {
+            "code": "CARNET_CORRESPONDANCE",
+            "enable": true,
+            "ordre": 70,
+            "badge": 0,
+            "params": {}
+          },
+          {
+            "code": "ESIDOC",
+            "enable": false,
+            "ordre": 110,
+            "badge": 0,
+            "params": {}
+          },
+          {
+            "code": "EDUNAO",
+            "enable": false,
+            "ordre": 100,
+            "badge": 0,
+            "params": {}
+          },
+          {
+            "code": "CATER",
+            "enable": false,
+            "ordre": 95,
+            "badge": 0,
+            "params": {}
+          },
+          {
+            "code": "ARD",
+            "enable": false,
+            "ordre": 120,
+            "badge": 0,
+            "params": {}
+          },
+          {
+            "code": "PEARLTREES",
+            "enable": true,
+            "ordre": 170,
+            "badge": 0,
+            "params": {
+              "url": "https%3A%2F%2Fwww%2Epearltrees%2Ecom%2Fs%2Fedu%2Fauth%2F4578963M",
+              "rne": "4578963M"
+            }
+          },
+          {
+            "code": "EDUMALIN",
+            "enable": false,
+            "ordre": 171,
+            "badge": 0,
+            "params": {}
+          },
+          {
+            "code": "SUIVI_STAGE",
+            "enable": false,
+            "ordre": 75,
+            "badge": 0,
+            "params": {}
+          },
+          {
+            "code": "CLICKNPLAY",
+            "enable": false,
+            "ordre": 171,
+            "badge": 0,
+            "params": {}
+          },
+          {
+            "code": "VOLTAIRE",
+            "enable": false,
+            "ordre": 175,
+            "badge": 0,
+            "params": {}
+          },
+          {
+            "code": "ONISEPSERVICES",
+            "enable": false,
+            "ordre": 172,
+            "badge": 0,
+            "params": {}
+          },
+          {
+            "code": "AVENRIA",
+            "enable": false,
+            "ordre": 173,
+            "badge": 0,
+            "params": {}
+          },
+          {
+            "code": "SACOCHE",
+            "enable": false,
+            "ordre": 174,
+            "badge": 0,
+            "params": {}
+          },
+          {
+            "code": "ETUDIANT",
+            "enable": false,
+            "ordre": 176,
+            "badge": 0,
+            "params": {}
+          },
+          {
+            "code": "IJBOX",
+            "enable": false,
+            "ordre": 177,
+            "badge": 0,
+            "params": {}
+          },
+          {
+            "code": "FUTURNESS",
+            "enable": false,
+            "ordre": 178,
+            "badge": 0,
+            "params": {}
+          },
+          {
+            "code": "IMPALA",
+            "enable": false,
+            "ordre": 179,
+            "badge": 0,
+            "params": {}
+          },
+          {
+            "code": "POPLAB",
+            "enable": false,
+            "ordre": 180,
+            "badge": 0,
+            "params": {}
+          },
+          {
+            "code": "EDUMEDIA",
+            "enable": true,
+            "ordre": 181,
+            "badge": 0,
+            "params": {
+              "url": "https%3A%2F%2Fwww%2Eedumedia%2Dsciences%2Ecom%2Ffr%3Fecoledirecte%3Dtrue",
+              "rne": "0931796X"
+            }
+          },
+          {
+            "code": "SITUATION_FINANCIERE",
+            "enable": false,
+            "ordre": 92,
+            "badge": 0,
+            "params": {}
+          }
+        ],
+        "parametresIndividuels": {
+          "lsuPoilDansLaMainBorne1": "",
+          "lsuPoilDansLaMainBorne2": "",
+          "lsuPoilDansLaMainBorne3": "",
+          "modeCalculLSU": "",
+          "isQrcode": false,
+          "accessibiliteVisuelle": false,
+          "checkAuthentificationSecure": false,
+          "checkFetS": false,
+          "typeSaisieNotesDefaut": "",
+          "nbJoursMaxRenduDevoirCDT": "",
+          "typeViewCDTDefaut": ""
+        },
+        "profile": {
+          "sexe": "M",
+          "infoEDT": "",
+          "nomEtablissement": "mon etablissement",
+          "idEtablissement": "0",
+          "rneEtablissement": "0931796X",
+          "telPortable": "0123456789",
+          "idReelEtab": "2",
+          "photo": "//doc1.ecoledirecte.com/.jpg",
+          "classe": {
+            "id": 102,
+            "code": "2TSSIOSLAM",
+            "libelle": "2TS SIO SLAM",
+            "estNote": 1
+          }
+        }
+      }
+    ]
+  }
+}

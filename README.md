@@ -8,7 +8,7 @@ Utilisation de la librairie PHP pour l'API Ecole Directe (non officielle)
 ## Installation
 
 ```php
-composer require ecole-directe-api
+composer require studoo/ecole-directe-api
 ```
 
 ## Utilisation

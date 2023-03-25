@@ -71,6 +71,7 @@ class RunQuery
             throw new Exception('Error');
         }
 
+        $this->apiModel->setrawSource($response);
         return $this->buildModel($response);
     }
 

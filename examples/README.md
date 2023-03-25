@@ -11,3 +11,9 @@ Pour lancer l'exemple de code, lancez la commande suivante dans le dossier de l'
 ```bash
 php -S localhost:8000
 ```
+
+Fichier .env :
+```dotenv
+CLIENT_ID=xxxx
+CLIENT_SECRET=xxxx
+```

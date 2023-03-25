@@ -48,18 +48,18 @@ class Query
     }
 
     /**
-     * @return array
+     * @return ResponseInterface
      */
-    public function getRawSource(): array
+    public function getRawSource(): ResponseInterface
     {
         return $this->rawSource;
     }
 
     /**
-     * @param array $rawSource
+     * @param ResponseInterface $rawSource
      * @return LoginQuery
      */
-    public function setRawSource(array $rawSource): LoginQuery
+    public function setRawSource(ResponseInterface $rawSource): LoginQuery
     {
         $this->rawSource = $rawSource;
         return $this;

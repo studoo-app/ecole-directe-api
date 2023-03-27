@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1679928517">
-  <project timestamp="1679928517">
+<coverage generated="1679929902">
+  <project timestamp="1679929902">
     <file name="/Users/redbull/Projects/studoo/ecole-directe-api/src/Client.php">
       <class name="Studoo\Api\EcoleDirecte\Client" namespace="global">
         <metrics complexity="4" methods="4" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="35" coveredstatements="0" elements="39" coveredelements="0"/>

@@ -5,26 +5,15 @@
 
 Utilisation de la librairie PHP pour l'API Ecole Directe (non officielle)
 
-## Installation
+## Installation de la librairie
 
 ```php
 composer require studoo/ecole-directe-api
 ```
 
-## Utilisation
+## Utilisation de la librairie
 
-Basic Authentification via le login et password fournis par Ecole Directe \
-Mettre les variables d'environnement CLIENT_ID et CLIENT_SECRET via le fichier .env (dotenv)
-
-```php
-use EcoleDirecte\EcoleDirecte;
-
-$client = new Client([
-    "client_id" => $_ENV["CLIENT_ID"],
-    "client_secret" => $_ENV["CLIENT_SECRET"],
-]);
-`
-```
+Des exemples d'utilisation sont disponibles dans le dossier `examples`.
 
 ## Documentation
 

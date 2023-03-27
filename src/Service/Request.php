@@ -49,13 +49,15 @@ class Request
     public function query(
         string $methode,
         string $path,
-        array  $query = ['body' => 'data=',
+        array  $query = ['body' => 'data={}',
             'headers' => [
                 'Content-Type' => 'text/plain',
             ]
         ]
     ): ResponseInterface
     {
+        $this->headers = array_merge($this->headers, $query['headers']);
+
         $client = new \GuzzleHttp\Client([
             'base_uri' => $this->basePath . '/' . $this->version . '/',
             'timeout' => $this->timeout,

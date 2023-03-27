@@ -41,7 +41,7 @@ class Client
             'headers' => [
                 'User-Agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36',
                 'Accept' => 'application/json',
-                'Content-Type' => 'application/json',
+                'Content-Type' => 'text/plain',
             ],
         ], $config);
     }
@@ -57,11 +57,24 @@ class Client
     public function fetchAccessToken(): object
     {
         $token = new RunQuery("login", $this->config);
-        $this->login = $token->run([
+        $this->login = $token->run(body: [
             'identifiant' => $this->config['client_id'],
             'motdepasse' => $this->config['client_secret']
         ]);
         return $this->login;
+    }
+
+    public function getVieScolaire(int $idEtudiant): object
+    {
+        return (new RunQuery("viescolaire", $this->config))->run(headers: [
+            'X-Token' => $this->login->getToken(),
+            'Content-Type' => 'text/plain'
+        ], param: [
+            'pathID' => [
+                'ID' => $idEtudiant
+            ]
+        ]
+        );
     }
 
     /**

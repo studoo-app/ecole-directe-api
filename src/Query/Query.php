@@ -38,6 +38,14 @@ class Query
         return $this->path;
     }
 
+    public function setParamToPath(array $pathID): Query
+    {
+        foreach ($pathID as $search => $replace) {
+            $this->path = str_replace("<{$search}>", $replace, $this->path);
+        }
+        return $this;
+    }
+
     /**
      * retourne les paramètres de la requête
      * @return array
@@ -57,9 +65,9 @@ class Query
 
     /**
      * @param ResponseInterface $rawSource
-     * @return LoginQuery
+     * @return Query
      */
-    public function setRawSource(ResponseInterface $rawSource): LoginQuery
+    public function setRawSource(ResponseInterface $rawSource): Query
     {
         $this->rawSource = $rawSource;
         return $this;

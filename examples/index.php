@@ -13,5 +13,7 @@ $client = new Client([
     "client_secret" => $_ENV["CLIENT_SECRET"],
 ]);
 
-echo "Token:{$client->fetchAccessToken()->getToken()}";
+echo "Token: {$client->fetchAccessToken()->getToken()} <br>";
+echo "ID: {} <br>";
+var_dump($client->getVieScolaire("7006"));
 

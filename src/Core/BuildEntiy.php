@@ -15,7 +15,7 @@ namespace Studoo\Api\EcoleDirecte\Core;
  * Traitement d'une entité
  * @package Studoo\Api\EcoleDirecte\Core
  */
-class BuildEntiy
+trait BuildEntiy
 {
     /**
      * Rempli l'entité avec les données d'un tableau

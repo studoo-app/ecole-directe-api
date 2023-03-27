@@ -12,13 +12,20 @@
 namespace Studoo\Api\EcoleDirecte\Query;
 
 use Psr\Http\Message\ResponseInterface;
+use Studoo\Api\EcoleDirecte\Core\BuildEntiy;
 
 class Query
 {
+    use BuildEntiy;
+
     protected string $methode;
+
     protected string $path;
+
     protected array $query = [];
+
     protected ResponseInterface $rawSource;
+
 
     /**
      * Retourne la méthode de la requête

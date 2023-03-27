@@ -25,7 +25,7 @@ trait DispacherQuery
     public function dispacherForModel(string $model) : object
     {
         $api = [
-            "login" => LoginQuery::class,
+            "login"       => LoginQuery::class,
             "viescolaire" => ViescolaireQuery::class
         ];
 

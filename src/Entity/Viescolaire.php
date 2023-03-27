@@ -31,6 +31,7 @@ class Viescolaire
      */
     private array $parametrage;
 
+
     /**
      * Retourne la liste des absences et retards
      * @return array

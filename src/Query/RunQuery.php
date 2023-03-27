@@ -26,7 +26,9 @@ class RunQuery
     use DispacherQuery;
 
     private object $apiModel;
+
     private array $config;
+
 
     /**
      * BuildQuery constructor.

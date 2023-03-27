@@ -10,8 +10,6 @@
 
 namespace Studoo\Api\EcoleDirecte\Query;
 
-use Studoo\Api\EcoleDirecte\Core\BuildEntiy;
-use Studoo\Api\EcoleDirecte\Entity\Login;
 use Studoo\Api\EcoleDirecte\Entity\Viescolaire;
 
 /**
@@ -36,8 +34,8 @@ class ViescolaireQuery extends Query implements EntityQueryInterface
     {
         $vieScolaire = new Viescolaire();
 
-        if (isset($data['data'])) {
-            BuildEntiy::hasPacked($vieScolaire, $data['data']);
+        if (isset($data['data']) === true) {
+            self::hasPacked($vieScolaire, $data['data']);
         } else {
             // TODO: Throw an exception
             throw new \Exception('Aucune donnée n\'a été trouvée');

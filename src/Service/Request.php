@@ -19,12 +19,19 @@ use Psr\Http\Message\ResponseInterface;
 class Request
 {
     private string $basePath;
+
     private string $version;
+
     private int $timeout;
+
     private int $connectTimeout;
+
     private bool $verify;
+
     private bool $debug;
+
     private array $headers;
+
 
     public function __construct(array $config = [])
     {
@@ -49,7 +56,8 @@ class Request
     public function query(
         string $methode,
         string $path,
-        array  $query = ['body' => 'data={}',
+        array  $query = [
+            'body'    => 'data={}',
             'headers' => [
                 'Content-Type' => 'text/plain',
             ]
@@ -59,12 +67,12 @@ class Request
         $this->headers = array_merge($this->headers, $query['headers']);
 
         $client = new \GuzzleHttp\Client([
-            'base_uri' => $this->basePath . '/' . $this->version . '/',
-            'timeout' => $this->timeout,
+            'base_uri'        => $this->basePath . '/' . $this->version . '/',
+            'timeout'         => $this->timeout,
             'connect_timeout' => $this->connectTimeout,
-            'verify' => $this->verify,
-            'debug' => $this->debug,
-            'headers' => $this->headers,
+            'verify'          => $this->verify,
+            'debug'           => $this->debug,
+            'headers'         => $this->headers,
         ]);
 
         return $client->request($methode, $path, $query);

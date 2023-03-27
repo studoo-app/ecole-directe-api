@@ -27,8 +27,16 @@ class Client
 
     private const API_VERSION = 'v3';
 
-    private array $config = [];
+    /**
+     * Configuration de l'API
+     * @var array
+     */
+    private array $config;
 
+    /**
+     * Objet Login contenant les informations de connexion et de l'utilisateur
+     * @var Login
+     */
     private Login $login;
 
 
@@ -49,7 +57,9 @@ class Client
                 'Content-Type' => 'text/plain',
             ],
         ], $config);
-    }
+
+
+    } //end __construct()
 
     /**
      * Accès à l'API EcoleDirecte avec les identifiants de l'utilisateur

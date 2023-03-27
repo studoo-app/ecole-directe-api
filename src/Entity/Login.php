@@ -59,10 +59,15 @@ class Login
     private string $email;
 
     /**
-     * Nom et Prenom de l'utilisateur
+     * Nom et de l'utilisateur
      * @var string
      */
     private string $nom;
+
+    /**
+     * Prenom de l'utilisateur
+     * @var string
+     */
     private string $prenom;
 
     /**
@@ -82,7 +87,6 @@ class Login
      * @var array
      */
     private array $profile;
-
 
     public function getToken(): string
     {

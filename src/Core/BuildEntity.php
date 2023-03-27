@@ -15,7 +15,7 @@ namespace Studoo\Api\EcoleDirecte\Core;
  * Traitement d'une entité
  * @package Studoo\Api\EcoleDirecte\Core
  */
-trait BuildEntiy
+class BuildEntity
 {
     /**
      * Rempli l'entité avec les données d'un tableau
@@ -26,16 +26,12 @@ trait BuildEntiy
     public static function hasPacked(object $entity, array $data): object
     {
         foreach ($data as $key => $value) {
-            $method = "set{ucfirst($key)}";
+            $method = "set" . ucfirst($key);
             if (method_exists($entity, $method) === true) {
                 $entity->$method($value);
             }
         }
 
         return $entity;
-
     }
-    //end hasPacked()
-
-
 }

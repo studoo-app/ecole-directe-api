@@ -10,6 +10,8 @@
 
 namespace Studoo\Api\EcoleDirecte\Service;
 
+use GuzzleHttp\Client;
+use GuzzleHttp\Exception\GuzzleException;
 use Psr\Http\Message\ResponseInterface;
 
 /**
@@ -45,13 +47,12 @@ class Request
     }
 
     /**
-     * Requete vers l'API
+     * Request vers l'API
      * @param string $methode Method of the request (GET, POST, PUT, DELETE)
      * @param string $path Path of the request (ex: 'v3/eleves/123456789')
      * @param array $query Query of the request (ex: ['body' => 'data=', 'headers' => ['Content-Type' => 'text/plain']])
      * @return ResponseInterface
-     * @throws \GuzzleHttp\Exception\GuzzleException
-     * @throws \JsonException
+     * @throws GuzzleException
      */
     public function query(
         string $methode,
@@ -62,11 +63,10 @@ class Request
                 'Content-Type' => 'text/plain',
             ]
         ]
-    ): ResponseInterface
-    {
+    ): ResponseInterface {
         $this->headers = array_merge($this->headers, $query['headers']);
 
-        $client = new \GuzzleHttp\Client([
+        $client = new Client([
             'base_uri'        => $this->basePath . '/' . $this->version . '/',
             'timeout'         => $this->timeout,
             'connect_timeout' => $this->connectTimeout,

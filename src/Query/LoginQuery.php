@@ -10,8 +10,9 @@
 
 namespace Studoo\Api\EcoleDirecte\Query;
 
-use Exception;
+use Studoo\Api\EcoleDirecte\Core\BuildEntity;
 use Studoo\Api\EcoleDirecte\Entity\Login;
+use Studoo\Api\EcoleDirecte\Exception\NotDataResponseException;
 
 /**
  * Traitement de la requête de connexion par requête API EcoleDirecte
@@ -33,6 +34,7 @@ class LoginQuery extends Query implements EntityQueryInterface
      * Retourne l'entité de la requête API
      * @param array $data
      * @return object
+     * @throws NotDataResponseException
      */
     public function buildEntity(array $data): object
     {
@@ -40,10 +42,9 @@ class LoginQuery extends Query implements EntityQueryInterface
         $login->setToken($data['token']);
 
         if (isset($data['data']['accounts'][0]) === true) {
-            self::hasPacked($login, $data['data']['accounts'][0]);
+            BuildEntity::hasPacked($login, $data['data']['accounts'][0]);
         } else {
-            // TODO: Throw an exception
-            throw new Exception('Aucune donnée n\'a été trouvée');
+            throw new NotDataResponseException();
         }
 
         return $login;

@@ -10,7 +10,9 @@
 
 namespace Studoo\Api\EcoleDirecte\Query;
 
+use Studoo\Api\EcoleDirecte\Core\BuildEntity;
 use Studoo\Api\EcoleDirecte\Entity\Viescolaire;
+use Studoo\Api\EcoleDirecte\Exception\NotDataResponseException;
 
 /**
  * Traitement de la requête sur la vie scolaire par requête API EcoleDirecte
@@ -29,16 +31,16 @@ class ViescolaireQuery extends Query implements EntityQueryInterface
      * Retourne l'entité de la requête API
      * @param array $data
      * @return object
+     * @throws NotDataResponseException
      */
     public function buildEntity(array $data): object
     {
         $vieScolaire = new Viescolaire();
 
         if (isset($data['data']) === true) {
-            self::hasPacked($vieScolaire, $data['data']);
+            BuildEntity::hasPacked($vieScolaire, $data['data']);
         } else {
-            // TODO: Throw an exception
-            throw new \Exception('Aucune donnée n\'a été trouvée');
+            throw new NotDataResponseException();
         }
         return $vieScolaire;
     }

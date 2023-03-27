@@ -5,6 +5,7 @@
   "keywords": ["ecole-directe", "api", "client"],
   "homepage": "https://github.com/studoo-app/ecole-directe-api",
   "license": "MIT",
+  "minimum-stability": "dev",
   "authors": [
     {
       "name": "Benoit Foujols",

@@ -10,6 +10,7 @@
 
 namespace Studoo\Api\EcoleDirecte\Query;
 
+use Exception;
 use Studoo\Api\EcoleDirecte\Core\BuildEntiy;
 use Studoo\Api\EcoleDirecte\Entity\Login;
 
@@ -43,7 +44,7 @@ class LoginQuery extends Query implements EntityQueryInterface
             BuildEntiy::hasPacked($login, $data['data']['accounts'][0]);
         } else {
             // TODO: Throw an exception
-            throw new \Exception('Aucune donnée n\'a été trouvée');
+            throw new Exception('Aucune donnée n\'a été trouvée');
         }
 
         return $login;

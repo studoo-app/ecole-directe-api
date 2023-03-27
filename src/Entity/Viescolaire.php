@@ -13,13 +13,26 @@ namespace Studoo\Api\EcoleDirecte\Entity;
 
 class Viescolaire
 {
+    /**
+     * Liste d'absences et de retards
+     * @var array
+     */
     private array $absencesRetards;
 
+    /**
+     * Liste de sanctions et d'encouragements
+     * @var array
+     */
     private array $sanctionsEncouragements;
 
+    /**
+     * Paramétrage de l'application
+     * @var array
+     */
     private array $parametrage;
 
     /**
+     * Retourne la liste des absences et retards
      * @return array
      */
     public function getAbsencesRetards(): array
@@ -28,6 +41,7 @@ class Viescolaire
     }
 
     /**
+     * Définit la liste des absences et retards
      * @param array $absencesRetards
      * @return Viescolaire
      */
@@ -38,6 +52,7 @@ class Viescolaire
     }
 
     /**
+     * Retourne la liste des sanctions et encouragements
      * @return array
      */
     public function getSanctionsEncouragements(): array
@@ -46,6 +61,7 @@ class Viescolaire
     }
 
     /**
+     * Définit la liste des sanctions et encouragements
      * @param array $sanctionsEncouragements
      * @return Viescolaire
      */
@@ -56,6 +72,7 @@ class Viescolaire
     }
 
     /**
+     * Retourne le paramétrage de l'application
      * @return array
      */
     public function getParametrage(): array
@@ -64,6 +81,7 @@ class Viescolaire
     }
 
     /**
+     * Définit le paramétrage de l'application
      * @param array $parametrage
      * @return Viescolaire
      */

@@ -52,15 +52,16 @@ class Client
      * @return object
      * @throws \GuzzleHttp\Exception\GuzzleException
      * @throws \JsonException
-     * @throws InvalidCredentialsException
      */
     public function fetchAccessToken(): object
     {
         $token = new RunQuery("login", $this->config);
-        $this->login = $token->run(body: [
-            'identifiant' => $this->config['client_id'],
-            'motdepasse' => $this->config['client_secret']
-        ]);
+        return $this->login = $token->run(
+            body: [
+                'identifiant' => $this->config['client_id'],
+                'motdepasse' => $this->config['client_secret']
+            ]
+        );
         return $this->login;
     }
 
@@ -69,17 +70,20 @@ class Client
      * @return object
      * @throws \GuzzleHttp\Exception\GuzzleException
      * @throws \JsonException
+     * @throws \Exception
      */
     public function getVieScolaire(int $idEtudiant): object
     {
-        return (new RunQuery("viescolaire", $this->config))->run(headers: [
-            'X-Token' => $this->login->getToken(),
-            'Content-Type' => 'text/plain'
-        ], param: [
-            'pathID' => [
-                'ID' => $idEtudiant
+        return (new RunQuery("viescolaire", $this->config))->run(
+            headers: [
+                'X-Token' => $this->login->getToken(),
+                'Content-Type' => 'text/plain'
+            ],
+            param: [
+                'pathID' => [
+                    'ID' => $idEtudiant
+                ]
             ]
-        ]
         );
     }
 

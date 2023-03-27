@@ -26,14 +26,16 @@ trait BuildEntiy
     public static function hasPacked(object $entity, array $data): object
     {
         foreach ($data as $key => $value) {
-            $method = 'set' . ucfirst($key);
+            $method = "set{ucfirst($key)}";
             if (method_exists($entity, $method) === true) {
                 $entity->$method($value);
             }
         }
 
         return $entity;
-    } //end hasPacked()
+
+    }
+    //end hasPacked()
 
 
 }

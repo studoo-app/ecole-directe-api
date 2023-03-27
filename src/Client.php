@@ -64,6 +64,12 @@ class Client
         return $this->login;
     }
 
+    /**
+     * Retourne les informations de l'utilisateur sur sa vie scolaire
+     * @return object
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     * @throws \JsonException
+     */
     public function getVieScolaire(int $idEtudiant): object
     {
         return (new RunQuery("viescolaire", $this->config))->run(headers: [

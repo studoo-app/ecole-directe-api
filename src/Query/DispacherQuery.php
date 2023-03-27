@@ -10,6 +10,8 @@
 
 namespace Studoo\Api\EcoleDirecte\Query;
 
+use Studoo\Api\EcoleDirecte\Exception\InvalidModelException;
+
 /**
  * Cette classe permet de dispatcher les requêtes
  * @package Studoo\Api\EcoleDirecte\Query
@@ -20,7 +22,7 @@ trait DispacherQuery
      * Permet de dispatcher les requêtes et de retourner l'objet
      * @param string $model Nom du model de l'api
      * @return object Retourne l'objet de la requête
-     * @throws \Exception
+     * @throws InvalidModelException
      */
     public function dispacherForModel(string $model) : object
     {
@@ -30,10 +32,8 @@ trait DispacherQuery
         ];
 
         if (array_key_exists($model, $api)) {
-            return new $api[$model];
-        } else {
-            // TODO Personnaliser Exception
-            throw new \Exception("Model not found");
+            return new $api[$model]();
         }
+        throw new InvalidModelException();
     }
 }

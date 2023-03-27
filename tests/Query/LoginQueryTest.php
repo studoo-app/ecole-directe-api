@@ -2,8 +2,8 @@
 
 namespace API;
 
-use Studoo\Api\EcoleDirecte\Query\LoginQuery;
 use PHPUnit\Framework\TestCase;
+use Studoo\Api\EcoleDirecte\Query\LoginQuery;
 
 class LoginQueryTest extends TestCase
 {
@@ -13,7 +13,12 @@ class LoginQueryTest extends TestCase
     public function setUp(): void
     {
         $this->loginQuery = new LoginQuery();
-        $this->jsonContent = json_decode(file_get_contents(__DIR__ . '/../Data/loginV3TypeP.json'), true);
+        $this->jsonContent = json_decode(
+            file_get_contents(__DIR__ . '/../Data/loginV3TypeP.json'),
+            true,
+            512,
+            JSON_THROW_ON_ERROR
+        );
     }
 
     public function testGetQuery()

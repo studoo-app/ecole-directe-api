@@ -1,23 +1,19 @@
 <?php
 /*
- * Ce fichier fait partie du ecole-directe-api.
+ * Ce fichier fait partie du Studoo.
  *
- * (c) redbull
+ * (c) Benoit Foujols
  *
  * Pour les informations complètes sur les droits d'auteur et la licence,
  * veuillez consulter le fichier LICENSE qui a été distribué avec ce code source.
  */
 
-
 namespace Studoo\Api\EcoleDirecte\Query;
 
 use Psr\Http\Message\ResponseInterface;
-use Studoo\Api\EcoleDirecte\Core\BuildEntiy;
 
 class Query
 {
-    use BuildEntiy;
-
     protected string $methode;
 
     protected string $path;
@@ -48,13 +44,13 @@ class Query
     public function setParamToPath(array $pathID): Query
     {
         foreach ($pathID as $search => $replace) {
-            $this->path = str_replace("<{$search}>", $replace, $this->path);
+            $this->path = str_replace("<$search>", $replace, $this->path);
         }
         return $this;
     }
 
     /**
-     * retourne les paramètres de la requête
+     * Retourne les paramètres de la requête
      * @return array
      */
     public function getQuery(): array

@@ -11,8 +11,8 @@
 
 namespace Studoo\Api\EcoleDirecte;
 
-use GuzzleHttp\Exception\GuzzleException;
 use Studoo\Api\EcoleDirecte\Entity\Login;
+use Studoo\Api\EcoleDirecte\Exception\InvalidModelException;
 use Studoo\Api\EcoleDirecte\Query\RunQuery;
 
 /**
@@ -27,8 +27,16 @@ class Client
 
     private const API_VERSION = 'v3';
 
-    private array $config = [];
+    /**
+     * Configuration de l'API
+     * @var array
+     */
+    private array $config;
 
+    /**
+     * Objet Login contenant les informations de connexion et de l'utilisateur
+     * @var Login
+     */
     private Login $login;
 
 
@@ -50,13 +58,13 @@ class Client
             ],
         ], $config);
     }
+    //end __construct()
 
     /**
      * Accès à l'API EcoleDirecte avec les identifiants de l'utilisateur
      * Retourne un objet Login
      * @return object
-     * @throws \GuzzleHttp\Exception\GuzzleException
-     * @throws \JsonException
+     * @throws InvalidModelException
      */
     public function fetchAccessToken(): object
     {
@@ -73,8 +81,7 @@ class Client
      * Retourne les informations de l'utilisateur sur sa vie scolaire
      * @param int $idEtudiant Identifiant de l'étudiant
      * @return object
-     * @throws GuzzleException
-     * @throws \JsonException
+     * @throws InvalidModelException
      */
     public function getVieScolaire(int $idEtudiant): object
     {
@@ -99,5 +106,4 @@ class Client
     {
         return self::LIBVER;
     }
-
 }

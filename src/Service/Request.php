@@ -10,6 +10,8 @@
 
 namespace Studoo\Api\EcoleDirecte\Service;
 
+use GuzzleHttp\Client;
+use GuzzleHttp\Exception\GuzzleException;
 use Psr\Http\Message\ResponseInterface;
 
 /**
@@ -19,12 +21,19 @@ use Psr\Http\Message\ResponseInterface;
 class Request
 {
     private string $basePath;
+
     private string $version;
+
     private int $timeout;
+
     private int $connectTimeout;
+
     private bool $verify;
+
     private bool $debug;
+
     private array $headers;
+
 
     public function __construct(array $config = [])
     {
@@ -38,33 +47,32 @@ class Request
     }
 
     /**
-     * Requete vers l'API
+     * Request vers l'API
      * @param string $methode Method of the request (GET, POST, PUT, DELETE)
      * @param string $path Path of the request (ex: 'v3/eleves/123456789')
      * @param array $query Query of the request (ex: ['body' => 'data=', 'headers' => ['Content-Type' => 'text/plain']])
      * @return ResponseInterface
-     * @throws \GuzzleHttp\Exception\GuzzleException
-     * @throws \JsonException
+     * @throws GuzzleException
      */
     public function query(
         string $methode,
         string $path,
-        array  $query = ['body' => 'data={}',
+        array  $query = [
+            'body'    => 'data={}',
             'headers' => [
                 'Content-Type' => 'text/plain',
             ]
         ]
-    ): ResponseInterface
-    {
+    ): ResponseInterface {
         $this->headers = array_merge($this->headers, $query['headers']);
 
-        $client = new \GuzzleHttp\Client([
-            'base_uri' => $this->basePath . '/' . $this->version . '/',
-            'timeout' => $this->timeout,
+        $client = new Client([
+            'base_uri'        => $this->basePath . '/' . $this->version . '/',
+            'timeout'         => $this->timeout,
             'connect_timeout' => $this->connectTimeout,
-            'verify' => $this->verify,
-            'debug' => $this->debug,
-            'headers' => $this->headers,
+            'verify'          => $this->verify,
+            'debug'           => $this->debug,
+            'headers'         => $this->headers,
         ]);
 
         return $client->request($methode, $path, $query);

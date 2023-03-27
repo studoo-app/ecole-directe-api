@@ -11,10 +11,11 @@
 
 namespace Studoo\Api\EcoleDirecte\Query;
 
-use Exception;
 use GuzzleHttp\Exception\GuzzleException;
 use JsonException;
 use Psr\Http\Message\ResponseInterface;
+use Studoo\Api\EcoleDirecte\Exception\ErrorHttpStatusException;
+use Studoo\Api\EcoleDirecte\Exception\InvalidModelException;
 use Studoo\Api\EcoleDirecte\Service\Request;
 
 /**
@@ -34,12 +35,11 @@ class RunQuery
      * BuildQuery constructor.
      * @param string $model Nom d'appel API
      * @param array $config Configuration de l'API
-     * @throws Exception
+     * @throws InvalidModelException
      */
     public function __construct(string $model, array $config)
     {
         $finalModel = $this->dispacherForModel($model);
-        // TODO Mettre un try catch pour la gestion d'erreur
         $this->apiModel = new $finalModel();
         $this->config = $config;
     }
@@ -52,6 +52,7 @@ class RunQuery
      * @return object
      * @throws GuzzleException
      * @throws JsonException
+     * @throws ErrorHttpStatusException
      */
     public function run(
         array $body = [],
@@ -59,10 +60,11 @@ class RunQuery
             'Content-Type' => 'text/plain',
         ],
         array $param = []
-    ): object
-    {
+    ): object {
         // Add pathID to path ('pathID' => [])
-        (isset($param['pathID'])) ? $this->apiModel->setParamToPath($param['pathID']) : null;
+        if (isset($param['pathID'])) {
+            $this->apiModel->setParamToPath($param['pathID']);
+        }
         // Fix body si vide
         (isset($body)) ? $bodyReponse = json_encode($body, JSON_THROW_ON_ERROR) : $bodyReponse = "{}";
 
@@ -76,7 +78,7 @@ class RunQuery
         );
 
         if ($response->getStatusCode() !== 200) {
-            throw new Exception('Error');
+            throw new ErrorHttpStatusException();
         }
 
         $this->apiModel->setrawSource($response);

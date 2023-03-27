@@ -19,20 +19,21 @@ trait BuildEntiy
 {
     /**
      * Rempli l'entité avec les données d'un tableau
-     * @param object $entity
-     * @param array $data
+     * @param object $entity Classe de l'entité
+     * @param array $data Tableau de correspondance entre les données et les méthodes
      * @return object
      */
     public static function hasPacked(object $entity, array $data): object
     {
         foreach ($data as $key => $value) {
             $method = 'set' . ucfirst($key);
-            if (method_exists($entity, $method)) {
+            if (method_exists($entity, $method) === true) {
                 $entity->$method($value);
             }
         }
 
         return $entity;
-    }
+    } //end hasPacked()
+
 
 }

@@ -62,7 +62,6 @@ class Client
                 'motdepasse' => $this->config['client_secret']
             ]
         );
-        return $this->login;
     }
 
     /**

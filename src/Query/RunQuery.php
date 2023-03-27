@@ -62,9 +62,8 @@ class RunQuery
         // Add pathID to path ('pathID' => [])
         (isset($param['pathID'])) ? $this->apiModel->setParamToPath($param['pathID']) : null;
         // Fix body si vide
-        (isset($body) && count($body) > 0) ? $bodyReponse = json_encode($body, JSON_THROW_ON_ERROR) : $bodyReponse = "{}";
+        (isset($body)) ? $bodyReponse = json_encode($body, JSON_THROW_ON_ERROR) : $bodyReponse = "{}";
 
-        // TODO Faire une verif et merge de body
         $response = (new Request(config: $this->config))->query(
             methode: $this->apiModel->getMethode(),
             path: $this->apiModel->getPath(),

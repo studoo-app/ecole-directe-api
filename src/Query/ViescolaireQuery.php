@@ -10,23 +10,19 @@
 
 namespace Studoo\Api\EcoleDirecte\Query;
 
-use Exception;
-use Studoo\Api\EcoleDirecte\Entity\Login;
+use Studoo\Api\EcoleDirecte\Entity\Viescolaire;
 
 /**
- * Traitement de la requête de connexion par requête API EcoleDirecte
+ * Traitement de la requête sur la vie scolaire par requête API EcoleDirecte
  * @package Studoo\Api\EcoleDirecte\Query
  */
-class LoginQuery extends Query implements EntityQueryInterface
+class ViescolaireQuery extends Query implements EntityQueryInterface
 {
     public function __construct()
     {
         $this->methode = 'POST';
-        $this->path = 'login.awp';
-        $this->query = [
-            'identifiant' => '',
-            'motdepasse' => ''
-        ];
+        $this->path = 'eleves/<ID>/viescolaire.awp?verbe=get';
+        $this->query = [];
     }
 
     /**
@@ -36,16 +32,14 @@ class LoginQuery extends Query implements EntityQueryInterface
      */
     public function buildEntity(array $data): object
     {
-        $login = new Login();
-        $login->setToken($data['token']);
+        $vieScolaire = new Viescolaire();
 
-        if (isset($data['data']['accounts'][0]) === true) {
-            self::hasPacked($login, $data['data']['accounts'][0]);
+        if (isset($data['data']) === true) {
+            self::hasPacked($vieScolaire, $data['data']);
         } else {
             // TODO: Throw an exception
-            throw new Exception('Aucune donnée n\'a été trouvée');
+            throw new \Exception('Aucune donnée n\'a été trouvée');
         }
-
-        return $login;
+        return $vieScolaire;
     }
 }

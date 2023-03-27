@@ -4,4 +4,5 @@ CHANGELOG
 0.1.0
 ---
 
-* Initial release of the package.
+* Add API Login
+* Add API Vie Scolaire

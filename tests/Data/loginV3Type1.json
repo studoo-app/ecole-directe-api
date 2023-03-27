@@ -1,0 +1,553 @@
+{
+  "code": 200,
+  "token": "azertyuiop",
+  "message": "",
+  "data": {
+    "changementMDP": false,
+    "accounts": [
+      {
+        "idLogin": 78945612,
+        "id": 1234,
+        "uid": "",
+        "identifiant": "MonIdParent",
+        "typeCompte": "1",
+        "codeOgec": "7894564M",
+        "main": true,
+        "lastConnexion": "2023-03-24 11:03",
+        "civilite": "M.",
+        "prenom": "MonPrenom",
+        "particule": "",
+        "nom": "MONNOM",
+        "email": "monemail@gmail.com",
+        "anneeScolaireCourante": "2022-2023",
+        "nomEtablissement": "Mon etablissement",
+        "logoEtablissement": "\\\\FTP01\\import\\7894564M\\MONTREUIL165.png",
+        "couleurAgendaEtablissement": "#bf00ff",
+        "dicoEnLigneLeRobert": true,
+        "socketToken": "+==",
+        "modules": [
+          {
+            "code": "ACTUALITES",
+            "enable": false,
+            "ordre": 0,
+            "badge": 0,
+            "params": {}
+          },
+          {
+            "code": "CLOUD",
+            "enable": false,
+            "ordre": 80,
+            "badge": 0,
+            "params": {}
+          },
+          {
+            "code": "COORDONNEES",
+            "enable": false,
+            "ordre": 10,
+            "badge": 0,
+            "params": {}
+          },
+          {
+            "code": "COMPTE",
+            "enable": true,
+            "ordre": 0,
+            "badge": 0,
+            "params": {}
+          },
+          {
+            "code": "SITUATION_FINANCIERE",
+            "enable": true,
+            "ordre": 20,
+            "badge": 0,
+            "params": {}
+          },
+          {
+            "code": "FACTURES",
+            "enable": true,
+            "ordre": 0,
+            "badge": 0,
+            "params": {}
+          },
+          {
+            "code": "MODE_DE_REGLEMENT",
+            "enable": false,
+            "ordre": 0,
+            "badge": 0,
+            "params": {}
+          },
+          {
+            "code": "PAIEMENT_EN_LIGNE",
+            "enable": true,
+            "ordre": 30,
+            "badge": 0,
+            "params": {
+              "montantMinimum": "100",
+              "codeDevise": "978",
+              "libelleSoldeDebiteur": "Règlement du solde de votre compte",
+              "libelleSoldeCrediteur": "Versement sur votre compte",
+              "devise": "€"
+            }
+          },
+          {
+            "code": "MESSAGERIE",
+            "enable": true,
+            "ordre": 40,
+            "badge": 4,
+            "params": {
+              "isActif": "1",
+              "canParentsLireMessagesEnfants": "1",
+              "destAdmin": "1",
+              "destEleve": "0",
+              "destFamille": "0",
+              "destProf": "1",
+              "destEspTravail": "0",
+              "disabledNotification": "0",
+              "notificationEmailEtablissement": "1",
+              "choixMailNotification": "0",
+              "autreMailNotification": "",
+              "mailPro": "",
+              "mailPerso": "",
+              "messagerieApiVersion": "v3",
+              "blackListProfActive": "0",
+              "estEnBlackList": "0",
+              "afficherToutesLesClasses": "0"
+            }
+          },
+          {
+            "code": "DOCUMENTS",
+            "enable": true,
+            "ordre": 50,
+            "badge": 0,
+            "params": {
+              "DocumentsNotesActif": "0",
+              "DocumentsVSActif": "1",
+              "DocumentsFactureActif": "1",
+              "DocumentsAdministratifActif": "1",
+              "DocumentsInsReinsActif": "1"
+            }
+          },
+          {
+            "code": "CATER",
+            "enable": false,
+            "ordre": 90,
+            "badge": 0,
+            "params": {}
+          },
+          {
+            "code": "ARD",
+            "enable": false,
+            "ordre": 120,
+            "badge": 0,
+            "params": {}
+          },
+          {
+            "code": "SCOLACONCEPT",
+            "enable": false,
+            "ordre": 100,
+            "badge": 0,
+            "params": {}
+          },
+          {
+            "code": "ALISE",
+            "enable": false,
+            "ordre": 110,
+            "badge": 0,
+            "params": {}
+          },
+          {
+            "code": "ESIDOC",
+            "enable": false,
+            "ordre": 120,
+            "badge": 0,
+            "params": {}
+          },
+          {
+            "code": "DOSSIER_INSCRIPTION",
+            "enable": true,
+            "ordre": 85,
+            "badge": 0,
+            "params": {}
+          },
+          {
+            "code": "CLICKNPLAY",
+            "enable": false,
+            "ordre": 171,
+            "badge": 0,
+            "params": {}
+          },
+          {
+            "code": "ONISEPSERVICES",
+            "enable": false,
+            "ordre": 172,
+            "badge": 0,
+            "params": {}
+          },
+          {
+            "code": "MSC",
+            "enable": false,
+            "ordre": 173,
+            "badge": 0,
+            "params": {}
+          },
+          {
+            "code": "ETUDIANT",
+            "enable": false,
+            "ordre": 174,
+            "badge": 0,
+            "params": {}
+          },
+          {
+            "code": "FUTURNESS",
+            "enable": false,
+            "ordre": 175,
+            "badge": 0,
+            "params": {}
+          },
+          {
+            "code": "ALPHAEDUCATION",
+            "enable": false,
+            "ordre": 176,
+            "badge": 0,
+            "params": {}
+          },
+          {
+            "code": "KIDIWE",
+            "enable": false,
+            "ordre": 177,
+            "badge": 0,
+            "params": {}
+          }
+        ],
+        "parametresIndividuels": {
+          "lsuPoilDansLaMainBorne1": "",
+          "lsuPoilDansLaMainBorne2": "",
+          "lsuPoilDansLaMainBorne3": "",
+          "modeCalculLSU": "",
+          "isQrcode": false,
+          "accessibiliteVisuelle": false,
+          "checkAuthentificationSecure": false,
+          "checkFetS": false,
+          "typeSaisieNotesDefaut": "",
+          "nbJoursMaxRenduDevoirCDT": "",
+          "typeViewCDTDefaut": ""
+        },
+        "profile": {
+          "email": "",
+          "telPortable": "0125463987",
+          "telPortableConjoint": "",
+          "eleves": [
+            {
+              "id": 6636,
+              "prenom": "monprenom",
+              "nom": "MONNOM",
+              "sexe": "M",
+              "infoEDT": "",
+              "photo": "//doc1.ecoledirecte.com/.jpg",
+              "nomEtablissement": "Mon etablissement",
+              "idEtablissement": "0",
+              "idReelEtab": "2",
+              "modules": [
+                {
+                  "code": "CANTINE_BARCODE",
+                  "enable": false,
+                  "ordre": 1,
+                  "badge": 0,
+                  "params": {}
+                },
+                {
+                  "code": "VIE_SCOLAIRE",
+                  "enable": true,
+                  "ordre": 10,
+                  "badge": 0,
+                  "params": {
+                    "autorisationsSortieActif": "0",
+                    "saisieDemandesFamillesActif": "0"
+                  }
+                },
+                {
+                  "code": "VIE_DE_LA_CLASSE",
+                  "enable": true,
+                  "ordre": 20,
+                  "badge": 0,
+                  "params": {}
+                },
+                {
+                  "code": "NOTES",
+                  "enable": true,
+                  "ordre": 30,
+                  "badge": 0,
+                  "params": {}
+                },
+                {
+                  "code": "CLOUD",
+                  "enable": false,
+                  "ordre": 90,
+                  "badge": 0,
+                  "params": {}
+                },
+                {
+                  "code": "MESSAGERIE",
+                  "enable": true,
+                  "ordre": 40,
+                  "badge": 0,
+                  "params": {
+                    "isActif": "1",
+                    "canParentsLireMessagesEnfants": "1",
+                    "destAdmin": "1",
+                    "destEleve": "0",
+                    "destFamille": "0",
+                    "destProf": "1",
+                    "destEspTravail": "0",
+                    "disabledNotification": "0",
+                    "notificationEmailEtablissement": "1",
+                    "choixMailNotification": "0",
+                    "autreMailNotification": "",
+                    "mailPro": "",
+                    "mailPerso": "monmail@gmail.com",
+                    "messagerieApiVersion": "v3",
+                    "blackListProfActive": "0",
+                    "estEnBlackList": "0",
+                    "afficherToutesLesClasses": "0"
+                  }
+                },
+                {
+                  "code": "EDT",
+                  "enable": true,
+                  "ordre": 50,
+                  "badge": 0,
+                  "params": {}
+                },
+                {
+                  "code": "DOCUMENTS_ELEVE",
+                  "enable": true,
+                  "ordre": 77,
+                  "badge": 0,
+                  "params": {
+                    "DocumentsNotesActif": "0",
+                    "DocumentsVSActif": "1",
+                    "DocumentsAdministratifActif": "1"
+                  }
+                },
+                {
+                  "code": "CAHIER_DE_TEXTES",
+                  "enable": true,
+                  "ordre": 60,
+                  "badge": 0,
+                  "params": {
+                    "compteRenduSeance": "1",
+                    "compteRenduSeancePrevisionnel": "0",
+                    "isCDTPrimaire": "0"
+                  }
+                },
+                {
+                  "code": "MANUELS_SCOLAIRES",
+                  "enable": true,
+                  "ordre": 62,
+                  "badge": 0,
+                  "params": {}
+                },
+                {
+                  "code": "COMMANDE_PASSAGE",
+                  "enable": false,
+                  "ordre": 81,
+                  "badge": 0,
+                  "params": {
+                    "affichageMenuSeul": "1"
+                  }
+                },
+                {
+                  "code": "CARNET_CORRESPONDANCE",
+                  "enable": true,
+                  "ordre": 70,
+                  "badge": 0,
+                  "params": {
+                    "peutEcrire": "0",
+                    "typesCorrespondance": "",
+                    "destPP": "0",
+                    "destP": "0",
+                    "destA": "0"
+                  }
+                },
+                {
+                  "code": "ESIDOC",
+                  "enable": false,
+                  "ordre": 110,
+                  "badge": 0,
+                  "params": {}
+                },
+                {
+                  "code": "EDUNAO",
+                  "enable": false,
+                  "ordre": 100,
+                  "badge": 0,
+                  "params": {}
+                },
+                {
+                  "code": "CATER",
+                  "enable": false,
+                  "ordre": 95,
+                  "badge": 0,
+                  "params": {}
+                },
+                {
+                  "code": "ARD",
+                  "enable": false,
+                  "ordre": 120,
+                  "badge": 0,
+                  "params": {}
+                },
+                {
+                  "code": "PEARLTREES",
+                  "enable": true,
+                  "ordre": 170,
+                  "badge": 0,
+                  "params": {
+                    "url": "https%3A%2F%2Fwww%2Epearltrees%2Ecom%2Fs%2Fedu%2Fauth%2F7894564M",
+                    "rne": "7894564M"
+                  }
+                },
+                {
+                  "code": "EDUMALIN",
+                  "enable": false,
+                  "ordre": 171,
+                  "badge": 0,
+                  "params": {}
+                },
+                {
+                  "code": "SUIVI_STAGE",
+                  "enable": false,
+                  "ordre": 75,
+                  "badge": 0,
+                  "params": {}
+                },
+                {
+                  "code": "CLICKNPLAY",
+                  "enable": false,
+                  "ordre": 171,
+                  "badge": 0,
+                  "params": {}
+                },
+                {
+                  "code": "VOLTAIRE",
+                  "enable": false,
+                  "ordre": 175,
+                  "badge": 0,
+                  "params": {}
+                },
+                {
+                  "code": "ONISEPSERVICES",
+                  "enable": false,
+                  "ordre": 172,
+                  "badge": 0,
+                  "params": {}
+                },
+                {
+                  "code": "AVENRIA",
+                  "enable": false,
+                  "ordre": 173,
+                  "badge": 0,
+                  "params": {}
+                },
+                {
+                  "code": "SACOCHE",
+                  "enable": false,
+                  "ordre": 174,
+                  "badge": 0,
+                  "params": {}
+                },
+                {
+                  "code": "ETUDIANT",
+                  "enable": false,
+                  "ordre": 176,
+                  "badge": 0,
+                  "params": {}
+                },
+                {
+                  "code": "IJBOX",
+                  "enable": false,
+                  "ordre": 177,
+                  "badge": 0,
+                  "params": {}
+                },
+                {
+                  "code": "FUTURNESS",
+                  "enable": false,
+                  "ordre": 178,
+                  "badge": 0,
+                  "params": {}
+                },
+                {
+                  "code": "IMPALA",
+                  "enable": false,
+                  "ordre": 179,
+                  "badge": 0,
+                  "params": {}
+                },
+                {
+                  "code": "POPLAB",
+                  "enable": false,
+                  "ordre": 180,
+                  "badge": 0,
+                  "params": {}
+                },
+                {
+                  "code": "EDUMEDIA",
+                  "enable": true,
+                  "ordre": 181,
+                  "badge": 0,
+                  "params": {
+                    "url": "https%3A%2F%2Fwww%2Eedumedia%2Dsciences%2Ecom%2Ffr%3Fecoledirecte%3Dtrue",
+                    "rne": "0931796X"
+                  }
+                },
+                {
+                  "code": "RESERVATIONS",
+                  "enable": false,
+                  "ordre": 80,
+                  "badge": 0,
+                  "params": {
+                    "regime": "Externe",
+                    "repasmidi_1": "0",
+                    "repassoir_1": "0",
+                    "repasmidi_2": "0",
+                    "repassoir_2": "0",
+                    "repasmidi_3": "0",
+                    "repassoir_3": "0",
+                    "repasmidi_4": "0",
+                    "repassoir_4": "0",
+                    "repasmidi_5": "0",
+                    "repassoir_5": "0",
+                    "repasmidi_6": "0",
+                    "repassoir_6": "0",
+                    "repasmidi_7": "0",
+                    "repassoir_7": "0"
+                  }
+                },
+                {
+                  "code": "REUNIONS_PP",
+                  "enable": false,
+                  "ordre": 85,
+                  "badge": 0,
+                  "params": {}
+                },
+                {
+                  "code": "RDVPP",
+                  "enable": false,
+                  "ordre": 90,
+                  "badge": 0,
+                  "params": {}
+                }
+              ],
+              "classe": {
+                "id": 102,
+                "code": "2TSSIOSLAM",
+                "libelle": "2TS SIO SLAM",
+                "estNote": 1
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

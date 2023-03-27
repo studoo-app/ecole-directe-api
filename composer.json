@@ -29,5 +29,13 @@
       "tests/",
       "examples/"
     ]
+  },
+  "scripts": {
+    "start": [  "Composer\\Config::disableProcessTimeout",
+      "php -S localhost:8042 -t examples"
+    ],
+    "test": "php vendor/bin/phpunit --testdox tests",
+    "docker-start": "docker compose up -d",
+    "docker-stop": "docker compose down"
   }
 }

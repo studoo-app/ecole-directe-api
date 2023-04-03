@@ -7,6 +7,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Upload coverage reports to Codecov
+        uses: codecov/codecov-action@v3
+    
       - uses: actions/checkout@v3
 
       - uses: php-actions/composer@v5

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1679929902">
-  <project timestamp="1679929902">
+<coverage generated="1680516003">
+  <project timestamp="1680516003">
     <file name="/Users/redbull/Projects/studoo/ecole-directe-api/src/Client.php">
       <class name="Studoo\Api\EcoleDirecte\Client" namespace="global">
-        <metrics complexity="4" methods="4" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="35" coveredstatements="0" elements="39" coveredelements="0"/>
+        <metrics complexity="4" methods="4" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="36" coveredstatements="0" elements="40" coveredelements="0"/>
       </class>
       <line num="43" type="method" name="__construct" visibility="public" complexity="1" crap="2" count="0"/>
       <line num="45" type="stmt" count="0"/>
@@ -21,16 +21,16 @@
       <line num="57" type="stmt" count="0"/>
       <line num="58" type="stmt" count="0"/>
       <line num="59" type="stmt" count="0"/>
-      <line num="69" type="method" name="fetchAccessToken" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="71" type="stmt" count="0"/>
+      <line num="60" type="stmt" count="0"/>
+      <line num="70" type="method" name="fetchAccessToken" visibility="public" complexity="1" crap="2" count="0"/>
       <line num="72" type="stmt" count="0"/>
       <line num="73" type="stmt" count="0"/>
       <line num="74" type="stmt" count="0"/>
       <line num="75" type="stmt" count="0"/>
       <line num="76" type="stmt" count="0"/>
       <line num="77" type="stmt" count="0"/>
-      <line num="86" type="method" name="getVieScolaire" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="88" type="stmt" count="0"/>
+      <line num="78" type="stmt" count="0"/>
+      <line num="87" type="method" name="getVieScolaire" visibility="public" complexity="1" crap="2" count="0"/>
       <line num="89" type="stmt" count="0"/>
       <line num="90" type="stmt" count="0"/>
       <line num="91" type="stmt" count="0"/>
@@ -41,9 +41,10 @@
       <line num="96" type="stmt" count="0"/>
       <line num="97" type="stmt" count="0"/>
       <line num="98" type="stmt" count="0"/>
-      <line num="105" type="method" name="getLibVerion" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="107" type="stmt" count="0"/>
-      <metrics loc="110" ncloc="73" classes="1" methods="4" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="35" coveredstatements="0" elements="39" coveredelements="0"/>
+      <line num="99" type="stmt" count="0"/>
+      <line num="106" type="method" name="getLibVerion" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="108" type="stmt" count="0"/>
+      <metrics loc="111" ncloc="74" classes="1" methods="4" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="36" coveredstatements="0" elements="40" coveredelements="0"/>
     </file>
     <file name="/Users/redbull/Projects/studoo/ecole-directe-api/src/Core/BuildEntity.php">
       <class name="Studoo\Api\EcoleDirecte\Core\BuildEntity" namespace="global">
@@ -308,6 +309,6 @@
       <line num="78" type="stmt" count="0"/>
       <metrics loc="81" ncloc="61" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="24" coveredstatements="0" elements="26" coveredelements="0"/>
     </file>
-    <metrics files="15" loc="1066" ncloc="625" classes="10" methods="51" coveredmethods="29" conditionals="0" coveredconditionals="0" statements="171" coveredstatements="55" elements="222" coveredelements="84"/>
+    <metrics files="15" loc="1067" ncloc="626" classes="10" methods="51" coveredmethods="29" conditionals="0" coveredconditionals="0" statements="172" coveredstatements="55" elements="223" coveredelements="84"/>
   </project>
 </coverage>

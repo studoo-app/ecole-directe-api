@@ -23,5 +23,8 @@ jobs:
 
       - name: Upload coverage to Codacy
         run: |
-          export CODACY_PROJECT_TOKEN=${{ secrets.CODACY_PROJECT_TOKEN }}
+          export CODACY_API_TOKEN=${{ secrets.CODACY_API_TOKEN }}
+          export CODACY_ORGANIZATION_PROVIDER=gh
+          export CODACY_USERNAME=studoo-app
+          export CODACY_PROJECT_NAME=ecole-directe-api
           bash <(curl -Ls https://coverage.codacy.com/get.sh) report -r clover.xml

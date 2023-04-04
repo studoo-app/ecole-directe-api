@@ -4,3 +4,6 @@ phpunit.xml
 .idea/**
 .env
 .env.local
+.phpunit.cache/**
+.phpunit.result.cache
+clover.xml

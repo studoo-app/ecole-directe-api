@@ -1,0 +1,2044 @@
+{
+  "code": 200,
+  "token": "sRG1BDbDU8CmQ8lVrjRMq241ew1gKc1oum3NJ9sBOpoDXqH0wI9t9CsRG1BDbDU8CmQ8lVrjRMq241ew1gKc1oum3NJ9sBOpoDXqH0wI9t9CXiMTJnrswxrcjm24Mvy5Rc1hJyqfylns9hEHDoBPX646DqXiMTJnrswxrcjm24Mvy5Rc1hJyqfylns9hEHDoBPX646Dq",
+  "host": "HTTP90",
+  "data": {
+    "foStat": "93783846621",
+    "periodes": [
+      {
+        "idPeriode": "A001",
+        "codePeriode": "A001",
+        "periode": "1er Semestre",
+        "annuel": false,
+        "dateDebut": "2022-09-01",
+        "dateFin": "2023-02-02",
+        "examenBlanc": false,
+        "cloture": true,
+        "moyNbreJoursApresConseil": -1,
+        "ensembleMatieres": {
+          "dateCalcul": "2023-01-25 12:24",
+          "moyenneGenerale": "11,55",
+          "moyenneClasse": "12,88",
+          "moyenneMin": "8,14",
+          "moyenneMax": "17,43",
+          "nomPP": "M. LAPOULE B.",
+          "nomCE": "",
+          "decisionDuConseil": "",
+          "rang": "16",
+          "effectif": "21",
+          "disciplines": [
+            {
+              "id": 5822,
+              "codeMatiere": "CGEXP",
+              "codeSousMatiere": "",
+              "discipline": "CULT.GENE.EXPRESSION",
+              "moyenne": "11,67",
+              "moyenneClasse": "13,55",
+              "moyenneMin": "8",
+              "moyenneMax": "20",
+              "coef": 2,
+              "effectif": 21,
+              "rang": 14,
+              "groupeMatiere": false,
+              "idGroupeMatiere": 0,
+              "option": 0,
+              "sousMatiere": false,
+              "saisieAppreciationSSMat": false,
+              "professeurs": [
+                {
+                  "id": 170,
+                  "nom": "Mme ANTOINETTE M."
+                }
+              ]
+            },
+            {
+              "id": 3933,
+              "codeMatiere": "AGL1",
+              "codeSousMatiere": "",
+              "discipline": "ANGLAIS LV1",
+              "moyenne": "10,83",
+              "moyenneClasse": "13,72",
+              "moyenneMin": "9,2",
+              "moyenneMax": "17,44",
+              "coef": 2,
+              "effectif": 21,
+              "rang": 18,
+              "groupeMatiere": false,
+              "idGroupeMatiere": 0,
+              "option": 0,
+              "sousMatiere": false,
+              "saisieAppreciationSSMat": false,
+              "professeurs": [
+                {
+                  "id": 303,
+                  "nom": "M. FRAISE M."
+                }
+              ]
+            },
+            {
+              "id": 6264,
+              "codeMatiere": "MA-AI",
+              "codeSousMatiere": "",
+              "discipline": "MATHS POUR INFORMATQ",
+              "moyenne": "12",
+              "moyenneClasse": "13,9",
+              "moyenneMin": "8,6",
+              "moyenneMax": "19,71",
+              "coef": 3,
+              "effectif": 21,
+              "rang": 14,
+              "groupeMatiere": false,
+              "idGroupeMatiere": 0,
+              "option": 0,
+              "sousMatiere": false,
+              "saisieAppreciationSSMat": false,
+              "professeurs": [
+                {
+                  "id": 302,
+                  "nom": "M. PATATE N."
+                }
+              ]
+            },
+            {
+              "id": 5821,
+              "codeMatiere": "CEJUM",
+              "codeSousMatiere": "",
+              "discipline": "CEJM",
+              "moyenne": "8,83",
+              "moyenneClasse": "12,47",
+              "moyenneMin": "8",
+              "moyenneMax": "16,67",
+              "coef": 3,
+              "effectif": 21,
+              "rang": 20,
+              "groupeMatiere": false,
+              "idGroupeMatiere": 0,
+              "option": 0,
+              "sousMatiere": false,
+              "saisieAppreciationSSMat": false,
+              "professeurs": [
+                {
+                  "id": 200,
+                  "nom": "Mme RASIMUS K."
+                }
+              ]
+            },
+            {
+              "id": 6280,
+              "codeMatiere": "CEJMA",
+              "codeSousMatiere": "",
+              "discipline": "CEJM appliquée",
+              "moyenne": "",
+              "moyenneClasse": "",
+              "moyenneMin": "",
+              "moyenneMax": "",
+              "coef": 1,
+              "effectif": 0,
+              "rang": 0,
+              "groupeMatiere": false,
+              "idGroupeMatiere": 0,
+              "option": 0,
+              "sousMatiere": false,
+              "saisieAppreciationSSMat": false,
+              "professeurs": [
+                {
+                  "id": 200,
+                  "nom": "Mme RASIMUS K."
+                }
+              ]
+            },
+            {
+              "id": 6205,
+              "codeMatiere": "SMDSI",
+              "codeSousMatiere": "",
+              "discipline": "Bloc 1 : SUP.DISPOS.SERV.INF.",
+              "moyenne": "",
+              "moyenneClasse": "",
+              "moyenneMin": "",
+              "moyenneMax": "",
+              "coef": 1,
+              "effectif": 0,
+              "rang": 0,
+              "groupeMatiere": false,
+              "idGroupeMatiere": 0,
+              "option": 0,
+              "sousMatiere": false,
+              "saisieAppreciationSSMat": false,
+              "professeurs": [
+                {
+                  "id": 204,
+                  "nom": "Mme LIUKKO O."
+                }
+              ]
+            },
+            {
+              "id": 5990,
+              "codeMatiere": "SLAM",
+              "codeSousMatiere": "",
+              "discipline": "Bloc 2 : CONCEPT.DEV.APPLIC",
+              "moyenne": "12,33",
+              "moyenneClasse": "12,29",
+              "moyenneMin": "5",
+              "moyenneMax": "17,17",
+              "coef": 5,
+              "effectif": 21,
+              "rang": 13,
+              "groupeMatiere": false,
+              "idGroupeMatiere": 0,
+              "option": 0,
+              "sousMatiere": false,
+              "saisieAppreciationSSMat": false,
+              "professeurs": [
+                {
+                  "id": 204,
+                  "nom": "Mme LIUKKO O."
+                },
+                {
+                  "id": 468,
+                  "nom": "M. LAPOULE B."
+                },
+                {
+                  "id": 350,
+                  "nom": "M. HAAJANEN  J."
+                }
+              ]
+            },
+            {
+              "id": 5823,
+              "codeMatiere": "CYSIN",
+              "codeSousMatiere": "",
+              "discipline": "Bloc 3 : CYBERSECURITE",
+              "moyenne": "12,25",
+              "moyenneClasse": "11,83",
+              "moyenneMin": "5,75",
+              "moyenneMax": "19,5",
+              "coef": 2.5,
+              "effectif": 21,
+              "rang": 9,
+              "groupeMatiere": false,
+              "idGroupeMatiere": 0,
+              "option": 0,
+              "sousMatiere": false,
+              "saisieAppreciationSSMat": false,
+              "professeurs": [
+                {
+                  "id": 350,
+                  "nom": "M. HAAJANEN  J."
+                }
+              ]
+            },
+            {
+              "id": 6056,
+              "codeMatiere": "ATELP",
+              "codeSousMatiere": "",
+              "discipline": "ATELIERS PRO",
+              "moyenne": "14",
+              "moyenneClasse": "13,05",
+              "moyenneMin": "10",
+              "moyenneMax": "19",
+              "coef": 1,
+              "effectif": 21,
+              "rang": 6,
+              "groupeMatiere": false,
+              "idGroupeMatiere": 0,
+              "option": 0,
+              "sousMatiere": false,
+              "saisieAppreciationSSMat": false,
+              "professeurs": [
+                {
+                  "id": 325,
+                  "nom": "Madame LADEROUTE L."
+                },
+                {
+                  "id": 468,
+                  "nom": "M. LAPOULE B."
+                }
+              ]
+            }
+          ],
+          "disciplinesSimulation": []
+        }
+      },
+      {
+        "idPeriode": "A001X001",
+        "codePeriode": "A001X001",
+        "periode": "BTS Blanc n°1",
+        "annuel": false,
+        "dateDebut": "2022-09-01",
+        "dateFin": "2022-09-01",
+        "examenBlanc": true,
+        "cloture": true,
+        "moyNbreJoursApresConseil": -1,
+        "ensembleMatieres": {
+          "dateCalcul": "",
+          "moyenneGenerale": "",
+          "moyenneClasse": "",
+          "moyenneMin": "",
+          "moyenneMax": "",
+          "nomPP": "M. LAPOULE B.",
+          "nomCE": "",
+          "decisionDuConseil": "",
+          "rang": "",
+          "effectif": "",
+          "disciplines": [
+            {
+              "id": 3933,
+              "codeMatiere": "AGL1",
+              "codeSousMatiere": "",
+              "discipline": "ANGLAIS LV1",
+              "moyenne": "",
+              "moyenneClasse": "",
+              "moyenneMin": "",
+              "moyenneMax": "",
+              "coef": 1,
+              "effectif": 0,
+              "rang": 0,
+              "groupeMatiere": false,
+              "idGroupeMatiere": 0,
+              "option": 0,
+              "sousMatiere": false,
+              "saisieAppreciationSSMat": false,
+              "professeurs": [
+                {
+                  "id": 303,
+                  "nom": "M. FRAISE M."
+                }
+              ]
+            },
+            {
+              "id": 5821,
+              "codeMatiere": "CEJUM",
+              "codeSousMatiere": "",
+              "discipline": "CULT.ECO JUR. MANAG.",
+              "moyenne": "",
+              "moyenneClasse": "",
+              "moyenneMin": "",
+              "moyenneMax": "",
+              "coef": 1,
+              "effectif": 0,
+              "rang": 0,
+              "groupeMatiere": false,
+              "idGroupeMatiere": 0,
+              "option": 0,
+              "sousMatiere": false,
+              "saisieAppreciationSSMat": false,
+              "professeurs": [
+                {
+                  "id": 200,
+                  "nom": "Mme RASIMUS K."
+                }
+              ]
+            },
+            {
+              "id": 5822,
+              "codeMatiere": "CGEXP",
+              "codeSousMatiere": "",
+              "discipline": "CULT.GENE.EXPRESSION",
+              "moyenne": "",
+              "moyenneClasse": "",
+              "moyenneMin": "",
+              "moyenneMax": "",
+              "coef": 1,
+              "effectif": 0,
+              "rang": 0,
+              "groupeMatiere": false,
+              "idGroupeMatiere": 0,
+              "option": 0,
+              "sousMatiere": false,
+              "saisieAppreciationSSMat": false,
+              "professeurs": [
+                {
+                  "id": 170,
+                  "nom": "Mme ANTOINETTE M."
+                }
+              ]
+            },
+            {
+              "id": 5823,
+              "codeMatiere": "CYSIN",
+              "codeSousMatiere": "",
+              "discipline": "CYBER.SERV.INFORMAT.",
+              "moyenne": "",
+              "moyenneClasse": "",
+              "moyenneMin": "",
+              "moyenneMax": "",
+              "coef": 1,
+              "effectif": 0,
+              "rang": 0,
+              "groupeMatiere": false,
+              "idGroupeMatiere": 0,
+              "option": 0,
+              "sousMatiere": false,
+              "saisieAppreciationSSMat": false,
+              "professeurs": [
+                {
+                  "id": 350,
+                  "nom": "M. HAAJANEN  J."
+                }
+              ]
+            },
+            {
+              "id": 5337,
+              "codeMatiere": "ENTRE",
+              "codeSousMatiere": "",
+              "discipline": "ENTREPREUNARIAT",
+              "moyenne": "",
+              "moyenneClasse": "",
+              "moyenneMin": "",
+              "moyenneMax": "",
+              "coef": 1,
+              "effectif": 0,
+              "rang": 0,
+              "groupeMatiere": false,
+              "idGroupeMatiere": 0,
+              "option": 0,
+              "sousMatiere": false,
+              "saisieAppreciationSSMat": false,
+              "professeurs": [
+                {
+                  "id": 395,
+                  "nom": "M. PINNEAU F."
+                }
+              ]
+            },
+            {
+              "id": 5401,
+              "codeMatiere": "MATAP",
+              "codeSousMatiere": "",
+              "discipline": "MATHS APPROFONDIES",
+              "moyenne": "",
+              "moyenneClasse": "",
+              "moyenneMin": "",
+              "moyenneMax": "",
+              "coef": 1,
+              "effectif": 0,
+              "rang": 0,
+              "groupeMatiere": false,
+              "idGroupeMatiere": 0,
+              "option": 0,
+              "sousMatiere": false,
+              "saisieAppreciationSSMat": false,
+              "professeurs": [
+                {
+                  "id": 302,
+                  "nom": "M. PATATE N."
+                }
+              ]
+            },
+            {
+              "id": 5990,
+              "codeMatiere": "SLAM",
+              "codeSousMatiere": "",
+              "discipline": "SLAM",
+              "moyenne": "",
+              "moyenneClasse": "",
+              "moyenneMin": "",
+              "moyenneMax": "",
+              "coef": 1,
+              "effectif": 0,
+              "rang": 0,
+              "groupeMatiere": false,
+              "idGroupeMatiere": 0,
+              "option": 0,
+              "sousMatiere": false,
+              "saisieAppreciationSSMat": false,
+              "professeurs": [
+                {
+                  "id": 204,
+                  "nom": "Mme LIUKKO O."
+                },
+                {
+                  "id": 468,
+                  "nom": "M. LAPOULE B."
+                },
+                {
+                  "id": 350,
+                  "nom": "M. HAAJANEN  J."
+                }
+              ]
+            },
+            {
+              "id": 6056,
+              "codeMatiere": "ATELP",
+              "codeSousMatiere": "",
+              "discipline": "AT. PROFESSIONNALIS.",
+              "moyenne": "",
+              "moyenneClasse": "",
+              "moyenneMin": "",
+              "moyenneMax": "",
+              "coef": 1,
+              "effectif": 0,
+              "rang": 0,
+              "groupeMatiere": false,
+              "idGroupeMatiere": 0,
+              "option": 0,
+              "sousMatiere": false,
+              "saisieAppreciationSSMat": false,
+              "professeurs": [
+                {
+                  "id": 325,
+                  "nom": "Madame LADEROUTE L."
+                },
+                {
+                  "id": 468,
+                  "nom": "M. LAPOULE B."
+                }
+              ]
+            },
+            {
+              "id": 6205,
+              "codeMatiere": "SMDSI",
+              "codeSousMatiere": "",
+              "discipline": "SUP.DISPOS.SERV.INF.",
+              "moyenne": "",
+              "moyenneClasse": "",
+              "moyenneMin": "",
+              "moyenneMax": "",
+              "coef": 1,
+              "effectif": 0,
+              "rang": 0,
+              "groupeMatiere": false,
+              "idGroupeMatiere": 0,
+              "option": 0,
+              "sousMatiere": false,
+              "saisieAppreciationSSMat": false,
+              "professeurs": [
+                {
+                  "id": 204,
+                  "nom": "Mme LIUKKO O."
+                }
+              ]
+            },
+            {
+              "id": 6208,
+              "codeMatiere": "COORD",
+              "codeSousMatiere": "",
+              "discipline": "VIE DE CLASSE",
+              "moyenne": "",
+              "moyenneClasse": "",
+              "moyenneMin": "",
+              "moyenneMax": "",
+              "coef": 1,
+              "effectif": 0,
+              "rang": 0,
+              "groupeMatiere": false,
+              "idGroupeMatiere": 0,
+              "option": 0,
+              "sousMatiere": false,
+              "saisieAppreciationSSMat": false,
+              "professeurs": [
+                {
+                  "id": 468,
+                  "nom": "M. LAPOULE B."
+                }
+              ]
+            },
+            {
+              "id": 6264,
+              "codeMatiere": "MA-AI",
+              "codeSousMatiere": "",
+              "discipline": "MATHS POUR INFORMATQ",
+              "moyenne": "",
+              "moyenneClasse": "",
+              "moyenneMin": "",
+              "moyenneMax": "",
+              "coef": 1,
+              "effectif": 0,
+              "rang": 0,
+              "groupeMatiere": false,
+              "idGroupeMatiere": 0,
+              "option": 0,
+              "sousMatiere": false,
+              "saisieAppreciationSSMat": false,
+              "professeurs": [
+                {
+                  "id": 302,
+                  "nom": "M. PATATE N."
+                }
+              ]
+            },
+            {
+              "id": 6280,
+              "codeMatiere": "CEJMA",
+              "codeSousMatiere": "",
+              "discipline": "CULT.ECO.JUR.MAN.AP.",
+              "moyenne": "",
+              "moyenneClasse": "",
+              "moyenneMin": "",
+              "moyenneMax": "",
+              "coef": 1,
+              "effectif": 0,
+              "rang": 0,
+              "groupeMatiere": false,
+              "idGroupeMatiere": 0,
+              "option": 0,
+              "sousMatiere": false,
+              "saisieAppreciationSSMat": false,
+              "professeurs": [
+                {
+                  "id": 200,
+                  "nom": "Mme RASIMUS K."
+                }
+              ]
+            }
+          ],
+          "disciplinesSimulation": []
+        }
+      },
+      {
+        "idPeriode": "A002",
+        "codePeriode": "A002",
+        "periode": "2ème Semestre",
+        "annuel": false,
+        "dateDebut": "2023-02-03",
+        "dateFin": "2023-07-07",
+        "examenBlanc": false,
+        "cloture": false,
+        "dateConseil": "2023-07-07",
+        "moyNbreJoursApresConseil": -1,
+        "ensembleMatieres": {
+          "dateCalcul": "2023-03-24 04:01",
+          "moyenneGenerale": "12",
+          "moyenneClasse": "12,44",
+          "moyenneMin": "4",
+          "moyenneMax": "15,8",
+          "nomPP": "M. LAPOULE B.",
+          "nomCE": "",
+          "decisionDuConseil": "",
+          "rang": "12",
+          "effectif": "21",
+          "disciplines": [
+            {
+              "id": 5822,
+              "codeMatiere": "CGEXP",
+              "codeSousMatiere": "",
+              "discipline": "CULT.GENE.EXPRESSION",
+              "moyenne": "",
+              "moyenneClasse": "",
+              "moyenneMin": "",
+              "moyenneMax": "",
+              "coef": 2,
+              "effectif": 0,
+              "rang": 0,
+              "groupeMatiere": false,
+              "idGroupeMatiere": 0,
+              "option": 0,
+              "sousMatiere": false,
+              "saisieAppreciationSSMat": false,
+              "professeurs": [
+                {
+                  "id": 170,
+                  "nom": "Mme ANTOINETTE M."
+                }
+              ]
+            },
+            {
+              "id": 3933,
+              "codeMatiere": "AGL1",
+              "codeSousMatiere": "",
+              "discipline": "ANGLAIS LV1",
+              "moyenne": "",
+              "moyenneClasse": "17",
+              "moyenneMin": "17",
+              "moyenneMax": "17",
+              "coef": 2,
+              "effectif": 21,
+              "rang": 0,
+              "groupeMatiere": false,
+              "idGroupeMatiere": 0,
+              "option": 0,
+              "sousMatiere": false,
+              "saisieAppreciationSSMat": false,
+              "professeurs": [
+                {
+                  "id": 303,
+                  "nom": "M. FRAISE M."
+                }
+              ]
+            },
+            {
+              "id": 6264,
+              "codeMatiere": "MA-AI",
+              "codeSousMatiere": "",
+              "discipline": "MATHS POUR INFORMATQ",
+              "moyenne": "",
+              "moyenneClasse": "",
+              "moyenneMin": "",
+              "moyenneMax": "",
+              "coef": 3,
+              "effectif": 0,
+              "rang": 0,
+              "groupeMatiere": false,
+              "idGroupeMatiere": 0,
+              "option": 0,
+              "sousMatiere": false,
+              "saisieAppreciationSSMat": false,
+              "professeurs": [
+                {
+                  "id": 302,
+                  "nom": "M. PATATE N."
+                }
+              ]
+            },
+            {
+              "id": 5821,
+              "codeMatiere": "CEJUM",
+              "codeSousMatiere": "",
+              "discipline": "CEJM",
+              "moyenne": "12",
+              "moyenneClasse": "12,4",
+              "moyenneMin": "4",
+              "moyenneMax": "15",
+              "coef": 3,
+              "effectif": 21,
+              "rang": 12,
+              "groupeMatiere": false,
+              "idGroupeMatiere": 0,
+              "option": 0,
+              "sousMatiere": false,
+              "saisieAppreciationSSMat": false,
+              "professeurs": [
+                {
+                  "id": 200,
+                  "nom": "Mme RASIMUS K."
+                }
+              ]
+            },
+            {
+              "id": 6280,
+              "codeMatiere": "CEJMA",
+              "codeSousMatiere": "",
+              "discipline": "CEJM appliquée",
+              "moyenne": "",
+              "moyenneClasse": "",
+              "moyenneMin": "",
+              "moyenneMax": "",
+              "coef": 1,
+              "effectif": 0,
+              "rang": 0,
+              "groupeMatiere": false,
+              "idGroupeMatiere": 0,
+              "option": 0,
+              "sousMatiere": false,
+              "saisieAppreciationSSMat": false,
+              "professeurs": [
+                {
+                  "id": 200,
+                  "nom": "Mme RASIMUS K."
+                }
+              ]
+            },
+            {
+              "id": 6205,
+              "codeMatiere": "SMDSI",
+              "codeSousMatiere": "",
+              "discipline": "Bloc 1 : SUP.DISPOS.SERV.INF.",
+              "moyenne": "",
+              "moyenneClasse": "",
+              "moyenneMin": "",
+              "moyenneMax": "",
+              "coef": 1,
+              "effectif": 0,
+              "rang": 0,
+              "groupeMatiere": false,
+              "idGroupeMatiere": 0,
+              "option": 0,
+              "sousMatiere": false,
+              "saisieAppreciationSSMat": false,
+              "professeurs": [
+                {
+                  "id": 204,
+                  "nom": "Mme LIUKKO O."
+                }
+              ]
+            },
+            {
+              "id": 5990,
+              "codeMatiere": "SLAM",
+              "codeSousMatiere": "",
+              "discipline": "Bloc 2 : CONCEPT.DEV.APPLIC",
+              "moyenne": "",
+              "moyenneClasse": "",
+              "moyenneMin": "",
+              "moyenneMax": "",
+              "coef": 5,
+              "effectif": 0,
+              "rang": 0,
+              "groupeMatiere": false,
+              "idGroupeMatiere": 0,
+              "option": 0,
+              "sousMatiere": false,
+              "saisieAppreciationSSMat": false,
+              "professeurs": [
+                {
+                  "id": 204,
+                  "nom": "Mme LIUKKO O."
+                },
+                {
+                  "id": 468,
+                  "nom": "M. LAPOULE B."
+                },
+                {
+                  "id": 350,
+                  "nom": "M. HAAJANEN  J."
+                }
+              ]
+            },
+            {
+              "id": 5823,
+              "codeMatiere": "CYSIN",
+              "codeSousMatiere": "",
+              "discipline": "Bloc 3 : CYBERSECURITE",
+              "moyenne": "",
+              "moyenneClasse": "",
+              "moyenneMin": "",
+              "moyenneMax": "",
+              "coef": 2.5,
+              "effectif": 0,
+              "rang": 0,
+              "groupeMatiere": false,
+              "idGroupeMatiere": 0,
+              "option": 0,
+              "sousMatiere": false,
+              "saisieAppreciationSSMat": false,
+              "professeurs": [
+                {
+                  "id": 350,
+                  "nom": "M. HAAJANEN  J."
+                }
+              ]
+            },
+            {
+              "id": 6056,
+              "codeMatiere": "ATELP",
+              "codeSousMatiere": "",
+              "discipline": "ATELIERS PRO",
+              "moyenne": "",
+              "moyenneClasse": "",
+              "moyenneMin": "",
+              "moyenneMax": "",
+              "coef": 1,
+              "effectif": 0,
+              "rang": 0,
+              "groupeMatiere": false,
+              "idGroupeMatiere": 0,
+              "option": 0,
+              "sousMatiere": false,
+              "saisieAppreciationSSMat": false,
+              "professeurs": [
+                {
+                  "id": 325,
+                  "nom": "Madame LADEROUTE L."
+                },
+                {
+                  "id": 468,
+                  "nom": "M. LAPOULE B."
+                }
+              ]
+            }
+          ],
+          "disciplinesSimulation": []
+        }
+      },
+      {
+        "idPeriode": "A002X001",
+        "codePeriode": "A002X001",
+        "periode": "Examen Blanc ",
+        "annuel": false,
+        "dateDebut": "2023-04-04",
+        "dateFin": "2023-04-08",
+        "examenBlanc": true,
+        "cloture": false,
+        "moyNbreJoursApresConseil": -1,
+        "ensembleMatieres": {
+          "dateCalcul": "",
+          "moyenneGenerale": "",
+          "moyenneClasse": "",
+          "moyenneMin": "",
+          "moyenneMax": "",
+          "nomPP": "M. LAPOULE B.",
+          "nomCE": "",
+          "decisionDuConseil": "",
+          "rang": "",
+          "effectif": "",
+          "disciplines": [
+            {
+              "id": 3933,
+              "codeMatiere": "AGL1",
+              "codeSousMatiere": "",
+              "discipline": "ANGLAIS LV1",
+              "moyenne": "",
+              "moyenneClasse": "",
+              "moyenneMin": "",
+              "moyenneMax": "",
+              "coef": 1,
+              "effectif": 0,
+              "rang": 0,
+              "groupeMatiere": false,
+              "idGroupeMatiere": 0,
+              "option": 0,
+              "sousMatiere": false,
+              "saisieAppreciationSSMat": false,
+              "professeurs": [
+                {
+                  "id": 303,
+                  "nom": "M. FRAISE M."
+                }
+              ]
+            },
+            {
+              "id": 5821,
+              "codeMatiere": "CEJUM",
+              "codeSousMatiere": "",
+              "discipline": "CULT.ECO JUR. MANAG.",
+              "moyenne": "",
+              "moyenneClasse": "",
+              "moyenneMin": "",
+              "moyenneMax": "",
+              "coef": 1,
+              "effectif": 0,
+              "rang": 0,
+              "groupeMatiere": false,
+              "idGroupeMatiere": 0,
+              "option": 0,
+              "sousMatiere": false,
+              "saisieAppreciationSSMat": false,
+              "professeurs": [
+                {
+                  "id": 200,
+                  "nom": "Mme RASIMUS K."
+                }
+              ]
+            },
+            {
+              "id": 5822,
+              "codeMatiere": "CGEXP",
+              "codeSousMatiere": "",
+              "discipline": "CULT.GENE.EXPRESSION",
+              "moyenne": "",
+              "moyenneClasse": "",
+              "moyenneMin": "",
+              "moyenneMax": "",
+              "coef": 1,
+              "effectif": 0,
+              "rang": 0,
+              "groupeMatiere": false,
+              "idGroupeMatiere": 0,
+              "option": 0,
+              "sousMatiere": false,
+              "saisieAppreciationSSMat": false,
+              "professeurs": [
+                {
+                  "id": 170,
+                  "nom": "Mme ANTOINETTE M."
+                }
+              ]
+            },
+            {
+              "id": 5823,
+              "codeMatiere": "CYSIN",
+              "codeSousMatiere": "",
+              "discipline": "CYBER.SERV.INFORMAT.",
+              "moyenne": "",
+              "moyenneClasse": "",
+              "moyenneMin": "",
+              "moyenneMax": "",
+              "coef": 1,
+              "effectif": 0,
+              "rang": 0,
+              "groupeMatiere": false,
+              "idGroupeMatiere": 0,
+              "option": 0,
+              "sousMatiere": false,
+              "saisieAppreciationSSMat": false,
+              "professeurs": [
+                {
+                  "id": 350,
+                  "nom": "M. HAAJANEN  J."
+                }
+              ]
+            },
+            {
+              "id": 5337,
+              "codeMatiere": "ENTRE",
+              "codeSousMatiere": "",
+              "discipline": "ENTREPREUNARIAT",
+              "moyenne": "",
+              "moyenneClasse": "",
+              "moyenneMin": "",
+              "moyenneMax": "",
+              "coef": 1,
+              "effectif": 0,
+              "rang": 0,
+              "groupeMatiere": false,
+              "idGroupeMatiere": 0,
+              "option": 0,
+              "sousMatiere": false,
+              "saisieAppreciationSSMat": false,
+              "professeurs": [
+                {
+                  "id": 395,
+                  "nom": "M. PINNEAU F."
+                }
+              ]
+            },
+            {
+              "id": 5401,
+              "codeMatiere": "MATAP",
+              "codeSousMatiere": "",
+              "discipline": "MATHS APPROFONDIES",
+              "moyenne": "",
+              "moyenneClasse": "",
+              "moyenneMin": "",
+              "moyenneMax": "",
+              "coef": 1,
+              "effectif": 0,
+              "rang": 0,
+              "groupeMatiere": false,
+              "idGroupeMatiere": 0,
+              "option": 0,
+              "sousMatiere": false,
+              "saisieAppreciationSSMat": false,
+              "professeurs": [
+                {
+                  "id": 302,
+                  "nom": "M. PATATE N."
+                }
+              ]
+            },
+            {
+              "id": 5990,
+              "codeMatiere": "SLAM",
+              "codeSousMatiere": "",
+              "discipline": "SLAM",
+              "moyenne": "",
+              "moyenneClasse": "",
+              "moyenneMin": "",
+              "moyenneMax": "",
+              "coef": 1,
+              "effectif": 0,
+              "rang": 0,
+              "groupeMatiere": false,
+              "idGroupeMatiere": 0,
+              "option": 0,
+              "sousMatiere": false,
+              "saisieAppreciationSSMat": false,
+              "professeurs": [
+                {
+                  "id": 204,
+                  "nom": "Mme LIUKKO O."
+                },
+                {
+                  "id": 468,
+                  "nom": "M. LAPOULE B."
+                },
+                {
+                  "id": 350,
+                  "nom": "M. HAAJANEN  J."
+                }
+              ]
+            },
+            {
+              "id": 6056,
+              "codeMatiere": "ATELP",
+              "codeSousMatiere": "",
+              "discipline": "AT. PROFESSIONNALIS.",
+              "moyenne": "",
+              "moyenneClasse": "",
+              "moyenneMin": "",
+              "moyenneMax": "",
+              "coef": 1,
+              "effectif": 0,
+              "rang": 0,
+              "groupeMatiere": false,
+              "idGroupeMatiere": 0,
+              "option": 0,
+              "sousMatiere": false,
+              "saisieAppreciationSSMat": false,
+              "professeurs": [
+                {
+                  "id": 325,
+                  "nom": "Madame LADEROUTE L."
+                },
+                {
+                  "id": 468,
+                  "nom": "M. LAPOULE B."
+                }
+              ]
+            },
+            {
+              "id": 6205,
+              "codeMatiere": "SMDSI",
+              "codeSousMatiere": "",
+              "discipline": "SUP.DISPOS.SERV.INF.",
+              "moyenne": "",
+              "moyenneClasse": "",
+              "moyenneMin": "",
+              "moyenneMax": "",
+              "coef": 1,
+              "effectif": 0,
+              "rang": 0,
+              "groupeMatiere": false,
+              "idGroupeMatiere": 0,
+              "option": 0,
+              "sousMatiere": false,
+              "saisieAppreciationSSMat": false,
+              "professeurs": [
+                {
+                  "id": 204,
+                  "nom": "Mme LIUKKO O."
+                }
+              ]
+            },
+            {
+              "id": 6208,
+              "codeMatiere": "COORD",
+              "codeSousMatiere": "",
+              "discipline": "VIE DE CLASSE",
+              "moyenne": "",
+              "moyenneClasse": "",
+              "moyenneMin": "",
+              "moyenneMax": "",
+              "coef": 1,
+              "effectif": 0,
+              "rang": 0,
+              "groupeMatiere": false,
+              "idGroupeMatiere": 0,
+              "option": 0,
+              "sousMatiere": false,
+              "saisieAppreciationSSMat": false,
+              "professeurs": [
+                {
+                  "id": 468,
+                  "nom": "M. LAPOULE B."
+                }
+              ]
+            },
+            {
+              "id": 6264,
+              "codeMatiere": "MA-AI",
+              "codeSousMatiere": "",
+              "discipline": "MATHS POUR INFORMATQ",
+              "moyenne": "",
+              "moyenneClasse": "",
+              "moyenneMin": "",
+              "moyenneMax": "",
+              "coef": 1,
+              "effectif": 0,
+              "rang": 0,
+              "groupeMatiere": false,
+              "idGroupeMatiere": 0,
+              "option": 0,
+              "sousMatiere": false,
+              "saisieAppreciationSSMat": false,
+              "professeurs": [
+                {
+                  "id": 302,
+                  "nom": "M. PATATE N."
+                }
+              ]
+            },
+            {
+              "id": 6280,
+              "codeMatiere": "CEJMA",
+              "codeSousMatiere": "",
+              "discipline": "CULT.ECO.JUR.MAN.AP.",
+              "moyenne": "",
+              "moyenneClasse": "",
+              "moyenneMin": "",
+              "moyenneMax": "",
+              "coef": 1,
+              "effectif": 0,
+              "rang": 0,
+              "groupeMatiere": false,
+              "idGroupeMatiere": 0,
+              "option": 0,
+              "sousMatiere": false,
+              "saisieAppreciationSSMat": false,
+              "professeurs": [
+                {
+                  "id": 200,
+                  "nom": "Mme RASIMUS K."
+                }
+              ]
+            }
+          ],
+          "disciplinesSimulation": []
+        }
+      },
+      {
+        "idPeriode": "A999Z",
+        "codePeriode": "A999Z",
+        "periode": "Année",
+        "annuel": true,
+        "dateDebut": "2022-09-01",
+        "dateFin": "2023-07-07",
+        "examenBlanc": false,
+        "cloture": false,
+        "moyNbreJoursApresConseil": -1,
+        "ensembleMatieres": {
+          "dateCalcul": "2023-03-24 04:01",
+          "nomPP": "M. LAPOULE B.",
+          "nomCE": "",
+          "decisionDuConseil": "",
+          "rang": "15",
+          "effectif": "21",
+          "disciplines": [
+            {
+              "id": 5822,
+              "codeMatiere": "CGEXP",
+              "codeSousMatiere": "",
+              "discipline": "CULT.GENE.EXPRESSION",
+              "coef": 2,
+              "effectif": 21,
+              "rang": 14,
+              "groupeMatiere": false,
+              "idGroupeMatiere": 0,
+              "option": 0,
+              "sousMatiere": false,
+              "saisieAppreciationSSMat": false,
+              "professeurs": [
+                {
+                  "id": 170,
+                  "nom": "Mme ANTOINETTE M."
+                }
+              ]
+            },
+            {
+              "id": 3933,
+              "codeMatiere": "AGL1",
+              "codeSousMatiere": "",
+              "discipline": "ANGLAIS LV1",
+              "coef": 2,
+              "effectif": 21,
+              "rang": 18,
+              "groupeMatiere": false,
+              "idGroupeMatiere": 0,
+              "option": 0,
+              "sousMatiere": false,
+              "saisieAppreciationSSMat": false,
+              "professeurs": [
+                {
+                  "id": 303,
+                  "nom": "M. FRAISE M."
+                }
+              ]
+            },
+            {
+              "id": 6264,
+              "codeMatiere": "MA-AI",
+              "codeSousMatiere": "",
+              "discipline": "MATHS POUR INFORMATQ",
+              "coef": 3,
+              "effectif": 21,
+              "rang": 14,
+              "groupeMatiere": false,
+              "idGroupeMatiere": 0,
+              "option": 0,
+              "sousMatiere": false,
+              "saisieAppreciationSSMat": false,
+              "professeurs": [
+                {
+                  "id": 302,
+                  "nom": "M. PATATE N."
+                }
+              ]
+            },
+            {
+              "id": 5821,
+              "codeMatiere": "CEJUM",
+              "codeSousMatiere": "",
+              "discipline": "CEJM",
+              "coef": 3,
+              "effectif": 21,
+              "rang": 15,
+              "groupeMatiere": false,
+              "idGroupeMatiere": 0,
+              "option": 0,
+              "sousMatiere": false,
+              "saisieAppreciationSSMat": false,
+              "professeurs": [
+                {
+                  "id": 200,
+                  "nom": "Mme RASIMUS K."
+                }
+              ]
+            },
+            {
+              "id": 6280,
+              "codeMatiere": "CEJMA",
+              "codeSousMatiere": "",
+              "discipline": "CEJM appliquée",
+              "coef": 1,
+              "effectif": 0,
+              "rang": 0,
+              "groupeMatiere": false,
+              "idGroupeMatiere": 0,
+              "option": 0,
+              "sousMatiere": false,
+              "saisieAppreciationSSMat": false,
+              "professeurs": [
+                {
+                  "id": 200,
+                  "nom": "Mme RASIMUS K."
+                }
+              ]
+            },
+            {
+              "id": 6205,
+              "codeMatiere": "SMDSI",
+              "codeSousMatiere": "",
+              "discipline": "Bloc 1 : SUP.DISPOS.SERV.INF.",
+              "coef": 1,
+              "effectif": 0,
+              "rang": 0,
+              "groupeMatiere": false,
+              "idGroupeMatiere": 0,
+              "option": 0,
+              "sousMatiere": false,
+              "saisieAppreciationSSMat": false,
+              "professeurs": [
+                {
+                  "id": 204,
+                  "nom": "Mme LIUKKO O."
+                }
+              ]
+            },
+            {
+              "id": 5990,
+              "codeMatiere": "SLAM",
+              "codeSousMatiere": "",
+              "discipline": "Bloc 2 : CONCEPT.DEV.APPLIC",
+              "coef": 5,
+              "effectif": 21,
+              "rang": 13,
+              "groupeMatiere": false,
+              "idGroupeMatiere": 0,
+              "option": 0,
+              "sousMatiere": false,
+              "saisieAppreciationSSMat": false,
+              "professeurs": [
+                {
+                  "id": 204,
+                  "nom": "Mme LIUKKO O."
+                },
+                {
+                  "id": 468,
+                  "nom": "M. LAPOULE B."
+                },
+                {
+                  "id": 350,
+                  "nom": "M. HAAJANEN  J."
+                }
+              ]
+            },
+            {
+              "id": 5823,
+              "codeMatiere": "CYSIN",
+              "codeSousMatiere": "",
+              "discipline": "Bloc 3 : CYBERSECURITE",
+              "coef": 2.5,
+              "effectif": 21,
+              "rang": 9,
+              "groupeMatiere": false,
+              "idGroupeMatiere": 0,
+              "option": 0,
+              "sousMatiere": false,
+              "saisieAppreciationSSMat": false,
+              "professeurs": [
+                {
+                  "id": 350,
+                  "nom": "M. HAAJANEN  J."
+                }
+              ]
+            },
+            {
+              "id": 5401,
+              "codeMatiere": "MATAP",
+              "codeSousMatiere": "",
+              "discipline": "MATHEMATIQUES APPROFONDIES",
+              "coef": 1,
+              "effectif": 21,
+              "rang": 0,
+              "groupeMatiere": false,
+              "idGroupeMatiere": 0,
+              "option": 0,
+              "sousMatiere": false,
+              "saisieAppreciationSSMat": false,
+              "professeurs": [
+                {
+                  "id": 302,
+                  "nom": "M. PATATE N."
+                }
+              ]
+            },
+            {
+              "id": 5337,
+              "codeMatiere": "ENTRE",
+              "codeSousMatiere": "",
+              "discipline": "ENTREPREUNARIAT",
+              "coef": 1,
+              "effectif": 0,
+              "rang": 0,
+              "groupeMatiere": false,
+              "idGroupeMatiere": 0,
+              "option": 0,
+              "sousMatiere": false,
+              "saisieAppreciationSSMat": false,
+              "professeurs": [
+                {
+                  "id": 395,
+                  "nom": "M. PINNEAU F."
+                }
+              ]
+            },
+            {
+              "id": 6056,
+              "codeMatiere": "ATELP",
+              "codeSousMatiere": "",
+              "discipline": "ATELIERS PRO",
+              "coef": 1,
+              "effectif": 21,
+              "rang": 6,
+              "groupeMatiere": false,
+              "idGroupeMatiere": 0,
+              "option": 0,
+              "sousMatiere": false,
+              "saisieAppreciationSSMat": false,
+              "professeurs": [
+                {
+                  "id": 325,
+                  "nom": "Madame LADEROUTE L."
+                },
+                {
+                  "id": 468,
+                  "nom": "M. LAPOULE B."
+                }
+              ]
+            },
+            {
+              "id": 6208,
+              "codeMatiere": "COORD",
+              "codeSousMatiere": "",
+              "discipline": "VIE DE CLASSE",
+              "coef": 1,
+              "effectif": 0,
+              "rang": 0,
+              "groupeMatiere": false,
+              "idGroupeMatiere": 0,
+              "option": 0,
+              "sousMatiere": false,
+              "saisieAppreciationSSMat": false,
+              "professeurs": [
+                {
+                  "id": 468,
+                  "nom": "M. LAPOULE B."
+                }
+              ]
+            }
+          ],
+          "disciplinesSimulation": []
+        }
+      }
+    ],
+    "notes": [
+      {
+        "id": 16778095,
+        "devoir": "Economie",
+        "codePeriode": "A001",
+        "codeMatiere": "CEJUM",
+        "libelleMatiere": "CEJM",
+        "codeSousMatiere": "",
+        "typeDevoir": "CONTROLE",
+        "enLettre": false,
+        "commentaire": "",
+        "uncSujet": "",
+        "uncCorrige": "",
+        "coef": "1",
+        "noteSur": "20",
+        "valeur": "2,5",
+        "nonSignificatif": false,
+        "date": "2022-09-22",
+        "dateSaisie": "2022-11-09",
+        "valeurisee": true,
+        "moyenneClasse": "11.16",
+        "minClasse": "2.50",
+        "maxClasse": "17.00",
+        "elementsProgramme": []
+      },
+      {
+        "id": 16777599,
+        "devoir": "JB - Devoir n°1",
+        "codePeriode": "A001",
+        "codeMatiere": "SLAM",
+        "libelleMatiere": "Bloc 2 : CONCEPT.DEV.APPLIC",
+        "codeSousMatiere": "",
+        "typeDevoir": "CONTROLE",
+        "enLettre": false,
+        "commentaire": "",
+        "uncSujet": "",
+        "uncCorrige": "",
+        "coef": "1",
+        "noteSur": "20",
+        "valeur": "5",
+        "nonSignificatif": false,
+        "date": "2022-10-04",
+        "dateSaisie": "2022-12-02",
+        "valeurisee": true,
+        "moyenneClasse": "8.79",
+        "minClasse": "1.00",
+        "maxClasse": "18.00",
+        "elementsProgramme": []
+      },
+      {
+        "id": 16777547,
+        "devoir": "ecrit",
+        "codePeriode": "A001",
+        "codeMatiere": "AGL1",
+        "libelleMatiere": "ANGLAIS LV1",
+        "codeSousMatiere": "",
+        "typeDevoir": "CONTROLE",
+        "enLettre": false,
+        "commentaire": "",
+        "uncSujet": "",
+        "uncCorrige": "",
+        "coef": "1",
+        "noteSur": "20",
+        "valeur": "8,5",
+        "nonSignificatif": false,
+        "date": "2022-10-05",
+        "dateSaisie": "2022-10-05",
+        "valeurisee": true,
+        "moyenneClasse": "12.73",
+        "minClasse": "8.00",
+        "maxClasse": "15.50",
+        "elementsProgramme": []
+      },
+      {
+        "id": 16778096,
+        "devoir": "droit",
+        "codePeriode": "A001",
+        "codeMatiere": "CEJUM",
+        "libelleMatiere": "CEJM",
+        "codeSousMatiere": "",
+        "typeDevoir": "CONTROLE",
+        "enLettre": false,
+        "commentaire": "",
+        "uncSujet": "",
+        "uncCorrige": "",
+        "coef": "1",
+        "noteSur": "20",
+        "valeur": "11",
+        "nonSignificatif": false,
+        "date": "2022-10-20",
+        "dateSaisie": "2022-11-09",
+        "valeurisee": false,
+        "moyenneClasse": "10.88",
+        "minClasse": "5.50",
+        "maxClasse": "16.00",
+        "elementsProgramme": []
+      },
+      {
+        "id": 16778268,
+        "devoir": "OB / Edc Cas-Sting",
+        "codePeriode": "A001",
+        "codeMatiere": "SLAM",
+        "libelleMatiere": "Bloc 2 : CONCEPT.DEV.APPLIC",
+        "codeSousMatiere": "",
+        "typeDevoir": "EXERCICES CLASSES",
+        "enLettre": false,
+        "commentaire": "",
+        "uncSujet": "",
+        "uncCorrige": "",
+        "coef": "1",
+        "noteSur": "20",
+        "valeur": "11",
+        "nonSignificatif": false,
+        "date": "2022-11-08",
+        "dateSaisie": "2022-11-20",
+        "valeurisee": false,
+        "moyenneClasse": "12.45",
+        "minClasse": "3.00",
+        "maxClasse": "20.00",
+        "elementsProgramme": []
+      },
+      {
+        "id": 16778098,
+        "devoir": "BF - CRUD",
+        "codePeriode": "A001",
+        "codeMatiere": "SLAM",
+        "libelleMatiere": "Bloc 2 : CONCEPT.DEV.APPLIC",
+        "codeSousMatiere": "",
+        "typeDevoir": "Projets personnalisés encadrés",
+        "enLettre": false,
+        "commentaire": "",
+        "uncSujet": "",
+        "uncCorrige": "",
+        "coef": "1",
+        "noteSur": "20",
+        "valeur": "15",
+        "nonSignificatif": false,
+        "date": "2022-11-09",
+        "dateSaisie": "2023-01-06",
+        "valeurisee": false,
+        "moyenneClasse": "11.65",
+        "minClasse": "2.00",
+        "maxClasse": "18.00",
+        "elementsProgramme": []
+      },
+      {
+        "id": 16778728,
+        "devoir": "Devoir n°1",
+        "codePeriode": "A001",
+        "codeMatiere": "CYSIN",
+        "libelleMatiere": "Bloc 3 : CYBERSECURITE",
+        "codeSousMatiere": "",
+        "typeDevoir": "CONTROLE",
+        "enLettre": false,
+        "commentaire": "",
+        "uncSujet": "",
+        "uncCorrige": "",
+        "coef": "1",
+        "noteSur": "20",
+        "valeur": "11,5",
+        "nonSignificatif": false,
+        "date": "2022-11-15",
+        "dateSaisie": "2022-12-02",
+        "valeurisee": false,
+        "moyenneClasse": "11.10",
+        "minClasse": "3.50",
+        "maxClasse": "20.00",
+        "elementsProgramme": []
+      },
+      {
+        "id": 16778225,
+        "devoir": "ecrit",
+        "codePeriode": "A001",
+        "codeMatiere": "AGL1",
+        "libelleMatiere": "ANGLAIS LV1",
+        "codeSousMatiere": "",
+        "typeDevoir": "CONTROLE",
+        "enLettre": false,
+        "commentaire": "",
+        "uncSujet": "",
+        "uncCorrige": "",
+        "coef": "1",
+        "noteSur": "20",
+        "valeur": "10",
+        "nonSignificatif": false,
+        "date": "2022-11-16",
+        "dateSaisie": "2022-11-16",
+        "valeurisee": false,
+        "moyenneClasse": "11.88",
+        "minClasse": "6.50",
+        "maxClasse": "17.50",
+        "elementsProgramme": []
+      },
+      {
+        "id": 16778739,
+        "devoir": "OB / TP SQL",
+        "codePeriode": "A001",
+        "codeMatiere": "SLAM",
+        "libelleMatiere": "Bloc 2 : CONCEPT.DEV.APPLIC",
+        "codeSousMatiere": "",
+        "typeDevoir": "EXERCICES CLASSES",
+        "enLettre": false,
+        "commentaire": "",
+        "uncSujet": "",
+        "uncCorrige": "",
+        "coef": "1",
+        "noteSur": "20",
+        "valeur": "14",
+        "nonSignificatif": false,
+        "date": "2022-11-22",
+        "dateSaisie": "2022-12-02",
+        "valeurisee": false,
+        "moyenneClasse": "15.00",
+        "minClasse": "13.00",
+        "maxClasse": "16.00",
+        "elementsProgramme": []
+      },
+      {
+        "id": 16778536,
+        "devoir": "exposés",
+        "codePeriode": "A001",
+        "codeMatiere": "CGEXP",
+        "libelleMatiere": "CULT.GENE.EXPRESSION",
+        "codeSousMatiere": "",
+        "typeDevoir": "",
+        "enLettre": false,
+        "commentaire": "",
+        "uncSujet": "",
+        "uncCorrige": "",
+        "coef": "1",
+        "noteSur": "20",
+        "valeur": "17",
+        "nonSignificatif": false,
+        "date": "2022-11-27",
+        "dateSaisie": "2022-11-27",
+        "valeurisee": false,
+        "moyenneClasse": "18.35",
+        "minClasse": "14.00",
+        "maxClasse": "20.00",
+        "elementsProgramme": []
+      },
+      {
+        "id": 16778537,
+        "devoir": "synthèse",
+        "codePeriode": "A001",
+        "codeMatiere": "CGEXP",
+        "libelleMatiere": "CULT.GENE.EXPRESSION",
+        "codeSousMatiere": "",
+        "typeDevoir": "",
+        "enLettre": false,
+        "commentaire": "",
+        "uncSujet": "",
+        "uncCorrige": "",
+        "coef": "2",
+        "noteSur": "20",
+        "valeur": "9",
+        "nonSignificatif": false,
+        "date": "2022-11-27",
+        "dateSaisie": "2022-11-27",
+        "valeurisee": true,
+        "moyenneClasse": "10.50",
+        "minClasse": "5.00",
+        "maxClasse": "17.00",
+        "elementsProgramme": []
+      },
+      {
+        "id": 16778729,
+        "devoir": "Devoir n°2",
+        "codePeriode": "A001",
+        "codeMatiere": "CYSIN",
+        "libelleMatiere": "Bloc 3 : CYBERSECURITE",
+        "codeSousMatiere": "",
+        "typeDevoir": "CONTROLE",
+        "enLettre": false,
+        "commentaire": "",
+        "uncSujet": "",
+        "uncCorrige": "",
+        "coef": "1",
+        "noteSur": "20",
+        "valeur": "13",
+        "nonSignificatif": false,
+        "date": "2022-11-29",
+        "dateSaisie": "2022-12-02",
+        "valeurisee": false,
+        "moyenneClasse": "12.57",
+        "minClasse": "5.00",
+        "maxClasse": "20.00",
+        "elementsProgramme": []
+      },
+      {
+        "id": 16778871,
+        "devoir": "vidéo",
+        "codePeriode": "A001",
+        "codeMatiere": "AGL1",
+        "libelleMatiere": "ANGLAIS LV1",
+        "codeSousMatiere": "",
+        "typeDevoir": "EXPRESSION ORALE",
+        "enLettre": false,
+        "commentaire": "",
+        "uncSujet": "",
+        "uncCorrige": "",
+        "coef": "1",
+        "noteSur": "20",
+        "valeur": "14",
+        "nonSignificatif": false,
+        "date": "2022-12-07",
+        "dateSaisie": "2022-12-07",
+        "valeurisee": false,
+        "moyenneClasse": "14.43",
+        "minClasse": "13.00",
+        "maxClasse": "17.00",
+        "elementsProgramme": []
+      },
+      {
+        "id": 16779301,
+        "devoir": "BF - JS",
+        "codePeriode": "A001",
+        "codeMatiere": "SLAM",
+        "libelleMatiere": "Bloc 2 : CONCEPT.DEV.APPLIC",
+        "codeSousMatiere": "",
+        "typeDevoir": "DEVOIR SURVEILLE",
+        "enLettre": false,
+        "commentaire": "",
+        "uncSujet": "",
+        "uncCorrige": "",
+        "coef": "1",
+        "noteSur": "20",
+        "valeur": "15",
+        "nonSignificatif": false,
+        "date": "2022-12-07",
+        "dateSaisie": "2023-01-06",
+        "valeurisee": false,
+        "moyenneClasse": "11.02",
+        "minClasse": "0.00",
+        "maxClasse": "17.00",
+        "elementsProgramme": []
+      },
+      {
+        "id": 16779168,
+        "devoir": "Projet V1",
+        "codePeriode": "A001",
+        "codeMatiere": "SLAM",
+        "libelleMatiere": "Bloc 2 : CONCEPT.DEV.APPLIC",
+        "codeSousMatiere": "",
+        "typeDevoir": "CONTROLE",
+        "enLettre": false,
+        "commentaire": "",
+        "uncSujet": "",
+        "uncCorrige": "",
+        "coef": "1",
+        "noteSur": "20",
+        "valeur": "14",
+        "nonSignificatif": false,
+        "date": "2022-12-12",
+        "dateSaisie": "2023-01-01",
+        "valeurisee": false,
+        "moyenneClasse": "14.86",
+        "minClasse": "12.00",
+        "maxClasse": "18.00",
+        "elementsProgramme": []
+      },
+      {
+        "id": 16779879,
+        "devoir": "CEJMA exposé",
+        "codePeriode": "A001",
+        "codeMatiere": "CEJUM",
+        "libelleMatiere": "CEJM",
+        "codeSousMatiere": "",
+        "typeDevoir": "EXPRESSION ORALE",
+        "enLettre": false,
+        "commentaire": "",
+        "uncSujet": "",
+        "uncCorrige": "",
+        "coef": "1",
+        "noteSur": "20",
+        "valeur": "13",
+        "nonSignificatif": false,
+        "date": "2023-01-05",
+        "dateSaisie": "2023-01-25",
+        "valeurisee": false,
+        "moyenneClasse": "15.10",
+        "minClasse": "12.00",
+        "maxClasse": "18.00",
+        "elementsProgramme": []
+      },
+      {
+        "id": 16779300,
+        "devoir": "Orale Blanc",
+        "codePeriode": "A001",
+        "codeMatiere": "ATELP",
+        "libelleMatiere": "ATELIERS PRO",
+        "codeSousMatiere": "",
+        "typeDevoir": "CONTROLE",
+        "enLettre": false,
+        "commentaire": "",
+        "uncSujet": "",
+        "uncCorrige": "",
+        "coef": "1",
+        "noteSur": "20",
+        "valeur": "14",
+        "nonSignificatif": false,
+        "date": "2023-01-06",
+        "dateSaisie": "2023-01-06",
+        "valeurisee": false,
+        "moyenneClasse": "13.05",
+        "minClasse": "10.00",
+        "maxClasse": "19.00",
+        "elementsProgramme": []
+      },
+      {
+        "id": 16779728,
+        "devoir": "Appréciation",
+        "codePeriode": "A001",
+        "codeMatiere": "MA-AI",
+        "libelleMatiere": "MATHS POUR INFORMATQ",
+        "codeSousMatiere": "",
+        "typeDevoir": "",
+        "enLettre": false,
+        "commentaire": "",
+        "uncSujet": "",
+        "uncCorrige": "",
+        "coef": "0.5",
+        "noteSur": "20",
+        "valeur": "13",
+        "nonSignificatif": false,
+        "date": "2023-01-20",
+        "dateSaisie": "2023-01-20",
+        "valeurisee": false,
+        "moyenneClasse": "14.76",
+        "minClasse": "12.00",
+        "maxClasse": "19.00",
+        "elementsProgramme": []
+      },
+      {
+        "id": 16779721,
+        "devoir": "dst maths 26/10/22",
+        "codePeriode": "A001",
+        "codeMatiere": "MA-AI",
+        "libelleMatiere": "MATHS POUR INFORMATQ",
+        "codeSousMatiere": "",
+        "typeDevoir": "",
+        "enLettre": false,
+        "commentaire": "",
+        "uncSujet": "",
+        "uncCorrige": "",
+        "coef": "1",
+        "noteSur": "20",
+        "valeur": "11,5",
+        "nonSignificatif": false,
+        "date": "2023-01-20",
+        "dateSaisie": "2023-01-20",
+        "valeurisee": false,
+        "moyenneClasse": "13.18",
+        "minClasse": "4.00",
+        "maxClasse": "20.00",
+        "elementsProgramme": []
+      },
+      {
+        "id": 16779722,
+        "devoir": "dst algo 26/10/22",
+        "codePeriode": "A001",
+        "codeMatiere": "MA-AI",
+        "libelleMatiere": "MATHS POUR INFORMATQ",
+        "codeSousMatiere": "",
+        "typeDevoir": "",
+        "enLettre": false,
+        "commentaire": "",
+        "uncSujet": "",
+        "uncCorrige": "",
+        "coef": "1",
+        "noteSur": "20",
+        "valeur": "15",
+        "nonSignificatif": false,
+        "date": "2023-01-20",
+        "dateSaisie": "2023-01-20",
+        "valeurisee": false,
+        "moyenneClasse": "12.60",
+        "minClasse": "1.50",
+        "maxClasse": "19.50",
+        "elementsProgramme": []
+      },
+      {
+        "id": 16779723,
+        "devoir": "dst du 4.01.23",
+        "codePeriode": "A001",
+        "codeMatiere": "MA-AI",
+        "libelleMatiere": "MATHS POUR INFORMATQ",
+        "codeSousMatiere": "",
+        "typeDevoir": "",
+        "enLettre": false,
+        "commentaire": "",
+        "uncSujet": "",
+        "uncCorrige": "",
+        "coef": "1",
+        "noteSur": "20",
+        "valeur": "9",
+        "nonSignificatif": false,
+        "date": "2023-01-20",
+        "dateSaisie": "2023-01-20",
+        "valeurisee": true,
+        "moyenneClasse": "16.06",
+        "minClasse": "8.50",
+        "maxClasse": "20.00",
+        "elementsProgramme": []
+      },
+      {
+        "id": 16780541,
+        "devoir": "Contrôle droit",
+        "codePeriode": "A002",
+        "codeMatiere": "CEJUM",
+        "libelleMatiere": "CEJM",
+        "codeSousMatiere": "",
+        "typeDevoir": "CONTROLE",
+        "enLettre": false,
+        "commentaire": "",
+        "uncSujet": "",
+        "uncCorrige": "",
+        "coef": "1",
+        "noteSur": "20",
+        "valeur": "12",
+        "nonSignificatif": false,
+        "date": "2023-02-03",
+        "dateSaisie": "1970-01-01",
+        "valeurisee": false,
+        "moyenneClasse": "12.40",
+        "minClasse": "4.00",
+        "maxClasse": "15.00",
+        "elementsProgramme": []
+      }
+    ],
+    "parametrage": {
+      "couleurEval1": "#FF0000",
+      "couleurEval2": "#FFC000",
+      "couleurEval3": "#0070C0",
+      "couleurEval4": "#00B050",
+      "libelleEval1": "Tm9sDJEGdGVpbnRz",
+      "libelleEval2": "UGFydkNDKBbkdVudCBhdHRlaW50cw==",
+      "libelleEval3": "QXR1JHbjdHM=",
+      "libelleEval4": "RMMhdGFzm9Ppcw==",
+      "affichageMoyenne": true,
+      "affichageMoyenneDevoir": true,
+      "affichagePositionMatiere": false,
+      "affichageNote": true,
+      "affichageCompetence": false,
+      "affichageEvaluationsComposantes": false,
+      "affichageGraphiquesComposantes": true,
+      "modeCalculGraphiquesComposantes": "eval",
+      "affichageCompNum": false,
+      "libelleEvalCompNum1": "Tm9sDJEGdGVpbnRz=",
+      "libelleEvalCompNum2": "UGFydkNDKBbkdVudCBhdHRlaW50",
+      "libelleEvalCompNum3": "QXR1JHbjdHM==",
+      "affichageAppreciation": false,
+      "appreciationsProf": false,
+      "appreciationProfPrinc": false,
+      "affichageMention": false,
+      "affichageAppreciationCE": false,
+      "affichageAppreciationVS": false,
+      "affichageAppreciationCN": false,
+      "affichageAppreciationClasse": false,
+      "affichageAppreciationPeriodeCloturee": false,
+      "moyenneUniquementPeriodeCloture": false,
+      "moyennePeriodeReleve": false,
+      "moyennePeriodeAnnuelle": false,
+      "moyennePeriodeHorsP": false,
+      "moyenneEleveDansNotes": true,
+      "moyenneEleve": true,
+      "moyenneEleveDansMoyenne": true,
+      "moyenneGenerale": true,
+      "moyenneCoefMatiere": true,
+      "moyenneClasse": true,
+      "moyenneMin": true,
+      "moyenneMax": true,
+      "moyenneRang": true,
+      "moyenneSur": 20,
+      "moyenneGraphique": true,
+      "moyennesSimulation": false,
+      "coefficientNote": true,
+      "colonneCoefficientMatiere": true,
+      "noteGrasSousMoyenne": true,
+      "noteGrasAudessusMoyenne": false,
+      "libelleDevoir": true,
+      "dateDevoir": true,
+      "typeDevoir": true,
+      "noteUniquementPeriodeCloture": false,
+      "notePeriodeReleve": false,
+      "notePeriodeAnnuelle": false,
+      "notePeriodeHorsP": false,
+      "libellesAppreciations": [
+        "Appréciations"
+      ],
+      "appreciationsParametrage": [
+        {
+          "code": "APP1",
+          "id": 1,
+          "nbMaxCaractere": 300,
+          "libelle": "Appréciations"
+        }
+      ]
+    }
+  }
+}

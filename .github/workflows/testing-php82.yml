@@ -1,4 +1,4 @@
-name: Testing PHP 8.1
+name: Testing PHP 8.2
 
 on: [ push ]
 
@@ -10,10 +10,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Set up php 8.1
+      - name: Set up php 8.2
         uses: shivammathur/setup-php@v2
         with:
-          php-version: '8.1'
+          php-version: '8.2'
 
       - name: Install dependencies
         run: composer self-update && composer install && composer dump-autoload

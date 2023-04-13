@@ -18,6 +18,11 @@ jobs:
       - name: Install dependencies
         run: composer self-update && composer install && composer dump-autoload
 
+      - name: Install & run API
+        run: |
+          git clone https://github.com/studoo-app/mock-ecole-directe-api.git
+          cd mock-ecole-directe-api && composer install && php -S localhost:9042 -t api &
+
       - name: Run tests and collect coverage
         run: vendor/bin/phpunit --coverage-clover clover.xml
 

@@ -6,6 +6,12 @@ jobs:
   build-test:
     runs-on: ubuntu-latest
 
+    services:
+      mock-api:
+        image: bfoujols/mock-api-ecole-directe:v0.1.0-dev
+        ports:
+          - 9042:80
+
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -20,3 +26,10 @@ jobs:
 
       - name: Run tests and collect coverage
         run: vendor/bin/phpunit
+
+      - name: Test API
+        run: |
+          curl --request POST \
+            --url http://localhost:9042/v3/login \
+            --header 'Content-Type: text/plain' \
+            --data 'data={"identifiant":"jeremy","motdepasse":"test"}'

@@ -11,7 +11,6 @@ jobs:
         image: bfoujols/mock-api-ecole-directe:v0.1.0-dev
         ports:
           - 80:80
-        options: --add-host mockapiecoledirecte:127.0.0.1
 
     steps:
       - name: Checkout
@@ -32,7 +31,7 @@ jobs:
         run: |
           timeout=60
           while [ $timeout -gt 0 ]; do
-            curl -I http://mockapiecoledirecte:${{ job.services.mock-api.ports['80'] }} && break
+            curl -I http://build-test.mock-api:${{ job.services.mock-api.ports['80'] }} && break
             echo "Waiting for API service..."
             timeout=$((timeout - 1))
             sleep 1
@@ -45,6 +44,6 @@ jobs:
       - name: Test API
         run: |
           curl --request POST \
-            --url http://mockapiecoledirecte:${{ job.services.mock-api.ports['80'] }}/v3/login \
+            --url http://build-test.mock-api:${{ job.services.mock-api.ports['80'] }}/v3/login \
             --header 'Content-Type: text/plain' \
             --data 'data={"identifiant":"jeremy","motdepasse":"test"}'

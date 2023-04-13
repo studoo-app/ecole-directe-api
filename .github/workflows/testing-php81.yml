@@ -30,6 +30,6 @@ jobs:
       - name: Test API
         run: |
           curl --request POST \
-            --url http://localhost:9042/v3/login \
+            --url http://127.0.0.1:${{ job.services.mock-api.ports['9042'] }}/v3/login \
             --header 'Content-Type: text/plain' \
             --data 'data={"identifiant":"jeremy","motdepasse":"test"}'

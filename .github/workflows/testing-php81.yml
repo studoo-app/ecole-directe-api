@@ -34,4 +34,4 @@ jobs:
           --header 'Content-Type: text/plain' \
           --body-data 'data={"identifiant":"jeremy","motdepasse":"test"}' \
           --output-document \
-          - http://localhost:${{ job.services.mock-api.ports[80] }}/v3/login
+          - http://localhost/v3/login

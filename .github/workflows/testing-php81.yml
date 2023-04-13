@@ -10,7 +10,7 @@ jobs:
       mock-api:
         image: bfoujols/mock-api-ecole-directe:v0.1.0-dev
         ports:
-          - 9042:80
+          - 80:80
 
     steps:
       - name: Checkout
@@ -30,6 +30,6 @@ jobs:
       - name: Test API
         run: |
           curl --request POST \
-            --url http://127.0.0.1:${{ job.services.mock-api.ports['9042'] }}/v3/login \
+            --url http://127.0.0.1:${{ job.services.mock-api.ports['80'] }}/v3/login \
             --header 'Content-Type: text/plain' \
             --data 'data={"identifiant":"jeremy","motdepasse":"test"}'

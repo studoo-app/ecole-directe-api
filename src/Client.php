@@ -21,7 +21,7 @@ use Studoo\Api\EcoleDirecte\Query\RunQuery;
  */
 class Client
 {
-    private const LIBVER = '0.1.0';
+    private const LIBVER = '0.1.x';
 
     private const API_BASE_PATH = 'https://apip.ecoledirecte.com';
 

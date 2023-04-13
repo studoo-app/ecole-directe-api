@@ -5,12 +5,6 @@ on: [ push ]
 jobs:
   build-test:
     runs-on: ubuntu-latest
-    container: ubuntu
-    services:
-      mock-api:
-        image: bfoujols/mock-api-ecole-directe:v0.1.0-dev
-        ports:
-          - 80:80
 
     steps:
       - name: Checkout
@@ -27,11 +21,15 @@ jobs:
       - name: Run tests and collect coverage
         run: vendor/bin/phpunit
 
+      - name: Install & run API
+        run: |
+          git clone https://github.com/studoo-app/mock-ecole-directe-api.git
+          cd mock-ecole-directe-api && composer install && php -S localhost:80 -t api &
+
       - name: Test API
         run: |
-          apt-get update; apt-get install curl -y
           curl --request POST \
-          --url http://mock-api:80/v3/login \
+          --url http://localhost:80/v3/login \
           --header 'Content-Type: text/plain' \
           --data 'data={"identifiant":"jeremy","motdepasse":"test"}' > curl_result_docker
           cat curl_result_docker

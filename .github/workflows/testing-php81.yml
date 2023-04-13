@@ -5,7 +5,7 @@ on: [ push ]
 jobs:
   build-test:
     runs-on: ubuntu-latest
-
+    container: ubuntu
     services:
       mock-api:
         image: bfoujols/mock-api-ecole-directe:v0.1.0-dev
@@ -29,6 +29,7 @@ jobs:
 
       - name: Test API
         run: |
+          apt-get update; apt-get install curl -y
           curl --request POST \
           --url http://mock-api:80/v3/login \
           --header 'Content-Type: text/plain' \

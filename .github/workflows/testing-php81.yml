@@ -18,18 +18,10 @@ jobs:
       - name: Install dependencies
         run: composer self-update && composer install && composer dump-autoload
 
-      - name: Run tests and collect coverage
-        run: vendor/bin/phpunit
-
       - name: Install & run API
         run: |
           git clone https://github.com/studoo-app/mock-ecole-directe-api.git
-          cd mock-ecole-directe-api && composer install && php -S localhost:8000 -t api &
+          cd mock-ecole-directe-api && composer install && php -S localhost:9042 -t api &
 
-      - name: Test API
-        run: |
-          curl --request POST \
-          --url http://localhost:8000/v3/login \
-          --header 'Content-Type: text/plain' \
-          --data 'data={"identifiant":"jeremy","motdepasse":"test"}' > curl_result_docker
-          cat curl_result_docker
+      - name: Run tests and collect coverage
+        run: vendor/bin/phpunit

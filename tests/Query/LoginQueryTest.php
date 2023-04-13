@@ -12,6 +12,7 @@ class LoginQueryTest extends TestCase
 
     public function setUp(): void
     {
+        $_ENV["ENV"] = "";
         $this->loginQuery = new LoginQuery();
         $this->jsonContent = json_decode(
             file_get_contents(__DIR__ . '/../Data/loginV3TypeP.json'),

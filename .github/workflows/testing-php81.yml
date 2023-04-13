@@ -27,23 +27,16 @@ jobs:
       - name: Run tests and collect coverage
         run: vendor/bin/phpunit
 
-      - name: Test start API
-        run: |
-          timeout=60
-          while [ $timeout -gt 0 ]; do
-            curl -I http://${{ job.services.mock-api.container }}:${{ job.services.mock-api.ports['80'] }} && break
-            echo "Waiting for API service..."
-            timeout=$((timeout - 1))
-            sleep 1
-          done
-          if [ $timeout -eq 0 ]; then
-            echo "API service did not start in time"
-            exit 1
-          fi
-
       - name: Test API
+        env:
+          # The hostname used to communicate with the API service container
+          API_HOST: mock-api
+          # The default API port
+          API_PORT: 80
         run: |
-          curl --request POST \
-            --url http://${{ job.services.mock-api.container }}:${{ job.services.mock-api.ports['80'] }}/v3/login \
-            --header 'Content-Type: text/plain' \
-            --data 'data={"identifiant":"jeremy","motdepasse":"test"}'
+          wget --quiet \
+          --method POST \
+          --header 'Content-Type: text/plain' \
+          --body-data 'data={"identifiant":"jeremy","motdepasse":"test"}' \
+          --output-document \
+          - http://API_HOST:API_PORT/v3/login

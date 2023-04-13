@@ -10,7 +10,7 @@ jobs:
       mock-api:
         image: bfoujols/mock-api-ecole-directe:v0.1.0-dev
         ports:
-          - 80:80
+          - 80
 
     steps:
       - name: Checkout
@@ -28,15 +28,10 @@ jobs:
         run: vendor/bin/phpunit
 
       - name: Test API
-        env:
-          # The hostname used to communicate with the API service container
-          API_HOST: mock-api
-          # The default API port
-          API_PORT: 80
         run: |
           wget --quiet \
           --method POST \
           --header 'Content-Type: text/plain' \
           --body-data 'data={"identifiant":"jeremy","motdepasse":"test"}' \
           --output-document \
-          - http://API_HOST:API_PORT/v3/login
+          - http://localhost:${{ job.services.mock-api.ports[80] }}/v3/login

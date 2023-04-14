@@ -5,6 +5,12 @@ require_once __DIR__ . '/../vendor/autoload.php';
 use Studoo\Api\EcoleDirecte\Client;
 use Symfony\Component\Dotenv\Dotenv;
 
+/**
+ * Mise en place de l'environnement de développement via DotEnv
+ * via le fichier .env à la racine du projet
+ * Renseigner les variables CLIENT_ID, CLIENT_SECRET
+ */
+
 $dotenv = new Dotenv();
 $dotenv->loadEnv(__DIR__ . '/../.env');
 

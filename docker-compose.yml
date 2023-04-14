@@ -1,0 +1,8 @@
+version: "3.8"
+services:
+  mock-ecole-directe-api:
+    container_name: mock-ecole-directe-api
+    image: bfoujols/mock-api-ecole-directe
+    ports:
+      - "9042:80"
+    restart: always

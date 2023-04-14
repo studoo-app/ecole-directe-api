@@ -21,32 +21,11 @@ class LoginTest extends TestCase
         $this->assertEquals('345', $login->getIdLogin());
     }
 
-    public function testGetIdLogin()
-    {
-        $login = new Login();
-        $login->setIdLogin('345');
-        $this->assertEquals('345', $login->getIdLogin());
-    }
-
-    public function testGetId()
-    {
-        $login = new Login();
-        $login->setId('345');
-        $this->assertEquals('345', $login->getId());
-    }
-
     public function testSetId()
     {
         $login = new Login();
         $login->setId('345');
         $this->assertEquals('345', $login->getId());
-    }
-
-    public function testGetUid()
-    {
-        $login = new Login();
-        $login->setUid('345');
-        $this->assertEquals('345', $login->getUid());
     }
 
     public function testSetUid()

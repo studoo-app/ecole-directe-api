@@ -7,13 +7,20 @@ Utilisation de la librairie PHP pour l'API Ecole Directe (non officielle)
 
 ## Installation de la librairie
 
-```php
+```bash
 composer require studoo/ecole-directe-api
 ```
 
 ## Utilisation de la librairie
 
-Des exemples d'utilisation sont disponibles dans le dossier `examples`.
+Des exemples d'utilisation sont disponibles dans le dossier `examples`. \
+
+Un mock a été développé pour tester API : [studoo-app/mock-ecole-directe-api](https://github.com/studoo-app/mock-ecole-directe-api)
+Le seul prérequis, il faut la version v0.1.3 de la lib ecole-directe-api. Faire la commande suivante :
+
+```bash
+composer update studoo/ecole-directe-api
+```
 
 ## Documentation
 

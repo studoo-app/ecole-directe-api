@@ -36,7 +36,7 @@ interface EntityQueryInterface
      * @example POST
      * @return string
      */
-    public function getMethode() : string;
+    public function getMethode(): string;
 
     /**
      * Retourne le chemin de la requête

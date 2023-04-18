@@ -24,7 +24,7 @@ trait DispacherQuery
      * @return object Retourne l'objet de la requête
      * @throws InvalidModelException
      */
-    public function dispacherForModel(string $model) : object
+    public function dispacherForModel(string $model): object
     {
         $api = [
             "login"       => LoginQuery::class,

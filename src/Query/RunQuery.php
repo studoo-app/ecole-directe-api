@@ -8,7 +8,6 @@
  * veuillez consulter le fichier LICENSE qui a été distribué avec ce code source.
  */
 
-
 namespace Studoo\Api\EcoleDirecte\Query;
 
 use GuzzleHttp\Exception\GuzzleException;
@@ -66,7 +65,7 @@ class RunQuery
             $this->apiModel->setParamToPath($param['pathID']);
         }
         // Fix body si vide
-        (isset($body)) ? $bodyReponse = json_encode($body, JSON_THROW_ON_ERROR) : $bodyReponse = "{}";
+        (count($body) != 0) ? $bodyReponse = json_encode($body, JSON_THROW_ON_ERROR) : $bodyReponse = "{}";
 
         $response = (new Request(config: $this->config))->query(
             methode: $this->apiModel->getMethode(),

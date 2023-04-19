@@ -1,5 +1,11 @@
 # CHANGELOG
 
+0.1.4
+---
+
+* Refactoring code by PHPStan
+* Add Makefile by Taskfile
+
 0.1.3
 ---
 

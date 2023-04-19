@@ -84,7 +84,7 @@ class Login
 
     /**
      * Profil de l'utilisateur
-     * @var array
+     * @var array<mixed>
      */
     private array $profile;
 
@@ -275,7 +275,7 @@ class Login
     }
 
     /**
-     * @return array
+     * @return array<mixed>
      */
     public function getProfile(): array
     {
@@ -283,7 +283,7 @@ class Login
     }
 
     /**
-     * @param array $profile
+     * @param array<mixed> $profile
      * @return Login
      */
     public function setProfile(array $profile): Login

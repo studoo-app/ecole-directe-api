@@ -12,5 +12,8 @@ namespace Studoo\Api\EcoleDirecte\Exception;
 
 class InvalidModelException extends \Exception
 {
+    /**
+     * @var string
+     */
     protected $message = "Invalid model API";
 }

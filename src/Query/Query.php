@@ -14,12 +14,24 @@ use Psr\Http\Message\ResponseInterface;
 
 class Query
 {
+    /**
+     * @var string $methode Méthode de la requête
+     */
     protected string $methode;
 
+    /**
+     * @var string $path Chemin de la requête
+     */
     protected string $path;
 
+    /**
+     * @var array<mixed> $query Paramètres de la requête
+     */
     protected array $query = [];
 
+    /**
+     * @var ResponseInterface $rawSource Source brute de la requête
+     */
     protected ResponseInterface $rawSource;
 
 
@@ -41,6 +53,11 @@ class Query
         return $this->path;
     }
 
+    /**
+     * Définit le chemin de la requête
+     * @param array<mixed> $pathID Tableau de remplacement des paramètres de la requête
+     * @return $this
+     */
     public function setParamToPath(array $pathID): Query
     {
         foreach ($pathID as $search => $replace) {
@@ -51,7 +68,7 @@ class Query
 
     /**
      * Retourne les paramètres de la requête
-     * @return array
+     * @return array<mixed>
      */
     public function getQuery(): array
     {
@@ -59,6 +76,7 @@ class Query
     }
 
     /**
+     * Retourne la source brute de la requête
      * @return ResponseInterface
      */
     public function getRawSource(): ResponseInterface
@@ -67,6 +85,7 @@ class Query
     }
 
     /**
+     * Définit la méthode de la requête
      * @param ResponseInterface $rawSource
      * @return Query
      */

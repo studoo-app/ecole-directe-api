@@ -12,5 +12,8 @@ namespace Studoo\Api\EcoleDirecte\Exception;
 
 class NotDataResponseException extends \Exception
 {
+    /**
+     * @var string
+     */
     protected $message = "Pas de donnée dans la réponse";
 }

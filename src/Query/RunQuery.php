@@ -25,29 +25,34 @@ class RunQuery
 {
     use DispacherQuery;
 
-    private object $apiModel;
+    /**
+     * @var EntityQueryInterface $apiModel Modèle de requête
+     */
+    private EntityQueryInterface $apiModel;
 
+    /**
+     * @var array<mixed> $config Configuration de l'API
+     */
     private array $config;
 
 
     /**
      * BuildQuery constructor.
      * @param string $model Nom d'appel API
-     * @param array $config Configuration de l'API
+     * @param array<mixed> $config Configuration de l'API
      * @throws InvalidModelException
      */
     public function __construct(string $model, array $config)
     {
-        $finalModel = $this->dispacherForModel($model);
-        $this->apiModel = new $finalModel();
+        $this->apiModel = $this->dispacherForModel($model);
         $this->config = $config;
     }
 
     /**
      * Exécute la requête API et renvoi le résultat en objet
-     * @param array $body Données à envoyer dans la requête
-     * @param array $headers Entêtes à envoyer dans la requête
-     * @param array $param Paramètres à envoyer dans la requête
+     * @param array<mixed> $body Données à envoyer dans la requête
+     * @param array<mixed> $headers Entêtes à envoyer dans la requête
+     * @param array<mixed> $param Paramètres à envoyer dans la requête
      * @return object
      * @throws GuzzleException
      * @throws JsonException

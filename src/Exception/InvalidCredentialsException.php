@@ -12,5 +12,8 @@ namespace Studoo\Api\EcoleDirecte\Exception;
 
 class InvalidCredentialsException extends \Exception
 {
+    /**
+     * @var string
+     */
     protected $message = "Invalid credentials";
 }

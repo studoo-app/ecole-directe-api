@@ -10,6 +10,8 @@
 
 namespace Studoo\Api\EcoleDirecte\Query;
 
+use Psr\Http\Message\ResponseInterface;
+
 /**
  * Cette interface permet de définir les méthodes d'une requête
  * @example LoginQuery
@@ -26,7 +28,7 @@ interface EntityQueryInterface
      *         BuildEntiy::hasPacked($login, $data['data']['accounts'][0]);
      *         return $login;
      *
-     * @param array $data
+     * @param array<mixed> $data
      * @return object
      */
     public function buildEntity(array $data): object;
@@ -48,7 +50,27 @@ interface EntityQueryInterface
     /**
      * Retourne les paramètres de la requête
      * @example ['identifiant' => '', 'motdepasse' => '']
-     * @return array
+     * @return array<mixed>
      */
     public function getQuery(): array;
+
+    /**
+         * Retourne la source brute de la requête
+         * @return ResponseInterface
+         */
+    public function getRawSource(): ResponseInterface;
+
+    /**
+     * Définit la source brute de la requête
+     * @param ResponseInterface $response
+     * @return Query
+     */
+    public function setRawSource(ResponseInterface $response): Query;
+
+    /**
+     * Définit le chemin de la requête
+     * @param array<mixed> $param
+     * @return Query
+     */
+    public function setParamToPath(array $param): Query;
 }

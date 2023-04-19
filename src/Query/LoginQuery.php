@@ -32,7 +32,7 @@ class LoginQuery extends Query implements EntityQueryInterface
 
     /**
      * Retourne l'entité de la requête API
-     * @param array $data
+     * @param array<mixed> $data
      * @return object
      * @throws NotDataResponseException
      */

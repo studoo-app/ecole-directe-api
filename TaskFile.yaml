@@ -37,7 +37,7 @@ vars:
   PHPUNIT: "php vendor/bin/phpunit"
   #
   # PHP QA TOOLS
-  PHPQA: jakzal/phpqa
+  PHPQA: jakzal/phpqa:php8.1-alpine
   PHPQA_RUN: "{{.DOCKER_RUN}} --init -it --rm -v {{.PWD}}:/project -w /project {{.PHPQA}}"
 
 ##
@@ -126,7 +126,7 @@ tasks:
   qa-phpstan:
     desc: "Run phpstan"
     cmds:
-      - "{{.PHPQA_RUN}} phpstan analyse ./src --level=5"
+      - "{{.PHPQA_RUN}} phpstan analyse ./src --level=7"
 
   qa-phpcpd:
     desc: "Run phpcpd (copy/paste detector)"

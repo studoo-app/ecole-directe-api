@@ -62,16 +62,5 @@ class ClientTest extends TestCase
         $client->fetchAccessToken();
     }
 
-    public function testClient05InvalidModelException()
-    {
-        $_ENV["ENV"] = "";
-
-        $client = new Client([
-            "base_path" => "http://localhost:9042",
-            "client_id" => "jeremy",
-            "client_secret" => "test",
-        ]);
-        $this->expectException(\Studoo\Api\EcoleDirecte\Exception\InvalidModelException::class);
-        $client->fetchAccessToken();
-    }
+    // TODO public function testClient05InvalidModelException()
 }

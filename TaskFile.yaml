@@ -166,7 +166,9 @@ tasks:
   testunit:
     desc: "Run tests"
     cmds:
+      - task: docker-up
       - task: tests
+      - task: docker-down
 
   ex-start:
     desc: "Start project exemple"

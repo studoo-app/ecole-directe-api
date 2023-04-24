@@ -22,32 +22,32 @@ class LoginQueryTest extends TestCase
         );
     }
 
-    public function testGetQuery()
+    public function testLoginQuery01GetQuery()
     {
         $this->assertEquals(['identifiant' => '', 'motdepasse' => ''], $this->loginQuery->getQuery());
     }
 
-    public function testGetMethode()
+    public function testLoginQuery02GetMethode()
     {
         $this->assertEquals('POST', $this->loginQuery->getMethode());
     }
 
-    public function testBuildEntity()
+    public function testLoginQuery03BuildEntity()
     {
         $this->assertEquals('Studoo\Api\EcoleDirecte\Entity\Login', get_class($this->loginQuery->buildEntity($this->jsonContent)));
     }
 
-    public function testGetPath()
+    public function testLoginQuery04GetPath()
     {
         $this->assertEquals('login.awp', $this->loginQuery->getPath());
     }
 
-    public function testGetToken()
+    public function testLoginQuery05GetToken()
     {
         $this->assertEquals('f6897e82-c10c-42d9-80R8-5c62r4c2acd2', $this->loginQuery->buildEntity($this->jsonContent)->getToken());
     }
 
-    public function testGetEmail()
+    public function testLoginQuery06GetEmail()
     {
         $this->assertEquals('Julien.Bouvier@test.fr', $this->loginQuery->buildEntity($this->jsonContent)->getEmail());
     }

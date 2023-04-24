@@ -8,7 +8,6 @@
  * veuillez consulter le fichier LICENSE qui a été distribué avec ce code source.
  */
 
-
 namespace Studoo\Api\EcoleDirecte\Core;
 
 /**
@@ -20,7 +19,7 @@ class BuildEntity
     /**
      * Rempli l'entité avec les données d'un tableau
      * @param object $entity Classe de l'entité
-     * @param array $data Tableau de correspondance entre les données et les méthodes
+     * @param array<mixed> $data Tableau de correspondance entre les données et les méthodes
      * @return object
      */
     public static function hasPacked(object $entity, array $data): object

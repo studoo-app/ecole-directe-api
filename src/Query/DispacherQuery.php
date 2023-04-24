@@ -21,10 +21,10 @@ trait DispacherQuery
     /**
      * Permet de dispatcher les requêtes et de retourner l'objet
      * @param string $model Nom du model de l'api
-     * @return object Retourne l'objet de la requête
+     * @return EntityQueryInterface Retourne l'objet de la requête
      * @throws InvalidModelException
      */
-    public function dispacherForModel(string $model) : object
+    public function dispacherForModel(string $model): EntityQueryInterface
     {
         $api = [
             "login"       => LoginQuery::class,

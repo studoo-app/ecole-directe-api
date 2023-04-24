@@ -8,10 +8,14 @@
  * veuillez consulter le fichier LICENSE qui a été distribué avec ce code source.
  */
 
-
 namespace Studoo\Api\EcoleDirecte\Exception;
 
 class NotDataResponseException extends \Exception
 {
+    /**
+     * @var string
+     */
     protected $message = "Pas de donnée dans la réponse";
+
+    protected $code = 403;
 }

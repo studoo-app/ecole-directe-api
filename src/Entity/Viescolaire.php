@@ -8,32 +8,31 @@
  * veuillez consulter le fichier LICENSE qui a été distribué avec ce code source.
  */
 
-
 namespace Studoo\Api\EcoleDirecte\Entity;
 
 class Viescolaire
 {
     /**
      * Liste d'absences et de retards
-     * @var array
+     * @var array<mixed>
      */
     private array $absencesRetards;
 
     /**
      * Liste de sanctions et d'encouragements
-     * @var array
+     * @var array<mixed>
      */
     private array $sanctionsEncouragements;
 
     /**
      * Paramétrage de l'application
-     * @var array
+     * @var array<mixed>
      */
     private array $parametrage;
 
     /**
      * Retourne la liste des absences et retards
-     * @return array
+     * @return array<mixed>
      */
     public function getAbsencesRetards(): array
     {
@@ -42,7 +41,7 @@ class Viescolaire
 
     /**
      * Définit la liste des absences et retards
-     * @param array $absencesRetards
+     * @param array<mixed> $absencesRetards
      * @return Viescolaire
      */
     public function setAbsencesRetards(array $absencesRetards): Viescolaire
@@ -53,7 +52,7 @@ class Viescolaire
 
     /**
      * Retourne la liste des sanctions et encouragements
-     * @return array
+     * @return array<mixed>
      */
     public function getSanctionsEncouragements(): array
     {
@@ -62,7 +61,7 @@ class Viescolaire
 
     /**
      * Définit la liste des sanctions et encouragements
-     * @param array $sanctionsEncouragements
+     * @param array<mixed> $sanctionsEncouragements
      * @return Viescolaire
      */
     public function setSanctionsEncouragements(array $sanctionsEncouragements): Viescolaire
@@ -73,7 +72,7 @@ class Viescolaire
 
     /**
      * Retourne le paramétrage de l'application
-     * @return array
+     * @return array<mixed>
      */
     public function getParametrage(): array
     {
@@ -82,7 +81,7 @@ class Viescolaire
 
     /**
      * Définit le paramétrage de l'application
-     * @param array $parametrage
+     * @param array<mixed> $parametrage
      * @return Viescolaire
      */
     public function setParametrage(array $parametrage): Viescolaire

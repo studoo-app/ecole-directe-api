@@ -8,10 +8,14 @@
  * veuillez consulter le fichier LICENSE qui a été distribué avec ce code source.
  */
 
-
 namespace Studoo\Api\EcoleDirecte\Exception;
 
 class InvalidCredentialsException extends \Exception
 {
+    /**
+     * @var string
+     */
     protected $message = "Invalid credentials";
+
+    protected $code = 401;
 }

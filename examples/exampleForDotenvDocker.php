@@ -18,18 +18,33 @@ $dotenv = new Dotenv();
 $dotenv->loadEnv(__DIR__ . '/../.env');
 
 if (isset($_POST['username']) && isset($_POST['password'])) {
-    $client = new Client([
-        "base_path" => "http://localhost:9042",
-        "client_id" => $_POST['username'],
-        "client_secret" => $_POST['password'],
-    ]);
-    // Recupération du token et profile
-    $etudiant = $client->fetchAccessToken();
-    echo "Token: {$etudiant->getToken()} <br>";
-    echo "Email: {$etudiant->getEmail()} <br>";
-    echo "Nom: {$etudiant->getNom()} <br>";
-    echo "Prenom: {$etudiant->getPrenom()} <br>";
-    echo "Identifiant: {$etudiant->getIdentifiant()} <br>";
+    $error = null;
+    try {
+        $client = new Client([
+            "base_path"     => "http://localhost:9042",
+            "client_id"     => $_POST['username'],
+            "client_secret" => $_POST['password'],
+        ]);
+        // Recupération du token et profile
+        $etudiant = $client->fetchAccessToken();
+    } catch (Exception $e) {
+        $error = $e->getCode();
+    }
+
+    if ($error === 400) {
+        echo "<h1>Nous rencontrons un problème de service, merci de retenter dans quelques minutes</h1>";
+    } elseif ($error === 401) {
+        echo "<h1>Identifiant ou mot de passe incorrect</h1>";
+    } elseif ($error === 402) {
+        echo "<h1>Problème de format, merci de contacter l'administrateur</h1>";
+    } else {
+        echo "<h1>Résultat API ECOLE DIRECTE</h1>";
+        echo "Token: {$etudiant->getToken()} <br>";
+        echo "Email: {$etudiant->getEmail()} <br>";
+        echo "Nom: {$etudiant->getNom()} <br>";
+        echo "Prenom: {$etudiant->getPrenom()} <br>";
+        echo "Identifiant: {$etudiant->getIdentifiant()} <br>";
+    }
 } else {
     echo "<h1>API ECOLE DIRECTE via Form</h1>";
     echo "<form method='post'>";

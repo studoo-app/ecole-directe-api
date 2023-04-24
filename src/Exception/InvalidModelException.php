@@ -8,10 +8,14 @@
  * veuillez consulter le fichier LICENSE qui a été distribué avec ce code source.
  */
 
-
 namespace Studoo\Api\EcoleDirecte\Exception;
 
 class InvalidModelException extends \Exception
 {
+    /**
+     * @var string
+     */
     protected $message = "Invalid model API";
+
+    protected $code = 402;
 }

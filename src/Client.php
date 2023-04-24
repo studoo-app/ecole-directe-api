@@ -8,10 +8,10 @@
  * veuillez consulter le fichier LICENSE qui a été distribué avec ce code source.
  */
 
-
 namespace Studoo\Api\EcoleDirecte;
 
-use Studoo\Api\EcoleDirecte\Entity\Login;
+use GuzzleHttp\Exception\GuzzleException;
+use Studoo\Api\EcoleDirecte\Exception\ErrorHttpStatusException;
 use Studoo\Api\EcoleDirecte\Exception\InvalidModelException;
 use Studoo\Api\EcoleDirecte\Query\RunQuery;
 
@@ -29,17 +29,14 @@ class Client
 
     /**
      * Configuration de l'API
-     * @var array
+     * @var array<mixed>
      */
     private array $config;
 
     /**
-     * Objet Login contenant les informations de connexion et de l'utilisateur
-     * @var Login
+     * Client constructor.
+     * @param array<mixed> $config Configuration de l'API
      */
-    private Login $login;
-
-
     public function __construct(array $config = [])
     {
         $this->config = array_merge([
@@ -63,48 +60,51 @@ class Client
 
     /**
      * Accès à l'API EcoleDirecte avec les identifiants de l'utilisateur
-     * Retourne un objet Login
      * @return object
-     * @throws InvalidModelException
+     * @throws InvalidModelException|ErrorHttpStatusException
      */
     public function fetchAccessToken(): object
     {
         $token = new RunQuery("login", $this->config);
-        return $this->login = $token->run(
-            body: [
-                'identifiant' => $this->config['client_id'],
-                'motdepasse'  => $this->config['client_secret']
-            ]
-        );
+        try {
+            return $token->run(
+                body: [
+                    'identifiant' => $this->config['client_id'],
+                    'motdepasse'  => $this->config['client_secret']
+                ]
+            );
+        } catch (GuzzleException|Exception\ErrorHttpStatusException $e) {
+            throw new ErrorHttpStatusException();
+        } catch (\JsonException $e) {
+            throw new InvalidModelException();
+        }
     }
 
     /**
      * Retourne les informations de l'utilisateur sur sa vie scolaire
      * @param int $idEtudiant Identifiant de l'étudiant
+     * @param string $token Token de connexion
      * @return object
      * @throws InvalidModelException
      */
-    public function getVieScolaire(int $idEtudiant): object
+    public function getVieScolaire(int $idEtudiant, string $token): object
     {
-        return (new RunQuery("viescolaire", $this->config))->run(
-            headers: [
-                'X-Token'      => $this->login->getToken(),
-                'Content-Type' => 'text/plain'
-            ],
-            param: [
-                'pathID' => [
-                    'ID' => $idEtudiant
+        try {
+            return (new RunQuery("viescolaire", $this->config))->run(
+                headers: [
+                    'X-Token'      => $token,
+                    'Content-Type' => 'text/plain'
+                ],
+                param: [
+                    'pathID' => [
+                        'ID' => $idEtudiant
+                    ]
                 ]
-            ]
-        );
-    }
-
-    /**
-     * Retourne la version de la librairie
-     * @return string
-     */
-    public function getLibVerion(): string
-    {
-        return self::LIBVER;
+            );
+        } catch (GuzzleException $e) {
+            throw new InvalidModelException($e->getMessage());
+        } catch (\JsonException|Exception\ErrorHttpStatusException $e) {
+            throw new InvalidModelException($e->getMessage());
+        }
     }
 }

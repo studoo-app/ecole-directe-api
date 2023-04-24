@@ -20,21 +20,45 @@ use Psr\Http\Message\ResponseInterface;
  */
 class Request
 {
+    /**
+     * @var string $basePath Base path of the API
+     */
     private string $basePath;
 
+    /**
+     * @var string $version Version of the API
+     */
     private string $version;
 
+    /**
+     * @var int $timeout Timeout of the request
+     */
     private int $timeout;
 
+    /**
+     * @var int $connectTimeout
+     */
     private int $connectTimeout;
 
+    /**
+     * @var bool $verify Verify SSL
+     */
     private bool $verify;
 
+    /**
+     * @var bool $debug Debug mode
+     */
     private bool $debug;
 
+    /**
+     * @var array<mixed> $headers Headers of the request
+     */
     private array $headers;
 
-
+    /**
+     * Request constructor.
+     * @param array<mixed> $config
+     */
     public function __construct(array $config = [])
     {
         $this->basePath = $config['base_path'];
@@ -50,7 +74,7 @@ class Request
      * Request vers l'API
      * @param string $methode Method of the request (GET, POST, PUT, DELETE)
      * @param string $path Path of the request (ex: 'v3/eleves/123456789')
-     * @param array $query Query of the request (ex: ['body' => 'data=', 'headers' => ['Content-Type' => 'text/plain']])
+     * @param array<mixed> $query Query of the request (ex: ['body' => 'data=', 'headers' => ['Content-Type' => 'text/plain']])
      * @return ResponseInterface
      * @throws GuzzleException
      */

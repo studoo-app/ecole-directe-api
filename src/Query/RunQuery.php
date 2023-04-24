@@ -8,13 +8,13 @@
  * veuillez consulter le fichier LICENSE qui a été distribué avec ce code source.
  */
 
-
 namespace Studoo\Api\EcoleDirecte\Query;
 
 use GuzzleHttp\Exception\GuzzleException;
 use JsonException;
 use Psr\Http\Message\ResponseInterface;
 use Studoo\Api\EcoleDirecte\Exception\ErrorHttpStatusException;
+use Studoo\Api\EcoleDirecte\Exception\InvalidCredentialsException;
 use Studoo\Api\EcoleDirecte\Exception\InvalidModelException;
 use Studoo\Api\EcoleDirecte\Service\Request;
 
@@ -26,33 +26,39 @@ class RunQuery
 {
     use DispacherQuery;
 
-    private object $apiModel;
+    /**
+     * @var EntityQueryInterface $apiModel Modèle de requête
+     */
+    private EntityQueryInterface $apiModel;
 
+    /**
+     * @var array<mixed> $config Configuration de l'API
+     */
     private array $config;
 
 
     /**
      * BuildQuery constructor.
      * @param string $model Nom d'appel API
-     * @param array $config Configuration de l'API
+     * @param array<mixed> $config Configuration de l'API
      * @throws InvalidModelException
      */
     public function __construct(string $model, array $config)
     {
-        $finalModel = $this->dispacherForModel($model);
-        $this->apiModel = new $finalModel();
+        $this->apiModel = $this->dispacherForModel($model);
         $this->config = $config;
     }
 
     /**
      * Exécute la requête API et renvoi le résultat en objet
-     * @param array $body Données à envoyer dans la requête
-     * @param array $headers Entêtes à envoyer dans la requête
-     * @param array $param Paramètres à envoyer dans la requête
+     * @param array<mixed> $body Données à envoyer dans la requête
+     * @param array<mixed> $headers Entêtes à envoyer dans la requête
+     * @param array<mixed> $param Paramètres à envoyer dans la requête
      * @return object
      * @throws GuzzleException
      * @throws JsonException
      * @throws ErrorHttpStatusException
+     * @throws InvalidCredentialsException
      */
     public function run(
         array $body = [],
@@ -66,7 +72,7 @@ class RunQuery
             $this->apiModel->setParamToPath($param['pathID']);
         }
         // Fix body si vide
-        (isset($body)) ? $bodyReponse = json_encode($body, JSON_THROW_ON_ERROR) : $bodyReponse = "{}";
+        (count($body) != 0) ? $bodyReponse = json_encode($body, JSON_THROW_ON_ERROR) : $bodyReponse = "{}";
 
         $response = (new Request(config: $this->config))->query(
             methode: $this->apiModel->getMethode(),
@@ -81,6 +87,11 @@ class RunQuery
             throw new ErrorHttpStatusException();
         }
 
+        if (str_contains($response->getBody()->getContents(), "Login/Password is not available") === true) {
+            throw new InvalidCredentialsException();
+        }
+
+        $response->getBody()->rewind();
         $this->apiModel->setrawSource($response);
         return $this->buildModel($response);
     }

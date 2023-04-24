@@ -14,6 +14,7 @@ use GuzzleHttp\Exception\GuzzleException;
 use JsonException;
 use Psr\Http\Message\ResponseInterface;
 use Studoo\Api\EcoleDirecte\Exception\ErrorHttpStatusException;
+use Studoo\Api\EcoleDirecte\Exception\InvalidCredentialsException;
 use Studoo\Api\EcoleDirecte\Exception\InvalidModelException;
 use Studoo\Api\EcoleDirecte\Service\Request;
 
@@ -57,6 +58,7 @@ class RunQuery
      * @throws GuzzleException
      * @throws JsonException
      * @throws ErrorHttpStatusException
+     * @throws InvalidCredentialsException
      */
     public function run(
         array $body = [],
@@ -85,6 +87,11 @@ class RunQuery
             throw new ErrorHttpStatusException();
         }
 
+        if (str_contains($response->getBody()->getContents(), "Login/Password is not available") === true) {
+            throw new InvalidCredentialsException();
+        }
+
+        $response->getBody()->rewind();
         $this->apiModel->setrawSource($response);
         return $this->buildModel($response);
     }

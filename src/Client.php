@@ -11,7 +11,7 @@
 namespace Studoo\Api\EcoleDirecte;
 
 use GuzzleHttp\Exception\GuzzleException;
-use Studoo\Api\EcoleDirecte\Entity\Login;
+use Studoo\Api\EcoleDirecte\Exception\ErrorHttpStatusException;
 use Studoo\Api\EcoleDirecte\Exception\InvalidModelException;
 use Studoo\Api\EcoleDirecte\Query\RunQuery;
 
@@ -67,22 +67,22 @@ class Client
     /**
      * Accès à l'API EcoleDirecte avec les identifiants de l'utilisateur
      * @return object
-     * @throws InvalidModelException
+     * @throws InvalidModelException|ErrorHttpStatusException
      */
     public function fetchAccessToken(): object
     {
         $token = new RunQuery("login", $this->config);
         try {
-            return $this->login = $token->run(
+            return $token->run(
                 body: [
                     'identifiant' => $this->config['client_id'],
                     'motdepasse'  => $this->config['client_secret']
                 ]
             );
-        } catch (GuzzleException $e) {
-            throw new InvalidModelException($e->getMessage());
-        } catch (\JsonException|Exception\ErrorHttpStatusException $e) {
-            throw new InvalidModelException($e->getMessage());
+        } catch (GuzzleException|Exception\ErrorHttpStatusException $e) {
+            throw new ErrorHttpStatusException();
+        } catch (\JsonException $e) {
+            throw new InvalidModelException();
         }
     }
 
@@ -109,7 +109,7 @@ class Client
             );
         } catch (GuzzleException $e) {
             throw new InvalidModelException($e->getMessage());
-        } catch (\JsonException|Exception\ErrorHttpStatusException|InvalidModelException $e) {
+        } catch (\JsonException|Exception\ErrorHttpStatusException $e) {
             throw new InvalidModelException($e->getMessage());
         }
     }
@@ -121,14 +121,5 @@ class Client
     public function getLibVerion(): string
     {
         return self::LIBVER;
-    }
-
-    /**
-     * Retourne les informations de connexion Login
-     * @return object Login
-     */
-    public function getLogin(): object
-    {
-        return $this->login;
     }
 }

@@ -16,4 +16,6 @@ class ErrorHttpStatusException extends \Exception
      * @var string
      */
     protected $message = "Erreur HTTP status";
+
+    protected $code = 400;
 }

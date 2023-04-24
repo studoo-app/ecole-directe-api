@@ -163,6 +163,11 @@ tasks:
       - task: tests-coverage
       - task: docker-down
 
+  testunit:
+    desc: "Run tests"
+    cmds:
+      - task: tests
+
   ex-start:
     desc: "Start project exemple"
     cmds:

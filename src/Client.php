@@ -34,12 +34,6 @@ class Client
     private array $config;
 
     /**
-     * Objet Login contenant les informations de connexion et de l'utilisateur
-     * @var object
-     */
-    private object $login;
-
-    /**
      * Client constructor.
      * @param array<mixed> $config Configuration de l'API
      */

@@ -107,13 +107,4 @@ class Client
             throw new InvalidModelException($e->getMessage());
         }
     }
-
-    /**
-     * Retourne la version de la librairie
-     * @return string
-     */
-    public function getLibVerion(): string
-    {
-        return self::LIBVER;
-    }
 }

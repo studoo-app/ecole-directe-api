@@ -5,6 +5,8 @@
 
 * Refactoring code by PHPStan
 * Add Makefile by Taskfile
+* Refactoring code by PHP-CS-Fixer
+* Refactoring Exception
 
 0.1.3
 ---

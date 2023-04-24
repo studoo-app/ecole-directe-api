@@ -1,0 +1,34 @@
+{
+  "code": 200,
+  "token": "93747fd-8dj4-038d-dzdd-863fef9867sd",
+  "host": "HTTP296",
+  "data": {
+    "factures": [],
+    "viescolaire": [],
+    "administratifs": [
+      {
+        "id": 200,
+        "libelle": "Rentrée 2021 -2022 - 15H30",
+        "idEleve": 3000,
+        "date": "2022-07-27",
+        "type": "",
+        "signatureDemandee": false,
+        "signature": {}
+      }
+    ],
+    "inscriptions": [],
+    "listesPiecesAVerser": {
+      "listesPieces": [],
+      "personnes": [
+        {
+          "id": 3000,
+          "nom": "BLUEDY",
+          "prenom": "Jean",
+          "type": "E"
+        }
+      ],
+      "pieces": [],
+      "televersements": []
+    }
+  }
+}

@@ -64,7 +64,7 @@ class ClientTest extends TestCase
 
     public function testClient05InvalidModelException()
     {
-        $_ENV["ENV"] = "prod";
+        $_ENV["ENV"] = "";
 
         $client = new Client([
             "base_path" => "http://localhost:9042",

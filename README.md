@@ -18,6 +18,7 @@ Des exemples d'utilisation sont disponibles dans le dossier `examples`.
 Un mock a été développé pour tester API : [studoo-app/mock-ecole-directe-api](https://github.com/studoo-app/mock-ecole-directe-api)
 Le seul prérequis, il faut la version v0.1.3 de la lib ecole-directe-api. Faire la commande suivante :
 
+Commande de mise à jour de la librairie
 ```bash
 composer update studoo/ecole-directe-api
 ```

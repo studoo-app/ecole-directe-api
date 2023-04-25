@@ -51,4 +51,9 @@ class LoginQueryTest extends TestCase
     {
         $this->assertEquals('Julien.Bouvier@test.fr', $this->loginQuery->buildEntity($this->jsonContent)->getEmail());
     }
+
+    public function testLoginQuery07GetClasses()
+    {
+        $this->assertEquals('2TSSIOALT2', $this->loginQuery->buildEntity($this->jsonContent)->getClasse()[0]["code"]);
+    }
 }

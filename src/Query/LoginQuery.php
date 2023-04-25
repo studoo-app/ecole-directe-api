@@ -43,6 +43,8 @@ class LoginQuery extends Query implements EntityQueryInterface
 
         if (isset($data['data']['accounts'][0]) === true) {
             BuildEntity::hasPacked($login, $data['data']['accounts'][0]);
+            $classe = ($data['data']['accounts'][0]["typeCompte"] === "P") ? "classes" : "classe";
+            $login->setClasse($data['data']['accounts'][0]["profile"][$classe]);
         } else {
             throw new NotDataResponseException();
         }

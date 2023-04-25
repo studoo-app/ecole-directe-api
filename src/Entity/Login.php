@@ -88,6 +88,12 @@ class Login
      */
     private array $profile;
 
+    /**
+     * Liste de/des classe.s
+     * @var array<mixed>
+     */
+    private array $classe;
+
     public function getToken(): string
     {
         return $this->token;
@@ -289,6 +295,24 @@ class Login
     public function setProfile(array $profile): Login
     {
         $this->profile = $profile;
+        return $this;
+    }
+
+    /**
+     * @return array
+     */
+    public function getClasse(): array
+    {
+        return $this->classe;
+    }
+
+    /**
+     * @param array $classe
+     * @return Login
+     */
+    public function setClasse(array $classe): Login
+    {
+        $this->classe = $classe;
         return $this;
     }
 }

@@ -11,26 +11,107 @@
 
 namespace Studoo\Api\EcoleDirecte\Entity;
 
+use DateTime;
 use Exception;
 use Studoo\Api\EcoleDirecte\Exception\InvalidDateTimeException;
+use Studoo\Api\EcoleDirecte\Exception\requireDataException;
 
 class Eleve
 {
+    /**
+     * @var int $id L'identifiant de l'élève
+     * @codeTest 01
+     * @required
+     */
     private int $id;
+
+    /**
+     * @var string $nom Le nom de l'élève
+     * @codeTest 02
+     * @required
+     */
     private string $nom;
+
+    /**
+     * @var string $particule Le particule de l'élève
+     * @codeTest 07
+     */
     private string $particule;
+
+    /**
+     * @var string $prenom Le prénom de l'élève
+     * @codeTest 03
+     * @required
+     */
     private string $prenom;
+
+    /**
+     * @var string $sexe Le sexe de l'élève
+     * @codeTest 05
+     */
     private string $sexe;
+
+    /**
+     * @var string $classeId L'identifiant de la classe de l'élève
+     * @codeTest 04
+     */
     private int $classeId;
-    private int $classeLibelle;
-    private \DateTime $dateEntree;
-    private \DateTime $dateSortie;
+
+    /**
+     * @var string $classeLibelle Le libellé de la classe de l'élève
+     * @codeTest 04
+     */
+    private string $classeLibelle;
+
+    /**
+     * @var DateTime|null $dateNaissance La date de naissance de l'élève
+     * @codeTest 06
+     */
+    private ?DateTime $dateNaissance;
+
+    /**
+     * @var DateTime|null $dateEntree La date d'entrée de l'élève
+     * @codeTest 08
+     */
+    private ?DateTime $dateEntree;
+
+    /**
+     * @var DateTime|null $dateSortie La date de sortie de l'élève
+     * @codeTest 09
+     */
+    private ?DateTime $dateSortie;
+
+    /**
+     * @var string $numeroBadge Le numéro de badge de l'élève
+     * @codeTest 10
+     */
     private string $numeroBadge;
+
+    /**
+     * @var string $regime Le régime de l'élève
+     * @codeTest 11
+     */
     private string $regime;
+
+    /**
+     * @var string $email L'email de l'élève
+     * @codeTest 12
+     * @required
+     */
     private string $email;
+
+    /**
+     * @var string $portable Le numéro de portable de l'élève
+     * @codeTest 13
+     */
     private string $portable;
+
+    /**
+     * @var string $photo L'url de la photo de l'élève
+     * @codeTest 14
+     */
     private string $photo;
-    private ?\DateTime $dateNaissance;
+
 
     /**
      * @return int
@@ -46,7 +127,8 @@ class Eleve
      */
     public function setId(int $id): Eleve
     {
-        $this->id = $id;
+        $this->id =  $id;
+
         return $this;
     }
 
@@ -61,10 +143,11 @@ class Eleve
     /**
      * @param string $nom
      * @return Eleve
+     * @throws requireDataException
      */
     public function setNom(string $nom): Eleve
     {
-        $this->nom = $nom;
+        $this->nom = (empty($nom)) ? throw new requireDataException("Le nom de l'élève est obligatoire") : $nom;
         return $this;
     }
 
@@ -97,10 +180,12 @@ class Eleve
     /**
      * @param string $prenom
      * @return Eleve
+     * @throws requireDataException
      */
     public function setPrenom(string $prenom): Eleve
     {
-        $this->prenom = $prenom;
+        $this->prenom = (empty($prenom))
+            ? throw new requireDataException("Le prenom de l'élève est obligatoire") : $prenom;
         return $this;
     }
 
@@ -141,56 +226,20 @@ class Eleve
     }
 
     /**
-     * @return int
+     * @return string
      */
-    public function getClasseLibelle(): int
+    public function getClasseLibelle(): string
     {
         return $this->classeLibelle;
     }
 
     /**
-     * @param int $classeLibelle
+     * @param string $classeLibelle
      * @return Eleve
      */
-    public function setClasseLibelle(int $classeLibelle): Eleve
+    public function setClasseLibelle(string $classeLibelle): Eleve
     {
         $this->classeLibelle = $classeLibelle;
-        return $this;
-    }
-
-    /**
-     * @return \DateTime
-     */
-    public function getDateEntree(): \DateTime
-    {
-        return $this->dateEntree;
-    }
-
-    /**
-     * @param \DateTime $dateEntree
-     * @return Eleve
-     */
-    public function setDateEntree(\DateTime $dateEntree): Eleve
-    {
-        $this->dateEntree = $dateEntree;
-        return $this;
-    }
-
-    /**
-     * @return \DateTime
-     */
-    public function getDateSortie(): \DateTime
-    {
-        return $this->dateSortie;
-    }
-
-    /**
-     * @param \DateTime $dateSortie
-     * @return Eleve
-     */
-    public function setDateSortie(\DateTime $dateSortie): Eleve
-    {
-        $this->dateSortie = $dateSortie;
         return $this;
     }
 
@@ -241,10 +290,12 @@ class Eleve
     /**
      * @param string $email
      * @return Eleve
+     * @throws requireDataException
      */
     public function setEmail(string $email): Eleve
     {
-        $this->email = $email;
+        $this->email = (empty($email) || !filter_var($email, FILTER_VALIDATE_EMAIL))
+            ? throw new requireDataException("L'email de l'élève est obligatoire") : $email;
         return $this;
     }
 
@@ -285,9 +336,9 @@ class Eleve
     }
 
     /**
-     * @return \DateTime|null
+     * @return DateTime|null
      */
-    public function getDateNaissance(): ?\DateTime
+    public function getDateNaissance(): ?DateTime
     {
         return $this->dateNaissance;
     }
@@ -300,11 +351,60 @@ class Eleve
     public function setDateNaissance(string $dateNaissance): Eleve
     {
         try {
-            $this->dateNaissance = ($dateNaissance !== "") ? new \DateTime($dateNaissance) : null;
+            $this->dateNaissance = ($dateNaissance !== "") ? new DateTime($dateNaissance) : null;
         } catch (Exception) {
             throw new InvalidDateTimeException("La date de naissance n'est pas valide");
         }
 
         return $this;
     }
+
+    /**
+     * @return DateTime|null
+     */
+    public function getDateEntree(): ?DateTime
+    {
+        return $this->dateEntree;
+    }
+
+    /**
+     * @param string $dateEntree
+     * @return Eleve
+     * @throws InvalidDateTimeException
+     */
+    public function setDateEntree(string $dateEntree): Eleve
+    {
+        try {
+            $this->dateEntree = ($dateEntree !== "") ? new DateTime($dateEntree) : null;
+        } catch (Exception) {
+            throw new InvalidDateTimeException("La date d'entrée n'est pas valide");
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return DateTime|null
+     */
+    public function getDateSortie(): ?DateTime
+    {
+        return $this->dateSortie;
+    }
+
+    /**
+     * @param String $dateSortie
+     * @return Eleve
+     * @throws InvalidDateTimeException
+     */
+    public function setDateSortie(String $dateSortie): Eleve
+    {
+        try {
+            $this->dateSortie = ($dateSortie !== "") ? new DateTime($dateSortie) : null;
+        } catch (Exception) {
+            throw new InvalidDateTimeException("La date de sortie n'est pas valide");
+        }
+
+        return $this;
+    }
+
 }

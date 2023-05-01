@@ -90,4 +90,11 @@ class LoginTest extends TestCase
         $login->setProfile(['ELEVE']);
         $this->assertEquals(['ELEVE'], $login->getProfile());
     }
+
+    public function testLogin13SetClasse()
+    {
+        $login = new Login();
+        $login->setClasse(['id' => '123', 'libelle' => 'BTS-SIO']);
+        $this->assertEquals('123', $login->getClasse()['id']);
+    }
 }

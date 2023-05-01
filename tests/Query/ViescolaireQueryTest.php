@@ -12,7 +12,6 @@ class ViescolaireQueryTest extends TestCase
 
     public function setUp(): void
     {
-        $_ENV["ENV"] = "";
         $this->viescolaireQuery = new ViescolaireQuery();
         $this->jsonContent = json_decode(
             file_get_contents(__DIR__ . '/../Data/viescolaireV3TypeE.json'),

@@ -8,7 +8,6 @@
  * veuillez consulter le fichier LICENSE qui a été distribué avec ce code source.
  */
 
-
 namespace Studoo\Api\EcoleDirecte\Entity;
 
 use DateTime;
@@ -52,7 +51,7 @@ class Eleve
     private string $sexe;
 
     /**
-     * @var string $classeId L'identifiant de la classe de l'élève
+     * @var int $classeId L'identifiant de la classe de l'élève
      * @codeTest 04
      */
     private int $classeId;

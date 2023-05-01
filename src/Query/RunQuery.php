@@ -76,7 +76,7 @@ class RunQuery
 
         $response = (new Request(config: $this->config))->query(
             methode: $this->apiModel->getMethode(),
-            path: $this->apiModel->getPath(),
+            path: $this->apiModel->getPath($this->config["mock"]),
             query: [
                 'body' => 'data=' . $bodyReponse,
                 'headers' => $headers,

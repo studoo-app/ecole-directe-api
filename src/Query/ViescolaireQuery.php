@@ -23,7 +23,10 @@ class ViescolaireQuery extends Query implements EntityQueryInterface
     public function __construct()
     {
         $this->methode = 'POST';
-        $this->path = 'eleves/<ID>/viescolaire.awp?verbe=get';
+        $this->path = [
+            'prod'    => 'eleves/<ID>/viescolaire.awp?verbe=get',
+            'test'    => 'viescolaire?eleves=<ID>'
+        ];
         $this->query = [];
     }
 

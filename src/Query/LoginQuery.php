@@ -23,7 +23,10 @@ class LoginQuery extends Query implements EntityQueryInterface
     public function __construct()
     {
         $this->methode = 'POST';
-        $this->path = isset($_ENV["ENV"]) && $_ENV["ENV"] === "test" ? 'login' : 'login.awp';
+        $this->path = [
+            'prod'    => 'login.awp',
+            'test'    => 'login'
+        ];
         $this->query = [
             'identifiant' => '',
             'motdepasse' => ''

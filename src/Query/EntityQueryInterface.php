@@ -45,7 +45,7 @@ interface EntityQueryInterface
      * @example login.awp
      * @return string
      */
-    public function getPath(): string;
+    public function getPath(bool $mock = false): string;
 
     /**
      * Retourne les paramètres de la requête

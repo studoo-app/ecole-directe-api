@@ -3,27 +3,25 @@
 require_once __DIR__ . '/../vendor/autoload.php';
 
 use Studoo\Api\EcoleDirecte\Client;
-use Symfony\Component\Dotenv\Dotenv;
 
 /**
- * Mise en place de l'environnement de développement via DotEnv
- * via le fichier .env à la racine du projet
- * Renseigner les variables ENV
- * Pour faire fonctionner le Docker, il faut renseigner ENV=test
- * Dans la classe Client, il faut renseigner le base_path "http://localhost:9042" (adresse du serveur Docker)
+ * Mise en place de l'environnement de développement via Mock
  * Voir https://github.com/studoo-app/mock-ecole-directe-api
+ *
+ * Dans la classe Client, il faut renseigner dans le tableau en config :
+ * base_path => "http://localhost:9042" (adresse du serveur Docker)
+ * mock => true (activation du mock au niveau des appels API)
+ *
  */
-
-$dotenv = new Dotenv();
-$dotenv->loadEnv(__DIR__ . '/../.env');
 
 if (isset($_POST['username']) && isset($_POST['password'])) {
     $error = null;
     try {
         $client = new Client([
             "base_path"     => "http://localhost:9042",
+            "mock"          => true,
             "client_id"     => $_POST['username'],
-            "client_secret" => $_POST['password'],
+            "client_secret" => $_POST['password']
         ]);
         // Recupération du token et profile
         $etudiant = $client->fetchAccessToken();

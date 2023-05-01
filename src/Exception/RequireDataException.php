@@ -10,7 +10,7 @@
 
 namespace Studoo\Api\EcoleDirecte\Exception;
 
-class requireDataException extends \Exception
+class RequireDataException extends \Exception
 {
     /**
      * @var string

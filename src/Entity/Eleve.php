@@ -14,7 +14,7 @@ namespace Studoo\Api\EcoleDirecte\Entity;
 use DateTime;
 use Exception;
 use Studoo\Api\EcoleDirecte\Exception\InvalidDateTimeException;
-use Studoo\Api\EcoleDirecte\Exception\requireDataException;
+use Studoo\Api\EcoleDirecte\Exception\RequireDataException;
 
 class Eleve
 {
@@ -143,11 +143,11 @@ class Eleve
     /**
      * @param string $nom
      * @return Eleve
-     * @throws requireDataException
+     * @throws RequireDataException
      */
     public function setNom(string $nom): Eleve
     {
-        $this->nom = (empty($nom)) ? throw new requireDataException("Le nom de l'élève est obligatoire") : $nom;
+        $this->nom = (empty($nom)) ? throw new RequireDataException("Le nom de l'élève est obligatoire") : $nom;
         return $this;
     }
 
@@ -180,12 +180,12 @@ class Eleve
     /**
      * @param string $prenom
      * @return Eleve
-     * @throws requireDataException
+     * @throws RequireDataException
      */
     public function setPrenom(string $prenom): Eleve
     {
         $this->prenom = (empty($prenom))
-            ? throw new requireDataException("Le prenom de l'élève est obligatoire") : $prenom;
+            ? throw new RequireDataException("Le prenom de l'élève est obligatoire") : $prenom;
         return $this;
     }
 
@@ -290,12 +290,12 @@ class Eleve
     /**
      * @param string $email
      * @return Eleve
-     * @throws requireDataException
+     * @throws RequireDataException
      */
     public function setEmail(string $email): Eleve
     {
         $this->email = (empty($email) || !filter_var($email, FILTER_VALIDATE_EMAIL))
-            ? throw new requireDataException("L'email de l'élève est obligatoire") : $email;
+            ? throw new RequireDataException("L'email de l'élève est obligatoire") : $email;
         return $this;
     }
 

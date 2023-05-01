@@ -26,7 +26,7 @@ class EleveTest extends TestCase
     public function testEleve02IsEmptyNom()
     {
         $eleve = new Eleve();
-        $this->expectException(\Studoo\Api\EcoleDirecte\Exception\requireDataException::class);
+        $this->expectException(\Studoo\Api\EcoleDirecte\Exception\RequireDataException::class);
         $eleve->setNom('');
     }
 
@@ -40,7 +40,7 @@ class EleveTest extends TestCase
     public function testEleve03IsEmptyPrenom()
     {
         $eleve = new Eleve();
-        $this->expectException(\Studoo\Api\EcoleDirecte\Exception\requireDataException::class);
+        $this->expectException(\Studoo\Api\EcoleDirecte\Exception\RequireDataException::class);
         $eleve->setPrenom('');
     }
 
@@ -187,21 +187,21 @@ class EleveTest extends TestCase
     public function testEleve12IsEmptyEmail()
     {
         $eleve = new Eleve();
-        $this->expectException(\Studoo\Api\EcoleDirecte\Exception\requireDataException::class);
+        $this->expectException(\Studoo\Api\EcoleDirecte\Exception\RequireDataException::class);
         $eleve->setEmail('');
     }
 
     public function testEleve12IsBadWithoutDomainEmail()
     {
         $eleve = new Eleve();
-        $this->expectException(\Studoo\Api\EcoleDirecte\Exception\requireDataException::class);
+        $this->expectException(\Studoo\Api\EcoleDirecte\Exception\RequireDataException::class);
         $eleve->setEmail('test@');
     }
 
     public function testEleve12IsBadDomainEmail()
     {
         $eleve = new Eleve();
-        $this->expectException(\Studoo\Api\EcoleDirecte\Exception\requireDataException::class);
+        $this->expectException(\Studoo\Api\EcoleDirecte\Exception\RequireDataException::class);
         $eleve->setEmail('test.test.fr');
     }
 

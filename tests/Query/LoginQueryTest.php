@@ -3,6 +3,7 @@
 namespace API;
 
 use PHPUnit\Framework\TestCase;
+use Studoo\Api\EcoleDirecte\Exception\NotDataResponseException;
 use Studoo\Api\EcoleDirecte\Query\LoginQuery;
 
 class LoginQueryTest extends TestCase
@@ -55,5 +56,11 @@ class LoginQueryTest extends TestCase
     public function testLoginQuery07GetClasses()
     {
         $this->assertEquals('2TSSIOALT2', $this->loginQuery->buildEntity($this->jsonContent)->getClasse()[0]["code"]);
+    }
+
+    public function testLoginQuery08NotDataResponseException()
+    {
+        $this->expectException(\Studoo\Api\EcoleDirecte\Exception\NotDataResponseException::class);
+        $this->assertEquals('2TSSIOALT2', $this->loginQuery->buildEntity(["token" => "testNoTocken"])->getClasse()[0]["code"]);
     }
 }

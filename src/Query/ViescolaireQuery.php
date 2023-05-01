@@ -35,13 +35,11 @@ class ViescolaireQuery extends Query implements EntityQueryInterface
      */
     public function buildEntity(array $data): object
     {
-        $vieScolaire = new Viescolaire();
-
         if (isset($data['data']) === true) {
+            $vieScolaire = new Viescolaire();
             BuildEntity::hasPacked($vieScolaire, $data['data']);
-        } else {
-            throw new NotDataResponseException();
+            return $vieScolaire;
         }
-        return $vieScolaire;
+        throw new NotDataResponseException();
     }
 }

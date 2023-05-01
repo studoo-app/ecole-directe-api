@@ -15,18 +15,21 @@ class Viescolaire
     /**
      * Liste d'absences et de retards
      * @var array<mixed>
+     * @codeTest 1
      */
     private array $absencesRetards;
 
     /**
      * Liste de sanctions et d'encouragements
      * @var array<mixed>
+     * @codeTest 2
      */
     private array $sanctionsEncouragements;
 
     /**
      * Paramétrage de l'application
      * @var array<mixed>
+     * @codeTest 3
      */
     private array $parametrage;
 

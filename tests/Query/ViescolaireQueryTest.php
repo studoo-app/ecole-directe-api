@@ -22,28 +22,34 @@ class ViescolaireQueryTest extends TestCase
         );
     }
 
-    public function testLoginQuery01GetMethode()
+    public function testVieScolaireQuery01GetMethode()
     {
         $this->assertEquals('POST', $this->viescolaireQuery->getMethode());
     }
 
-    public function testLoginQuery02BuildEntity()
+    public function testVieScolaireQuery02BuildEntity()
     {
         $this->assertEquals('Studoo\Api\EcoleDirecte\Entity\Viescolaire', get_class($this->viescolaireQuery->buildEntity($this->jsonContent)));
     }
 
-    public function testLoginQuery03GetPath()
+    public function testVieScolaireQuery03GetPath()
     {
         $this->assertEquals('eleves/<ID>/viescolaire.awp?verbe=get', $this->viescolaireQuery->getPath());
     }
 
-    public function testLoginQuery04GetAbsencesRetards()
+    public function testVieScolaireQuery04GetAbsencesRetards()
     {
         $this->assertEquals('987', $this->viescolaireQuery->buildEntity($this->jsonContent)->getAbsencesRetards()[0]["id"]);
     }
 
-    public function testLoginQuery05GetParametrage()
+    public function testVieScolaireQuery05GetParametrage()
     {
         $this->assertFalse($this->viescolaireQuery->buildEntity($this->jsonContent)->getParametrage()["justificationEnLigne"]);
+    }
+
+    public function testVieScolaireQuery06NotDataResponseException()
+    {
+        $this->expectException(\Studoo\Api\EcoleDirecte\Exception\NotDataResponseException::class);
+        $this->assertFalse($this->viescolaireQuery->buildEntity([])->getParametrage()["justificationEnLigne"]);
     }
 }

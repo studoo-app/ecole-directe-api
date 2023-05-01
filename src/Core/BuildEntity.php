@@ -14,7 +14,7 @@ namespace Studoo\Api\EcoleDirecte\Core;
  * Traitement d'une entité
  * @package Studoo\Api\EcoleDirecte\Core
  */
-class BuildEntity
+trait BuildEntity
 {
     /**
      * Rempli l'entité avec les données d'un tableau
@@ -22,7 +22,7 @@ class BuildEntity
      * @param array<mixed> $data Tableau de correspondance entre les données et les méthodes
      * @return object
      */
-    public static function hasPacked(object $entity, array $data): object
+    public function hasPacked(object $entity, array $data): object
     {
         foreach ($data as $key => $value) {
             $method = "set" . ucfirst($key);

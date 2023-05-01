@@ -20,6 +20,7 @@ use Studoo\Api\EcoleDirecte\Exception\NotDataResponseException;
  */
 class LoginQuery extends Query implements EntityQueryInterface
 {
+    use BuildEntity;
     public function __construct()
     {
         $this->methode = 'POST';
@@ -44,7 +45,7 @@ class LoginQuery extends Query implements EntityQueryInterface
         if (isset($data['data']['accounts'][0]) === true) {
             $login = new Login();
             $login->setToken($data['token']);
-            BuildEntity::hasPacked($login, $data['data']['accounts'][0]);
+            $this->hasPacked($login, $data['data']['accounts'][0]);
             $classe = ($data['data']['accounts'][0]["typeCompte"] === "P") ? "classes" : "classe";
             $login->setClasse($data['data']['accounts'][0]["profile"][$classe]);
             return $login;

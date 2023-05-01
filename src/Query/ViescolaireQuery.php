@@ -20,6 +20,7 @@ use Studoo\Api\EcoleDirecte\Exception\NotDataResponseException;
  */
 class ViescolaireQuery extends Query implements EntityQueryInterface
 {
+    use BuildEntity;
     public function __construct()
     {
         $this->methode = 'POST';
@@ -40,7 +41,7 @@ class ViescolaireQuery extends Query implements EntityQueryInterface
     {
         if (isset($data['data']) === true) {
             $vieScolaire = new Viescolaire();
-            BuildEntity::hasPacked($vieScolaire, $data['data']);
+            $this->hasPacked($vieScolaire, $data['data']);
             return $vieScolaire;
         }
         throw new NotDataResponseException();

@@ -42,6 +42,14 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
         echo "Nom: {$etudiant->getNom()} <br>";
         echo "Prenom: {$etudiant->getPrenom()} <br>";
         echo "Identifiant: {$etudiant->getIdentifiant()} <br>";
+
+        echo "Liste de la/les classe.s<br>";
+
+        foreach ($etudiant->getClasse() as $classe) {
+            echo "Identifiant Classe: {$classe['id']} <br>";
+            echo "Lib Classe: {$classe['libelle']} <br>";
+            echo "Code Classe: {$classe['code']} <br><br>";
+        }
     }
 } else {
     echo "<h1>API ECOLE DIRECTE via Form</h1>";

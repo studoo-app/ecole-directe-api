@@ -46,8 +46,10 @@ class LoginQuery extends Query implements EntityQueryInterface
             $login = new Login();
             $login->setToken($data['token']);
             $this->hasPacked($login, $data['data']['accounts'][0]);
-            $classe = ($data['data']['accounts'][0]["typeCompte"] === "P") ? "classes" : "classe";
-            $login->setClasse($data['data']['accounts'][0]["profile"][$classe]);
+            $classe = ($data['data']['accounts'][0]["typeCompte"] === "P")
+                ? $data['data']['accounts'][0]["profile"]["classes"]
+                : array($data['data']['accounts'][0]["profile"]["classe"]);
+            $login->setClasse($classe);
             return $login;
         }
         throw new NotDataResponseException();

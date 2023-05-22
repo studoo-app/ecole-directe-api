@@ -17,5 +17,8 @@ class InvalidCredentialsException extends \Exception
      */
     protected $message = "Invalid credentials";
 
+    /**
+     * @var int
+     */
     protected $code = 401;
 }

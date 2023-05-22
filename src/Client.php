@@ -21,7 +21,7 @@ use Studoo\Api\EcoleDirecte\Query\RunQuery;
  */
 class Client
 {
-    private const LIBVER = '0.1.3';
+    private const LIBVER = '0.1.5';
 
     private const API_BASE_PATH = 'https://apip.ecoledirecte.com';
 
@@ -58,6 +58,15 @@ class Client
         ], $config);
     }
     //end __construct()
+
+    /**
+     * Retourne la version de l'API
+     * @return string
+     */
+    public function getVersion(): string
+    {
+        return self::LIBVER;
+    }
 
     /**
      * Accès à l'API EcoleDirecte avec les identifiants de l'utilisateur

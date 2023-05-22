@@ -312,7 +312,7 @@ class Login
     }
 
     /**
-     * @return array
+     * @return array<mixed>
      */
     public function getClasse(): array
     {
@@ -320,7 +320,7 @@ class Login
     }
 
     /**
-     * @param array $classe
+     * @param array<mixed> $classe
      * @return Login
      */
     public function setClasse(array $classe): Login

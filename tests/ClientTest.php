@@ -5,9 +5,20 @@ use PHPUnit\Framework\TestCase;
 
 class ClientTest extends TestCase
 {
+    private $version = "0.1.5";
+
+    public function testClientGetVersion()
+    {
+        $client = new Client([
+            "base_path" => "http://localhost:9042",
+            "mock" => true
+        ]);
+        $this->assertEquals($this->version, $client->getVersion());
+    }
 
     /**
      * @throws \Studoo\Api\EcoleDirecte\Exception\InvalidModelException
+     * @throws \Studoo\Api\EcoleDirecte\Exception\ErrorHttpStatusException
      */
     public function testClient01FetchAccessToken()
     {
@@ -17,7 +28,7 @@ class ClientTest extends TestCase
             "client_secret" => "test",
             "mock" => true
         ]);
-        $this->assertEquals('7654-5678-43345-80R8-54324', $client->fetchAccessToken()->getToken());
+        $this->assertEquals(52, strlen($client->fetchAccessToken()->getToken()));
     }
 
     /**

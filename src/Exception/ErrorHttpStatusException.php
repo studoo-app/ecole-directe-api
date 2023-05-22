@@ -10,6 +10,8 @@
 
 namespace Studoo\Api\EcoleDirecte\Exception;
 
+use http\Exception;
+
 class ErrorHttpStatusException extends \Exception
 {
     /**
@@ -17,5 +19,8 @@ class ErrorHttpStatusException extends \Exception
      */
     protected $message = "Erreur HTTP status";
 
+    /**
+     * @var int
+     */
     protected $code = 400;
 }

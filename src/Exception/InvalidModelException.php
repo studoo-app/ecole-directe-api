@@ -17,5 +17,8 @@ class InvalidModelException extends \Exception
      */
     protected $message = "Invalid model API";
 
+    /**
+     * @var int
+     */
     protected $code = 402;
 }

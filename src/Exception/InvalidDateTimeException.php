@@ -17,5 +17,8 @@ class InvalidDateTimeException extends \Exception
      */
     protected $message = "Invalid DateTime format";
 
+    /**
+     * @var int
+     */
     protected $code = 404;
 }

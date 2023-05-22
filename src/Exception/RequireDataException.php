@@ -17,5 +17,8 @@ class RequireDataException extends \Exception
      */
     protected $message = "Require Data in the method";
 
+    /**
+     * @var int
+     */
     protected $code = 405;
 }

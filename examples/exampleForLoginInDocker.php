@@ -41,14 +41,12 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
         echo "Email: {$etudiant->getEmail()} <br>";
         echo "Nom: {$etudiant->getNom()} <br>";
         echo "Prenom: {$etudiant->getPrenom()} <br>";
-        echo "Identifiant: {$etudiant->getIdentifiant()} <br>";
+        echo "Identifiant: {$etudiant->getIdentifiant()} <br><br>";
 
         echo "Liste de la/les classe.s<br>";
 
         foreach ($etudiant->getClasse() as $classe) {
-            echo "Identifiant Classe: {$classe['id']} <br>";
-            echo "Lib Classe: {$classe['libelle']} <br>";
-            echo "Code Classe: {$classe['code']} <br><br>";
+            echo "<a href='exampleGetClasseInDocker.php?token={$etudiant->getToken()}&idclasse={$classe['id']}'> Identifiant Classe: {$classe['id']} - Lib Classe: {$classe['libelle']}</a><br><br>";
         }
     }
 } else {

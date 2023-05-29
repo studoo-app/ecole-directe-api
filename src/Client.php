@@ -117,4 +117,32 @@ class Client
             throw new InvalidModelException($e->getMessage());
         }
     }
+
+    /**
+     * Retourne les informations de l'utilisateur sur sa vie scolaire
+     * @param int $idClasse Identifiant de l'étudiant
+     * @param string $token Token de connexion
+     * @return object
+     * @throws InvalidModelException
+     */
+    public function getClasse(int $idClasse, string $token): object
+    {
+        try {
+            return (new RunQuery("classes", $this->config))->run(
+                headers: [
+                    'X-Token'      => $token,
+                    'Content-Type' => 'text/plain'
+                ],
+                param: [
+                    'pathID' => [
+                        'ID' => $idClasse
+                    ]
+                ]
+            );
+        } catch (GuzzleException $e) {
+            throw new InvalidModelException($e->getMessage());
+        } catch (\JsonException|Exception\ErrorHttpStatusException|Exception\InvalidCredentialsException $e) {
+            throw new InvalidModelException($e->getMessage());
+        }
+    }
 }

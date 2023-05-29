@@ -11,6 +11,8 @@
 namespace Studoo\Api\EcoleDirecte\Query;
 
 use Studoo\Api\EcoleDirecte\Core\BuildEntity;
+use Studoo\Api\EcoleDirecte\Entity\Classe;
+use Studoo\Api\EcoleDirecte\Entity\Eleve;
 use Studoo\Api\EcoleDirecte\Exception\NotDataResponseException;
 
 /**
@@ -27,7 +29,7 @@ class ClassesQuery extends Query implements EntityQueryInterface
             'prod'    => 'classes/<ID>/eleves.awp?verbe=get',
             'test'    => 'classes/<ID>/eleves'
         ];
-        $this->query = [];
+            $this->query = [];
     }
 
     /**
@@ -39,7 +41,17 @@ class ClassesQuery extends Query implements EntityQueryInterface
     public function buildEntity(array $data): object
     {
         if (isset($data['data']) === true) {
-            // TODO Implementation l'obj classe & eleve
+            $classe = new Classe();
+            $classe->setId($data['data']['entity']['id']);
+            $classe->setLibelle($data['data']['entity']['libelle']);
+            $classe->setCode($data['data']['entity']['code']);
+            $classe->setType($data['data']['entity']['type']);
+            foreach ($data['data']['eleves'] as $eleve) {
+                $eleveFinal = new Eleve();
+                $this->hasPacked($eleveFinal, $eleve);
+                $classe->setEleves($eleveFinal);
+            }
+            return $classe;
         }
         throw new NotDataResponseException();
     }

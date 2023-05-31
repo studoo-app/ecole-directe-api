@@ -8,10 +8,6 @@ use Studoo\Api\EcoleDirecte\Client;
  * Mise en place de l'environnement de développement via Mock
  * Voir https://github.com/studoo-app/mock-ecole-directe-api
  *
- * Dans la classe Client, il faut renseigner dans le tableau en config :
- * base_path => "http://localhost:9042" (adresse du serveur Docker)
- * mock => true (activation du mock au niveau des appels API)
- *
  */
 
 if (isset($_POST['idclasse']) && isset($_POST['token'])) {

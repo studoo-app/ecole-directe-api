@@ -29,7 +29,7 @@ class ClassesQuery extends Query implements EntityQueryInterface
             'prod'    => 'classes/<ID>/eleves.awp?verbe=get',
             'test'    => 'classes/<ID>/eleves'
         ];
-            $this->query = [];
+        $this->query = [];
     }
 
     /**

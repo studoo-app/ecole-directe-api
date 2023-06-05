@@ -8,7 +8,6 @@
  * veuillez consulter le fichier LICENSE qui a été distribué avec ce code source.
  */
 
-
 namespace Studoo\Api\EcoleDirecte\Entity;
 
 class Classe
@@ -51,7 +50,7 @@ class Classe
 
     /**
      * Retourne la liste des élèves de la classe
-     * @return array
+     * @return array<Eleve>
      */
     public function getEleves(): array
     {

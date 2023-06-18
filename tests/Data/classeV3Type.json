@@ -1,0 +1,101 @@
+{
+  "code": 200,
+  "token": "a2c2c804-456-4ce4-3456-d66512fcaaf3",
+  "host": "HTTP47",
+  "data": {
+    "eleves": [
+      {
+        "id": 7070,
+        "nom": "OUCHE",
+        "particule": "",
+        "prenom": "Benoy",
+        "sexe": "M",
+        "classeId": 107,
+        "classeLibelle": "1 TS SIO A",
+        "dateEntree": "2022-10-24",
+        "dateSortie": "",
+        "numeroBadge": "80700",
+        "regime": "Externe",
+        "email": "Benoy.OUCHE@icloud.com",
+        "portable": "06 83 66 70 86",
+        "photo": "//6169544e6277.jpg",
+        "dateNaissance": "2002-12-11"
+      },
+      {
+        "id": 7062,
+        "nom": "ALL",
+        "particule": "",
+        "prenom": "Ethano",
+        "sexe": "M",
+        "classeId": 107,
+        "classeLibelle": "1 TS SIO A",
+        "dateEntree": "2022-09-01",
+        "dateSortie": "",
+        "numeroBadge": "80620",
+        "regime": "Externe",
+        "email": "Ethano.ALL@gmail.com",
+        "portable": "07 77 91 92 37",
+        "photo": "//7146474e7077.jpg",
+        "dateNaissance": "2003-09-24"
+      },
+      {
+        "id": 7023,
+        "nom": "GOODWIN",
+        "particule": "",
+        "prenom": "Mike",
+        "sexe": "M",
+        "classeId": 107,
+        "classeLibelle": "1 TS SIO A",
+        "dateEntree": "2022-09-01",
+        "dateSortie": "",
+        "numeroBadge": "80230",
+        "regime": "Externe",
+        "email": "Mike.GOODWIN@gmail.com",
+        "portable": "06 84 95 22 06",
+        "photo": "//616948496167.jpg",
+        "dateNaissance": "2001-06-12"
+      },
+      {
+        "id": 7006,
+        "nom": "ZOINNE",
+        "particule": "",
+        "prenom": "Paul",
+        "sexe": "M",
+        "classeId": 107,
+        "classeLibelle": "1 TS SIO A",
+        "dateEntree": "2022-09-01",
+        "dateSortie": "",
+        "numeroBadge": "80060",
+        "regime": "Externe",
+        "email": "Paul.ZOINNE@gmail.com",
+        "portable": "06 33 03 54 22",
+        "photo": "//504c4d314677.jpg",
+        "dateNaissance": "2003-03-17"
+      },
+      {
+        "id": 7161,
+        "nom": "ASSAS",
+        "particule": "",
+        "prenom": "Elsa",
+        "sexe": "F",
+        "classeId": 107,
+        "classeLibelle": "1 TS SIO A",
+        "dateEntree": "2022-09-01",
+        "dateSortie": "",
+        "numeroBadge": "81610",
+        "regime": "Externe",
+        "email": "Elsa.ASSAS@gmail.com",
+        "portable": "06 86 52 34 12",
+        "photo": "//7257324c7151.jpg",
+        "dateNaissance": "2002-09-12"
+      }
+    ],
+    "entity": {
+      "id": 107,
+      "code": "1TSSIOA",
+      "libelle": "1 TS SIO A",
+      "type": "C",
+      "isFlexible": false
+    }
+  }
+}

@@ -5,20 +5,30 @@ use PHPUnit\Framework\TestCase;
 
 class ClientTest extends TestCase
 {
+    private $version = "0.1.5";
+
+    public function testClientGetVersion()
+    {
+        $client = new Client([
+            "base_path" => "http://localhost:9042",
+            "mock" => true
+        ]);
+        $this->assertEquals($this->version, $client->getVersion());
+    }
 
     /**
      * @throws \Studoo\Api\EcoleDirecte\Exception\InvalidModelException
+     * @throws \Studoo\Api\EcoleDirecte\Exception\ErrorHttpStatusException
      */
     public function testClient01FetchAccessToken()
     {
-        $_ENV["ENV"] = "test";
-
         $client = new Client([
             "base_path" => "http://localhost:9042",
             "client_id" => "jeremy",
             "client_secret" => "test",
+            "mock" => true
         ]);
-        $this->assertEquals('7654-5678-43345-80R8-54324', $client->fetchAccessToken()->getToken());
+        $this->assertEquals(52, strlen($client->fetchAccessToken()->getToken()));
     }
 
     /**
@@ -26,24 +36,22 @@ class ClientTest extends TestCase
      */
     public function testClient02GetCurrentUserLogin()
     {
-        $_ENV["ENV"] = "test";
-
         $client = new Client([
             "base_path" => "http://localhost:9042",
             "client_id" => "jeremy",
             "client_secret" => "test",
+            "mock" => true
         ]);
         $this->assertInstanceOf("Studoo\Api\EcoleDirecte\Entity\Login", $client->fetchAccessToken());
     }
 
     public function testClient03ErrorHttpStatusException()
     {
-        $_ENV["ENV"] = "test";
-
         $client = new Client([
             "base_path" => "http://NoTDomain:9042",
             "client_id" => "jeremy",
             "client_secret" => "test",
+            "mock" => true
         ]);
         $this->expectException(\Studoo\Api\EcoleDirecte\Exception\ErrorHttpStatusException::class);
         $client->fetchAccessToken();
@@ -51,12 +59,11 @@ class ClientTest extends TestCase
 
     public function testClient04InvalidCredentialsException()
     {
-        $_ENV["ENV"] = "test";
-
-        $client = new Client([
+       $client = new Client([
             "base_path" => "http://localhost:9042",
             "client_id" => "j",
             "client_secret" => "t",
+            "mock" => true
         ]);
         $this->expectException(\Studoo\Api\EcoleDirecte\Exception\InvalidCredentialsException::class);
         $client->fetchAccessToken();

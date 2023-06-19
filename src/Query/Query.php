@@ -20,9 +20,9 @@ class Query
     protected string $methode;
 
     /**
-     * @var string $path Chemin de la requête
+     * @var array<mixed> $path Tableau des chemins de la requête
      */
-    protected string $path;
+    protected array $path = [];
 
     /**
      * @var array<mixed> $query Paramètres de la requête
@@ -48,9 +48,9 @@ class Query
      * Retourne le chemin de la requête
      * @return string
      */
-    public function getPath(): string
+    public function getPath(bool $mock = false): string
     {
-        return $this->path;
+        return ($mock === true) ? $this->path["test"] : $this->path["prod"];
     }
 
     /**

@@ -10,15 +10,15 @@
 
 namespace Studoo\Api\EcoleDirecte\Exception;
 
-class InvalidCredentialsException extends \Exception
+class RequireDataException extends \Exception
 {
     /**
      * @var string
      */
-    protected $message = "Invalid credentials";
+    protected $message = "Require Data in the method";
 
     /**
      * @var int
      */
-    protected $code = 401;
+    protected $code = 405;
 }

@@ -21,7 +21,7 @@ use Studoo\Api\EcoleDirecte\Query\RunQuery;
  */
 class Client
 {
-    private const LIBVER = '0.1.3';
+    private const LIBVER = '0.1.5';
 
     private const API_BASE_PATH = 'https://apip.ecoledirecte.com';
 
@@ -49,6 +49,7 @@ class Client
             'verify'          => true,
             'cert'            => __DIR__ . '/Certificat/apip.ecoledirecte.com.pem',
             'debug'           => false,
+            'mock'            => false,
             'headers'         => [
                 'User-Agent'   => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36',
                 'Accept'       => 'application/json',
@@ -57,6 +58,15 @@ class Client
         ], $config);
     }
     //end __construct()
+
+    /**
+     * Retourne la version de l'API
+     * @return string
+     */
+    public function getVersion(): string
+    {
+        return self::LIBVER;
+    }
 
     /**
      * Accès à l'API EcoleDirecte avec les identifiants de l'utilisateur
@@ -104,6 +114,34 @@ class Client
         } catch (GuzzleException $e) {
             throw new InvalidModelException($e->getMessage());
         } catch (\JsonException|Exception\ErrorHttpStatusException $e) {
+            throw new InvalidModelException($e->getMessage());
+        }
+    }
+
+    /**
+     * Retourne les informations de l'utilisateur sur sa vie scolaire
+     * @param int $idClasse Identifiant de l'étudiant
+     * @param string $token Token de connexion
+     * @return object
+     * @throws InvalidModelException
+     */
+    public function getClasse(int $idClasse, string $token): object
+    {
+        try {
+            return (new RunQuery("classes", $this->config))->run(
+                headers: [
+                    'X-Token'      => $token,
+                    'Content-Type' => 'text/plain'
+                ],
+                param: [
+                    'pathID' => [
+                        'ID' => $idClasse
+                    ]
+                ]
+            );
+        } catch (GuzzleException $e) {
+            throw new InvalidModelException($e->getMessage());
+        } catch (\JsonException|Exception\ErrorHttpStatusException|Exception\InvalidCredentialsException $e) {
             throw new InvalidModelException($e->getMessage());
         }
     }

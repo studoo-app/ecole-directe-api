@@ -28,7 +28,8 @@ trait DispacherQuery
     {
         $api = [
             "login"       => LoginQuery::class,
-            "viescolaire" => ViescolaireQuery::class
+            "viescolaire" => ViescolaireQuery::class,
+            "classes"     => ClassesQuery::class
         ];
 
         if (array_key_exists($model, $api)) {
